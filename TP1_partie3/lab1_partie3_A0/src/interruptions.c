@@ -43,7 +43,7 @@ int status;
 		xil_printf("Error: timer setup failed\n");
 		//return XST_FAILURE;
 	}
-	XTmrCtr_SetResetValue(&timer_dev, XPAR_AXI_TIMER_DEVICE_ID, 0xFFFFFFFF);
+	XTmrCtr_SetResetValue(&timer_dev, XPAR_AXI_TIMER_DEVICE_ID, 0xB2D05E00); // set pour 30s à 100MHz
 	XTmrCtr_SetOptions(&timer_dev, XPAR_AXI_TIMER_DEVICE_ID, XTC_INT_MODE_OPTION | XTC_AUTO_RELOAD_OPTION | XTC_DOWN_COUNT_OPTION );
 
 }

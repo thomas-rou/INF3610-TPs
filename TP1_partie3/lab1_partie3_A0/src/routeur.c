@@ -42,13 +42,15 @@ int nb_calls_CRC = 0;
 int packet_rejete_fifo_pleine_inputQ = 0;			// Utilisation de la fifo d'entrÃ©e
 int packet_rejete_output_port_plein = 0;			// Utilisation des MB
 int packet_rejete_fifo_pleine_Q = 0;
-int delai_pour_vider_les_fifos_sec = 0;
-int delai_pour_vider_les_fifos_msec = 100;
+int delai_pour_vider_les_fifos_sec = 1;
+int delai_pour_vider_les_fifos_msec = 50;
 int print_paquets_rejetes = 0;
 int limite_de_paquets= 100000;
-int limite_packet_source_rejete = 250;
+int limite_packet_source_rejete = 2500;
 int routerIsOn = 0;
 int Stat_Period = 0;
+volatile bool end_timer =  false;
+int timeStampOffset = 0;
 
 // e utiliser pour suivre le remplissage et le vidage des fifos
 // Mettre en commentaire et utiliser la fonction vide suivante si vous ne voulez
@@ -134,6 +136,8 @@ int create_events() {
 void Update_TS(Packet *packet) {
 
     CPU_TS64 delay;
+
+
 
     delay = CPU_TS_Get64() - packet->timestamp; // Valeur courante - valeur initiale
 
@@ -349,7 +353,12 @@ void timer_isr(void *p_int_arg, CPU_INT32U source_cpu){
 
 	 if (XTmrCtr_IsExpired(&timer_dev, 0)){
 		 XTmrCtr_Start(&timer_dev, 0);
+		 if(end_timer == true) {
+			 flags = OSFlagPost(&RouterStatus, TASK_SHUTDOWN, OS_OPT_POST_FLAG_SET + OS_OPT_POST_NO_SCHED,&perr);
+		 }
+		 XTmrCtr_Start(&timer_dev, 0);
 	 }
+	 end_timer = true;
 
 	xil_printf("------------------timer_isr-------------------\n");
 }
@@ -467,18 +476,18 @@ void TaskComputing(void *pdata) {
 
     volatile uint32_t* req = (uint32_t*) (BASEADDR +0x04);	// signal prêt recevoir un data
     volatile uint32_t* ack = (uint32_t*) (BASEADDR +0x00);	// signal attend le producteur ecrit un data
-    volatile uint32_t* burst_no = (uint32_t*) (BASEADDR + 0x08);
-    volatile uint32_t* number_of_packets = (uint32_t*) (BASEADDR + 0x0C);
+    volatile uint32_t* done = (uint32_t*) (BASEADDR + 0x08);
+    volatile uint32_t* burst_no = (uint32_t*) (BASEADDR + 0x0C);
+    volatile uint32_t* number_of_packets = (uint32_t*) (BASEADDR + 0x10);
+    volatile uint32_t* base_offSet = (uint32_t*) (BASEADDR + 0x14); // timeoffset
 
 
 
     Packet *ppacket;
-    ppacket = BASEADDR + 0x10;
 
 
 //    *req = 0;
 //    *ack = 0;
-//    *done = 0;
 
     while (true) {
 
@@ -489,14 +498,18 @@ void TaskComputing(void *pdata) {
 
         while(!*ack);	// Attend donnee du producteur
 
-        ppacket = BASEADDR + 0x10;
-        for ( int i=0; i< *number_of_packets;i++) {
+        ppacket = BASEADDR + 0x1C;
+        for ( int i = 0; i < *number_of_packets; i++) {
+        	OSSemPend(&NbPaquets, 0, OS_OPT_PEND_BLOCKING, &ts, &err);
         	Packet *packet = (Packet *)OSMemGet(&BLockMem, &err);
+        	OSSemPost(&NbPaquets, OS_OPT_POST_1, &err);
         	packet->src = (ppacket->src);
         	packet->dst = (ppacket->dst);
         	packet->type = (ppacket->type);
+        	packet->crc = (ppacket->crc);
+        	packet->timestamp = CPU_TS_Get64() + timeStampOffset;
 
-        	for ( int j=0; j<ARRAY_SIZE(packet->data);j++){
+        	for ( int j = 0; j < ARRAY_SIZE(packet->data); j++){
         		packet->data[j] = (ppacket->data[j]);
         	}
 
@@ -527,11 +540,14 @@ void TaskComputing(void *pdata) {
 
 			}
 
-			else if (computeCRC((uint16_t *)packet, sizeof(*packet)) != 0) {
-				++nbPacketCRCRejete;
-				OSTaskQPost(&TaskStatsTCB, packet, sizeof(packet),
-							OS_OPT_POST_FIFO + OS_OPT_POST_NO_SCHED, &err);
-			}
+//			else if (computeCRC((uint16_t*) (packet), sizeof(*packet)) != 0) {
+//				++nbPacketCRCRejete;
+//				OSTaskQPost(&TaskStatsTCB, packet, sizeof(packet),
+//							OS_OPT_POST_FIFO + OS_OPT_POST_NO_SCHED, &err);
+//			}
+
+			// commenté car computeCRC rejetais tout les packets, même si le crc et le sizeof
+			// est identique à ceux de ppacket envoyé et reçus
 
 			else {
 
@@ -581,7 +597,7 @@ void TaskComputing(void *pdata) {
 
 		while(*ack); // attend prod
 
-		OSTimeDlyHMSM(0, 0, 5, 0, OS_OPT_TIME_HMSM_STRICT, &err); // pause pour vider FIFO
+		OSTimeDlyHMSM(0, 0, 0, delai_pour_vider_les_fifos_msec, OS_OPT_TIME_HMSM_STRICT, &err); // pause pour vider FIFO
     }
 }
 
@@ -881,6 +897,23 @@ void err_msg(char *entete, uint8_t err) {
     }
 }
 
+void delete_events(){
+	OS_ERR err, p_err;
+
+	OSSemDel(&Sem, OS_OPT_DEL_NO_PEND,&err);
+	OSSemDel(&NbPaquets, OS_OPT_DEL_NO_PEND,&err);
+
+	OSMutexDel(&mutPrint, OS_OPT_DEL_NO_PEND, &err);
+
+	OSQDel(&source_errQ, OS_OPT_DEL_NO_PEND, &err);
+	OSQDel(&crc_errQ, OS_OPT_DEL_NO_PEND, &err);
+
+	OSFlagDel(&RouterStatus, OS_OPT_DEL_NO_PEND, &err);
+
+	return;
+
+}
+
 void StartupTask(void *p_arg) {
     int i;
     OS_ERR err;
@@ -964,6 +997,9 @@ void StartupTask(void *p_arg) {
     initialize_timer();
     initialize_axi_intc();
     connect_axi();
+
+	volatile uint32_t* base_offSet = (uint32_t*) (BASEADDR + 0x14); // time offset
+	timeStampOffset = *base_offSet - CPU_TS_Get64() ;
 
     // Point 1
     freq_hz = CPU_TS_TmrFreqGet(&err); /* Get CPU timestamp timer frequency. */
@@ -1070,12 +1106,48 @@ void StartupTask(void *p_arg) {
 
     OSFlagPend(&RouterStatus, TASK_SHUTDOWN, 0, OS_OPT_PEND_FLAG_SET_ANY + OS_OPT_PEND_FLAG_CONSUME, &ts, &err);
 
+    volatile uint32_t* done = (uint32_t*) (BASEADDR + 0x08);
+    volatile uint32_t* req = (uint32_t*) (BASEADDR + 0x04);
+    volatile uint32_t* ack = (uint32_t*) (BASEADDR + 0x00);
     UCOS_Print("Prepare to shutdown System - \r\n");
 
-    while (1) { // indique que le système est en arrêt permanent
-    	TurnLEDButton(0b1111); // mettre 4 bits
-    	OSTimeDlyHMSM(0, 0, 1, 0, OS_OPT_TIME_HMSM_STRICT, &err);
-    	TurnLEDButton(0b0000);
-    	OSTimeDlyHMSM(0, 0, 1, 0, OS_OPT_TIME_HMSM_STRICT, &err);
+    *done = 1;
+
+    // débloquer generator qui attend le req de routeur
+    // le blocage peut être complexe et je tente de ne pas bloquer routeur en même temps
+    // je n'ais pas eu de problème en testant de mon côté, mais je n'exclue pas la possibilité
+
+    *req = 1;
+    if(*ack == 0){
+    	while(!*ack);
     }
+    *req = 0;
+
+    OSTimeDlyHMSM(0, 0, delai_pour_vider_les_fifos_sec, delai_pour_vider_les_fifos_msec, OS_OPT_TIME_HMSM_STRICT, &err);
+
+    xil_printf("Core 0: Shutdown\r\n");
+
+    delete_events();
+
+    // j'assume qu'on ne delete pas StartupTasks pour conserver le flash des leds
+    OSTaskDel(&TaskComputingTCB, &err);
+    OSTaskDel(&TaskStatsTCB, &err);
+    OSTaskDel(&TaskResetTCB, &err);
+    OSTaskDel(&TaskStopTCB, &err);
+    for(int i = 0; i < NB_FIFO; i++){
+    	OSTaskDel(&TaskFIFOForwardingTCB[i],&err);
+    };
+
+    for(int i = 0; i < NB_OUTPUT_PORTS; i++){
+    	OSTaskDel(&TaskOutputPortTCB[i], &err);
+    };
+
+    OSTaskDel(&StartupTaskTCB, &err);
+
+//    while (1) { // indique que le système est en arrêt permanent
+//    	TurnLEDButton(0b1111); // mettre 4 bits
+//    	OSTimeDlyHMSM(0, 0, 1, 0, OS_OPT_TIME_HMSM_STRICT, &err);
+//    	TurnLEDButton(0b0000);
+//    	OSTimeDlyHMSM(0, 0, 1, 0, OS_OPT_TIME_HMSM_STRICT, &err);
+//    }
 }

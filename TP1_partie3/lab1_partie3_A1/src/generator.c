@@ -29,6 +29,7 @@ int packet_rejete_fifo_pleine_Q = 0;
 int delai_pour_vider_les_fifos_sec = 1;
 int delai_pour_vider_les_fifos_msec = 0;
 int print_paquets_rejetes = 0;
+int timeStampOffset = 0;
 
 
 int routerIsOn = 0;
@@ -220,17 +221,20 @@ void TaskGenerate(void *data) {
 	volatile uint32_t* done = (uint32_t*) (BASEADDR + 0x08);
 	volatile uint32_t* burst_no = (uint32_t*) (BASEADDR + 0x0C); // No du burst
 	volatile uint32_t* number_of_packets = (uint32_t*) (BASEADDR + 0x10); // Nombre de paquets
+	volatile uint32_t* base_offSet = (uint32_t*) (BASEADDR + 0x14); // time offset
+
 
 	Packet *ppacket;
 
 	*req = 0;
 	*ack = 0;
 	*done = 0;
+	*base_offSet = timeStampOffset;
 
 	while(true) {
 
 //		    OSFlagPend(&RouterStatus, TASK_GENERATE_RDY, 0, OS_OPT_PEND_FLAG_SET_ALL + OS_OPT_PEND_BLOCKING, &ts, &err);
-			ppacket = BASEADDR + 0x14;
+			ppacket = BASEADDR + 0x1C;
 			do { packGenQty = (rand() %255); } while (packGenQty == 0);
 
 //			xil_printf("GENERATE: Debut rafale no: %d\n", burst_number);
@@ -278,7 +282,7 @@ void TaskGenerate(void *data) {
 
 			OSTimeDlyHMSM(0, 0, 0, 50, OS_OPT_TIME_HMSM_STRICT, &err);
 
-			xil_printf("GENERATE: Fin rafale no: %d completee avec %d paquets\n", *burst_no, *number_of_packets);
+//			xil_printf("GENERATE: Fin rafale no: %d completee avec %d paquets\n", *burst_no, *number_of_packets);
 
 			burst_number++;
 
@@ -286,7 +290,7 @@ void TaskGenerate(void *data) {
 
 			*req = 1;
 
-			xil_printf("Task_Generate Fin rafale no: %d completee avec %d paquets\n", *burst_no, *number_of_packets);
+//			xil_printf("Task_Generate Fin rafale no: %d completee avec %d paquets\n", *burst_no, *number_of_packets);
 
 			while(*ack);
 
@@ -381,6 +385,7 @@ void StartupTask (void *p_arg)
 
 
 	// On crée les tâches
+    timeStampOffset = CPU_TS_Get64();
 
 	OSTaskCreate(&TaskGenerateTCB, 		"TaskGenerate", 	TaskGenerate,	(void*)0, 	TaskGeneratePRIO, 	&TaskGenerateSTK[0u], 	TASK_STK_SIZE / 2, TASK_STK_SIZE, 1, 0, (void*) 0,(OS_OPT_TASK_STK_CHK | OS_OPT_TASK_STK_CLR), &err );
 

@@ -130,12 +130,12 @@ typedef struct {
     unsigned int type;
     CPU_TS64 timestamp;
     unsigned int crc;
-    unsigned int data[13];
+    unsigned int data[10];
 } Packet;
 
 
 // Stacks
-static CPU_STK TaskGenerateSTK[TASK_STK_SIZE];
+//static CPU_STK TaskGenerateSTK[TASK_STK_SIZE];
 static CPU_STK TaskComputingSTK[TASK_STK_SIZE];
 static CPU_STK TaskFIFOForwardingSTK[NB_FIFO][TASK_STK_SIZE];
 static CPU_STK TaskOutputPortSTK[NB_OUTPUT_PORTS][TASK_STK_SIZE];
@@ -146,7 +146,7 @@ static CPU_STK StartupTaskStk[TASK_STK_SIZE];
 
 
 
-static OS_TCB TaskGenerateTCB;
+//static OS_TCB TaskGenerateTCB;
 static OS_TCB TaskStatsTCB;
 static OS_TCB TaskComputingTCB;
 static OS_TCB TaskFIFOForwardingTCB[NB_FIFO];
