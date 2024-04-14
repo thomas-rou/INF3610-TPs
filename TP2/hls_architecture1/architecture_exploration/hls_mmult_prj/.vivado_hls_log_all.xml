@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [SCHED 204-21] The critical path in module 'mmult_hw' consists of the following:&#xD;&#xA;&#x9;'mul' operation of DSP[33] ('tmp', mmult_accel.cpp:20) [26]  (3.36 ns)&#xD;&#xA;&#x9;'add' operation of DSP[33] ('tmp_1', mmult_accel.cpp:20) [33]  (3.02 ns)&#xD;&#xA;&#x9;'getelementptr' operation ('out_addr', mmult_accel.cpp:20) [35]  (0 ns)&#xD;&#xA;&#x9;'store' operation (mmult_accel.cpp:20) of variable 'sum', mmult_accel.cpp:19 on array 'out_r' [293]  (3.25 ns)" projectName="hls_mmult_prj" solutionName="solution1" date="2024-04-14T10:21:17.141-0400" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-21] Estimated clock period (9.634ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns)." projectName="hls_mmult_prj" solutionName="solution1" date="2024-04-14T10:21:17.105-0400" type="Warning"/>
+        <logs message="WARNING: [SYN 201-107] Renaming port name 'mmult_hw/out' to 'mmult_hw/out_r' to avoid the conflict with HDL keywords or other object names." projectName="hls_mmult_prj" solutionName="solution1" date="2024-04-14T10:21:16.319-0400" type="Warning"/>
+        <logs message="WARNING: [SYN 201-303] Cannot apply functional unit assignment of 'FAddSub_nodsp' (mmult_accel.cpp:18) on 'alloca' operation ('sum', mmult_accel.cpp:17) due to incompatible operation sets." projectName="hls_mmult_prj" solutionName="solution1" date="2024-04-14T10:21:16.302-0400" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>
