@@ -3,7 +3,7 @@
 
 #include "mmult.h"
 
-typedef char mat_type;
+//typedef char mat_type;
 
 void mmult_sw(mat_type a[DIM][DIM], mat_type b[DIM][DIM], mat_type out[DIM][DIM])
 {

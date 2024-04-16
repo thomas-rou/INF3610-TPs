@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [SYN 201-107] Renaming port name 'mmult_hw/out' to 'mmult_hw/out_r' to avoid the conflict with HDL keywords or other object names." projectName="hls_mmult_prj" solutionName="solution1" date="2024-04-14T22:53:47.769-0400" type="Warning"/>
+        <logs message="WARNING: [SYN 201-303] Cannot apply functional unit assignment of 'AddSubnS' (mmult_accel.cpp:19) on 'mul' operation ('temp', mmult_accel.cpp:19) due to incompatible operation sets." projectName="hls_mmult_prj" solutionName="solution1" date="2024-04-14T22:53:47.744-0400" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>
