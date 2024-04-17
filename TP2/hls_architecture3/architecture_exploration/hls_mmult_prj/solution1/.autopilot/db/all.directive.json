@@ -20,7 +20,7 @@
               },
               {
                 "name": "factor",
-                "value": "130"
+                "value": "80"
               },
               {
                 "name": "dim",
@@ -48,7 +48,7 @@
               },
               {
                 "name": "factor",
-                "value": "130"
+                "value": "80"
               },
               {
                 "name": "dim",
@@ -67,44 +67,6 @@
                 "name": "II",
                 "value": "1"
               }]
-          }
-        },
-        {
-          "functionName": "mmult_hw",
-          "label": "",
-          "functionLabel": "",
-          "pragma": {
-            "name": "RESOURCE",
-            "option": [
-              {
-                "name": "variable",
-                "value": "sum",
-                "positionalBoolean": "4"
-              },
-              {
-                "name": "core",
-                "value": "AddSubnS"
-              }
-            ]
-          }
-        },
-        {
-          "functionName": "mmult_hw",
-          "label": "",
-          "functionLabel": "",
-          "pragma": {
-            "name": "RESOURCE",
-            "option": [
-              {
-                "name": "variable",
-                "value": "temp",
-                "positionalBoolean": "4"
-              },
-              {
-                "name": "core",
-                "value": "Mul_LUT"
-              }
-            ]
           }
         }
       ]

@@ -5,7 +5,7 @@
 
 typedef uint8_t mat_type;
 
-int const DIM = 260;
+int const DIM = 160;
 int const SIZE = DIM*DIM;
 
 // function prototypes

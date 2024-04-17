@@ -12,8 +12,9 @@
   <warningLogs>
     <logs>
       <synLog>
-        <logs message="WARNING: [SYN 201-107] Renaming port name 'mmult_hw/out' to 'mmult_hw/out_r' to avoid the conflict with HDL keywords or other object names." projectName="hls_mmult_prj" solutionName="solution1" date="2024-04-14T22:53:47.769-0400" type="Warning"/>
-        <logs message="WARNING: [SYN 201-303] Cannot apply functional unit assignment of 'AddSubnS' (mmult_accel.cpp:19) on 'mul' operation ('temp', mmult_accel.cpp:19) due to incompatible operation sets." projectName="hls_mmult_prj" solutionName="solution1" date="2024-04-14T22:53:47.744-0400" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-21] The critical path in module 'mmult_hw' consists of the following:&#xD;&#xA;&#x9;'mul' operation of DSP[1192] ('temp_38', mmult_accel.cpp:19) [798]  (3.36 ns)&#xD;&#xA;&#x9;'add' operation of DSP[1192] ('tmp40', mmult_accel.cpp:20) [1192]  (3.02 ns)&#xD;&#xA;&#x9;'add' operation of DSP[1193] ('tmp39', mmult_accel.cpp:20) [1193]  (3.02 ns)&#xD;&#xA;&#x9;'add' operation ('tmp37', mmult_accel.cpp:20) [1194]  (1.92 ns)" projectName="hls_mmult_prj" solutionName="solution1" date="2024-04-17T14:51:29.119-0400" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-21] Estimated clock period (11.315ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns)." projectName="hls_mmult_prj" solutionName="solution1" date="2024-04-17T14:51:29.101-0400" type="Warning"/>
+        <logs message="WARNING: [SYN 201-107] Renaming port name 'mmult_hw/out' to 'mmult_hw/out_r' to avoid the conflict with HDL keywords or other object names." projectName="hls_mmult_prj" solutionName="solution1" date="2024-04-17T14:51:28.396-0400" type="Warning"/>
       </synLog>
       <simLog/>
       <mgLog/>
