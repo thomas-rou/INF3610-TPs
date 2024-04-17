@@ -7556,7 +7556,7 @@ template<int D>
 
 typedef float mat_type;
 
-int const DIM = 42;
+int const DIM = 34;
 int const SIZE = DIM*DIM;
 
 
@@ -7568,11 +7568,11 @@ void mmult_hw (mat_type a[DIM][DIM], mat_type b[DIM][DIM], mat_type c[DIM][DIM])
 typedef float mat_type;
 
 void mmult_hw (mat_type a[DIM][DIM], mat_type b[DIM][DIM], mat_type out[DIM][DIM])
-{_ssdm_SpecArrayDimSize(a, 42);_ssdm_SpecArrayDimSize(b, 42);_ssdm_SpecArrayDimSize(out, 42);
-#pragma HLS ARRAY_PARTITION variable=&a complete dim=2
+{_ssdm_SpecArrayDimSize(a, 34);_ssdm_SpecArrayDimSize(b, 34);_ssdm_SpecArrayDimSize(out, 34);
+#pragma HLS ARRAY_PARTITION variable=&a block factor=17 dim=2
 # 11 "mmult_accel.cpp"
 
-#pragma HLS ARRAY_PARTITION variable=&b complete dim=1
+#pragma HLS ARRAY_PARTITION variable=&b block factor=17 dim=1
 # 11 "mmult_accel.cpp"
 
 
@@ -7589,11 +7589,11 @@ void mmult_hw (mat_type a[DIM][DIM], mat_type b[DIM][DIM], mat_type out[DIM][DIM
 #pragma 
 # 19 "mmult_accel.cpp"
 
-{ _ssdm_RegionBegin("?FMul_meddsp_temp_Region_mmult_accel.cpp:19:1");
+{ _ssdm_RegionBegin("?FMul_nodsp_temp_Region_mmult_accel.cpp:19:1");
 # 19 "mmult_accel.cpp"
 temp = a[ia][id] * b[id][ib];
-_ssdm_op_SpecResource(temp, "?FMul_meddsp_temp_Region_mmult_accel.cpp:19:1", "", "FMul_meddsp", "", -1, "", "", "", "", "");
-_ssdm_RegionEnd("?FMul_meddsp_temp_Region_mmult_accel.cpp:19:1"); }
+_ssdm_op_SpecResource(temp, "?FMul_nodsp_temp_Region_mmult_accel.cpp:19:1", "", "FMul_nodsp", "", -1, "", "", "", "", "");
+_ssdm_RegionEnd("?FMul_nodsp_temp_Region_mmult_accel.cpp:19:1"); }
 # 19 "mmult_accel.cpp"
 
      

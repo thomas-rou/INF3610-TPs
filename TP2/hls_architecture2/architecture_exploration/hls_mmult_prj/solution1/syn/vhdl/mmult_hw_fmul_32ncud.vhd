@@ -1,5 +1,5 @@
 -- ==============================================================
--- File generated on Sat Apr 13 17:35:50 -0400 2024
+-- File generated on Wed Apr 17 14:44:53 -0400 2024
 -- Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
 -- SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
 -- IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
@@ -10,8 +10,8 @@ use ieee.std_logic_1164.all;
 
 entity mmult_hw_fmul_32ncud is
     generic (
-        ID         : integer := 43;
-        NUM_STAGE  : integer := 5;
+        ID         : integer := 35;
+        NUM_STAGE  : integer := 4;
         din0_WIDTH : integer := 32;
         din1_WIDTH : integer := 32;
         dout_WIDTH : integer := 32
@@ -28,7 +28,7 @@ end entity;
 
 architecture arch of mmult_hw_fmul_32ncud is
     --------------------- Component ---------------------
-    component mmult_hw_ap_fmul_3_med_dsp_32 is
+    component mmult_hw_ap_fmul_2_no_dsp_32 is
         port (
             aclk                 : in  std_logic;
             aclken               : in  std_logic;
@@ -56,7 +56,7 @@ architecture arch of mmult_hw_fmul_32ncud is
     signal dout_r    : std_logic_vector(dout_WIDTH-1 downto 0);
 begin
     --------------------- Instantiation -----------------
-    mmult_hw_ap_fmul_3_med_dsp_32_u : component mmult_hw_ap_fmul_3_med_dsp_32
+    mmult_hw_ap_fmul_2_no_dsp_32_u : component mmult_hw_ap_fmul_2_no_dsp_32
     port map (
         aclk                 => aclk,
         aclken               => aclken,

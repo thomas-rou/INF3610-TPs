@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'mmult_hw'" level="0">
-<item name = "Date">Sat Apr 13 17:35:45 2024
+<item name = "Date">Wed Apr 17 14:44:44 2024
 </item>
 <item name = "Version">2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)</item>
 <item name = "Project">hls_mmult_prj</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00, 9.634, 1.25</column>
+<column name="ap_clk">10.00, 8.484, 1.25</column>
 </table>
 </item>
 </section>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">1982, 1982, 1982, 1982, none</column>
+<column name="">1333, 1333, 1333, 1333, none</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,7 +35,7 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- L1_L2">1980, 1980, 218, 1, 1, 1764, yes</column>
+<column name="- L1_L2">1331, 1331, 177, 1, 1, 1156, yes</column>
 </table>
 </item>
 </section>

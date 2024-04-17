@@ -1,38 +1,38 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <AutoPilot:ProjectResources xmlns:AutoPilot="com.autoesl.autopilot.ui.directiveView">
-  <sourceFile>
-    <directive functionName="mmult_hw" label="" functionLabel="">
-      <pragma name="ARRAY_PARTITION">
-        <option name="variable" value="a" positionalBoolean="4"/>
-        <option name="complete" value="" positionalBoolean="type"/>
-        <option name="dim" value="2"/>
-      </pragma>
-    </directive>
-    <directive functionName="mmult_hw" label="" functionLabel="">
-      <pragma name="ARRAY_PARTITION">
-        <option name="variable" value="b" positionalBoolean="4"/>
-        <option name="complete" value="" positionalBoolean="type"/>
-        <option name="dim" value="1"/>
-      </pragma>
-    </directive>
-    <directive functionName="mmult_hw" label="L2" functionLabel="">
-      <pragma name="PIPELINE">
-        <option name="II" value="1"/>
-      </pragma>
-    </directive>
-    <directive functionName="mmult_hw" label="" functionLabel="">
-      <pragma name="RESOURCE">
-        <option name="variable" value="temp" positionalBoolean="4"/>
-        <option name="core" value="FMul_meddsp"/>
-      </pragma>
-    </directive>
-  </sourceFile>
-  <sourceFile name="mmult_accel.cpp">
-    <directive functionName="mmult_hw" label=" " functionLabel=" ">
-      <pragma name="RESOURCE">
-        <option name="variable" value="sum" positionalBoolean="4"/>
-        <option name="core" value="FAddSub_nodsp" positionalBoolean="4"/>
-      </pragma>
-    </directive>
-  </sourceFile>
+    <sourceFile name="">
+        <directive functionName="mmult_hw" label="" functionLabel="">
+            <pragma name="ARRAY_PARTITION">
+                <option name="variable" value="a" positionalBoolean="4"/>
+                <option name="block" value="" positionalBoolean="type"/>
+                <option name="factor" value="17"/>
+                <option name="dim" value="2"/>
+            </pragma>
+        </directive>
+        <directive functionName="mmult_hw" label="" functionLabel="">
+            <pragma name="ARRAY_PARTITION">
+                <option name="variable" value="b" positionalBoolean="4"/>
+                <option name="block" value="" positionalBoolean="type"/>
+                <option name="factor" value="17"/>
+                <option name="dim" value="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="mmult_hw" label="L2" functionLabel="">
+            <pragma name="PIPELINE">
+                <option name="II" value="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="mmult_hw" label="" functionLabel="">
+            <pragma name="RESOURCE">
+                <option name="variable" value="temp" positionalBoolean="4"/>
+                <option name="core" value="FMul_nodsp"/>
+            </pragma>
+        </directive>
+        <directive functionName="mmult_hw" label="" functionLabel="">
+            <pragma name="RESOURCE">
+                <option name="variable" value="sum" positionalBoolean="4"/>
+                <option name="core" value="FAddSub_nodsp"/>
+            </pragma>
+        </directive>
+    </sourceFile>
 </AutoPilot:ProjectResources>
+

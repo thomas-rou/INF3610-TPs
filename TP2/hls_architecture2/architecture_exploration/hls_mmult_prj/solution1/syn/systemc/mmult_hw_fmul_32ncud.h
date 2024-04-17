@@ -1,5 +1,5 @@
 // ==============================================================
-// File generated on Sat Apr 13 17:35:50 -0400 2024
+// File generated on Wed Apr 17 14:44:53 -0400 2024
 // Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
 // SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
 // IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
@@ -26,7 +26,7 @@ SC_MODULE(mmult_hw_fmul_32ncud) {
 
 
 
-    ACMP_fmul<ID, 5, din0_WIDTH, din1_WIDTH, dout_WIDTH> ACMP_fmul_U;
+    ACMP_fmul<ID, 4, din0_WIDTH, din1_WIDTH, dout_WIDTH> ACMP_fmul_U;
 
     SC_CTOR(mmult_hw_fmul_32ncud):  ACMP_fmul_U ("ACMP_fmul_U") {
         ACMP_fmul_U.clk(clk);
