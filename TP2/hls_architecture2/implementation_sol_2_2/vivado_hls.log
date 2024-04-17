@@ -3062,4 +3062,16 @@ Timing met
 
 HLS EXTRACTION: generated C:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture2/implementation_sol_2_2/hls_wrapped_mmult_prj/solution2_2/impl/report/verilog/HLS_accel_export.rpt
 INFO: [Common 17-206] Exiting Vivado at Wed Apr 17 15:59:45 2024...
+[2Kvivado_hls> [12C[2Kvivado_hls> l[13C[2Kvivado_hls> ls[14C
+hls_wrapped_mmult_prj
+mmult.h
+mmult_accel.cpp
+mmult_test.cpp
+readme.txt
+run_hls_script.tcl
+vivado_hls.log
+[2Kvivado_hls> [12C[2Kvivado_hls> c[13C[2Kvivado_hls> cd[14C[2Kvivado_hls> cd [15C[2Kvivado_hls> cd .[16C[2Kvivado_hls> cd ..[17C
+[2Kvivado_hls> [12C[2Kvivado_hls> l[13C[2Kvivado_hls> ls[14C
+architecture_exploration
+implementation_sol_2_2
 [2Kvivado_hls> [12C
