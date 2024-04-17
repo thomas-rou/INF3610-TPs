@@ -15,7 +15,9 @@ set_part {xc7z020clg484-1}
 create_clock -period 10 -name default
 # set_directive_inline "mmult_hw" 
 # Insérez ici vos directives, ces dernieres peuvent etre copiees directement de directives.tcl dans la solution retenue
-
+set_directive_array_reshape -type block -factor 21 -dim 2 "mmult_hw" a
+set_directive_array_reshape -type block -factor 21 -dim 1 "mmult_hw" b
+set_directive_pipeline -II 1 "mmult_hw/L2"
 
 
 
