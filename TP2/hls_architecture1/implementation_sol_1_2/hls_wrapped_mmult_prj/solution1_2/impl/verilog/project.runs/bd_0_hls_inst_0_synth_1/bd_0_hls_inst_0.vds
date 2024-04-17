@@ -1,0 +1,1281 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Wed Apr 17 16:44:32 2024
+# Process ID: 23512
+# Current directory: C:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1
+# Command line: vivado.exe -log bd_0_hls_inst_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source bd_0_hls_inst_0.tcl
+# Log file: C:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1/bd_0_hls_inst_0.vds
+# Journal file: C:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source bd_0_hls_inst_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'.
+WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal path. The IP cache path is more than 80 characters. If you experience issues with IP caching, please consider changing the IP cache to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. 
+Current IP cache path is c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.cache/ip 
+Command: synth_design -top bd_0_hls_inst_0 -part xc7z020clg484-1 -directive sdx_optimization_effort_high -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 20076 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 477.094 ; gain = 103.113
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'bd_0_hls_inst_0' [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/synth/bd_0_hls_inst_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'HLS_accel' [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel.v:12]
+	Parameter ap_ST_fsm_state1 bound to: 9'b000000001 
+	Parameter ap_ST_fsm_pp0_stage0 bound to: 9'b000000010 
+	Parameter ap_ST_fsm_state5 bound to: 9'b000000100 
+	Parameter ap_ST_fsm_pp1_stage0 bound to: 9'b000001000 
+	Parameter ap_ST_fsm_state9 bound to: 9'b000010000 
+	Parameter ap_ST_fsm_pp2_stage0 bound to: 9'b000100000 
+	Parameter ap_ST_fsm_state227 bound to: 9'b001000000 
+	Parameter ap_ST_fsm_pp3_stage0 bound to: 9'b010000000 
+	Parameter ap_ST_fsm_state232 bound to: 9'b100000000 
+	Parameter C_S_AXI_CONTROL_BUS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_CONTROL_BUS_ADDR_WIDTH bound to: 4 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_CONTROL_BUS_WSTRB_WIDTH bound to: 4 - type: integer 
+	Parameter C_S_AXI_WSTRB_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel.v:112]
+INFO: [Synth 8-6157] synthesizing module 'HLS_accel_CONTROL_BUS_s_axi' [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel_CONTROL_BUS_s_axi.v:9]
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 4 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter ADDR_AP_CTRL bound to: 4'b0000 
+	Parameter ADDR_GIE bound to: 4'b0100 
+	Parameter ADDR_IER bound to: 4'b1000 
+	Parameter ADDR_ISR bound to: 4'b1100 
+	Parameter WRIDLE bound to: 2'b00 
+	Parameter WRDATA bound to: 2'b01 
+	Parameter WRRESP bound to: 2'b10 
+	Parameter WRRESET bound to: 2'b11 
+	Parameter RDIDLE bound to: 2'b00 
+	Parameter RDDATA bound to: 2'b01 
+	Parameter RDRESET bound to: 2'b10 
+	Parameter ADDR_BITS bound to: 4 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel_CONTROL_BUS_s_axi.v:189]
+INFO: [Synth 8-6155] done synthesizing module 'HLS_accel_CONTROL_BUS_s_axi' (1#1) [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel_CONTROL_BUS_s_axi.v:9]
+INFO: [Synth 8-6157] synthesizing module 'HLS_accel_a' [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel_a.v:61]
+	Parameter DataWidth bound to: 672 - type: integer 
+	Parameter AddressRange bound to: 84 - type: integer 
+	Parameter AddressWidth bound to: 7 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'HLS_accel_a_ram' [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel_a.v:9]
+	Parameter DWIDTH bound to: 672 - type: integer 
+	Parameter AWIDTH bound to: 7 - type: integer 
+	Parameter MEM_SIZE bound to: 84 - type: integer 
+	Parameter COL_WIDTH bound to: 8 - type: integer 
+	Parameter NUM_COL bound to: 84 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "block" *) [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel_a.v:27]
+INFO: [Synth 8-6155] done synthesizing module 'HLS_accel_a_ram' (2#1) [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel_a.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'HLS_accel_a' (3#1) [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel_a.v:61]
+INFO: [Synth 8-6157] synthesizing module 'HLS_accel_out' [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel_out.v:43]
+	Parameter DataWidth bound to: 32 - type: integer 
+	Parameter AddressRange bound to: 1764 - type: integer 
+	Parameter AddressWidth bound to: 11 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'HLS_accel_out_ram' [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel_out.v:9]
+	Parameter DWIDTH bound to: 32 - type: integer 
+	Parameter AWIDTH bound to: 11 - type: integer 
+	Parameter MEM_SIZE bound to: 1764 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "block" *) [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel_out.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'HLS_accel_out_ram' (4#1) [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel_out.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'HLS_accel_out' (5#1) [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel_out.v:43]
+INFO: [Synth 8-6157] synthesizing module 'HLS_accel_fadd_32bkb' [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel_fadd_32bkb.v:11]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 5 - type: integer 
+	Parameter din0_WIDTH bound to: 32 - type: integer 
+	Parameter din1_WIDTH bound to: 32 - type: integer 
+	Parameter dout_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'HLS_accel_ap_fadd_3_full_dsp_32' [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/ip/HLS_accel_ap_fadd_3_full_dsp_32.vhd:72]
+	Parameter C_XDEVICEFAMILY bound to: virtex7 - type: string 
+	Parameter C_HAS_ADD bound to: 1 - type: integer 
+	Parameter C_HAS_SUBTRACT bound to: 0 - type: integer 
+	Parameter C_HAS_MULTIPLY bound to: 0 - type: integer 
+	Parameter C_HAS_DIVIDE bound to: 0 - type: integer 
+	Parameter C_HAS_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_COMPARE bound to: 0 - type: integer 
+	Parameter C_HAS_FIX_TO_FLT bound to: 0 - type: integer 
+	Parameter C_HAS_FLT_TO_FIX bound to: 0 - type: integer 
+	Parameter C_HAS_FLT_TO_FLT bound to: 0 - type: integer 
+	Parameter C_HAS_RECIP bound to: 0 - type: integer 
+	Parameter C_HAS_RECIP_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_ABSOLUTE bound to: 0 - type: integer 
+	Parameter C_HAS_LOGARITHM bound to: 0 - type: integer 
+	Parameter C_HAS_EXPONENTIAL bound to: 0 - type: integer 
+	Parameter C_HAS_FMA bound to: 0 - type: integer 
+	Parameter C_HAS_FMS bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_A bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_S bound to: 0 - type: integer 
+	Parameter C_A_WIDTH bound to: 32 - type: integer 
+	Parameter C_A_FRACTION_WIDTH bound to: 24 - type: integer 
+	Parameter C_B_WIDTH bound to: 32 - type: integer 
+	Parameter C_B_FRACTION_WIDTH bound to: 24 - type: integer 
+	Parameter C_C_WIDTH bound to: 32 - type: integer 
+	Parameter C_C_FRACTION_WIDTH bound to: 24 - type: integer 
+	Parameter C_RESULT_WIDTH bound to: 32 - type: integer 
+	Parameter C_RESULT_FRACTION_WIDTH bound to: 24 - type: integer 
+	Parameter C_COMPARE_OPERATION bound to: 8 - type: integer 
+	Parameter C_LATENCY bound to: 3 - type: integer 
+	Parameter C_OPTIMIZATION bound to: 1 - type: integer 
+	Parameter C_MULT_USAGE bound to: 2 - type: integer 
+	Parameter C_BRAM_USAGE bound to: 0 - type: integer 
+	Parameter C_RATE bound to: 1 - type: integer 
+	Parameter C_ACCUM_INPUT_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_LSB bound to: -31 - type: integer 
+	Parameter C_HAS_UNDERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_INVALID_OP bound to: 0 - type: integer 
+	Parameter C_HAS_DIVIDE_BY_ZERO bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_INPUT_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACLKEN bound to: 1 - type: integer 
+	Parameter C_HAS_ARESETN bound to: 0 - type: integer 
+	Parameter C_THROTTLE_SCHEME bound to: 3 - type: integer 
+	Parameter C_HAS_A_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_A_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_B bound to: 1 - type: integer 
+	Parameter C_HAS_B_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_B_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_C bound to: 0 - type: integer 
+	Parameter C_HAS_C_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_C_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TLAST bound to: 0 - type: integer 
+	Parameter C_TLAST_RESOLUTION bound to: 0 - type: integer 
+	Parameter C_A_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_A_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_B_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_B_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_C_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_C_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_OPERATION_TDATA_WIDTH bound to: 8 - type: integer 
+	Parameter C_OPERATION_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_RESULT_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_RESULT_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_FIXED_DATA_UNSIGNED bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'floating_point_v7_1_7' declared at 'c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/c63e/hdl/floating_point_v7_1_vh_rfs.vhd:91615' bound to instance 'U0' of component 'floating_point_v7_1_7' [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/ip/HLS_accel_ap_fadd_3_full_dsp_32.vhd:203]
+INFO: [Synth 8-256] done synthesizing module 'HLS_accel_ap_fadd_3_full_dsp_32' (23#1) [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/ip/HLS_accel_ap_fadd_3_full_dsp_32.vhd:72]
+INFO: [Synth 8-6155] done synthesizing module 'HLS_accel_fadd_32bkb' (24#1) [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel_fadd_32bkb.v:11]
+INFO: [Synth 8-6157] synthesizing module 'HLS_accel_fmul_32cud' [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel_fmul_32cud.v:11]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 32 - type: integer 
+	Parameter din1_WIDTH bound to: 32 - type: integer 
+	Parameter dout_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'HLS_accel_ap_fmul_2_max_dsp_32' [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/ip/HLS_accel_ap_fmul_2_max_dsp_32.vhd:72]
+	Parameter C_XDEVICEFAMILY bound to: virtex7 - type: string 
+	Parameter C_HAS_ADD bound to: 0 - type: integer 
+	Parameter C_HAS_SUBTRACT bound to: 0 - type: integer 
+	Parameter C_HAS_MULTIPLY bound to: 1 - type: integer 
+	Parameter C_HAS_DIVIDE bound to: 0 - type: integer 
+	Parameter C_HAS_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_COMPARE bound to: 0 - type: integer 
+	Parameter C_HAS_FIX_TO_FLT bound to: 0 - type: integer 
+	Parameter C_HAS_FLT_TO_FIX bound to: 0 - type: integer 
+	Parameter C_HAS_FLT_TO_FLT bound to: 0 - type: integer 
+	Parameter C_HAS_RECIP bound to: 0 - type: integer 
+	Parameter C_HAS_RECIP_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_ABSOLUTE bound to: 0 - type: integer 
+	Parameter C_HAS_LOGARITHM bound to: 0 - type: integer 
+	Parameter C_HAS_EXPONENTIAL bound to: 0 - type: integer 
+	Parameter C_HAS_FMA bound to: 0 - type: integer 
+	Parameter C_HAS_FMS bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_A bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_S bound to: 0 - type: integer 
+	Parameter C_A_WIDTH bound to: 32 - type: integer 
+	Parameter C_A_FRACTION_WIDTH bound to: 24 - type: integer 
+	Parameter C_B_WIDTH bound to: 32 - type: integer 
+	Parameter C_B_FRACTION_WIDTH bound to: 24 - type: integer 
+	Parameter C_C_WIDTH bound to: 32 - type: integer 
+	Parameter C_C_FRACTION_WIDTH bound to: 24 - type: integer 
+	Parameter C_RESULT_WIDTH bound to: 32 - type: integer 
+	Parameter C_RESULT_FRACTION_WIDTH bound to: 24 - type: integer 
+	Parameter C_COMPARE_OPERATION bound to: 8 - type: integer 
+	Parameter C_LATENCY bound to: 2 - type: integer 
+	Parameter C_OPTIMIZATION bound to: 1 - type: integer 
+	Parameter C_MULT_USAGE bound to: 3 - type: integer 
+	Parameter C_BRAM_USAGE bound to: 0 - type: integer 
+	Parameter C_RATE bound to: 1 - type: integer 
+	Parameter C_ACCUM_INPUT_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_LSB bound to: -31 - type: integer 
+	Parameter C_HAS_UNDERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_INVALID_OP bound to: 0 - type: integer 
+	Parameter C_HAS_DIVIDE_BY_ZERO bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_INPUT_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACLKEN bound to: 1 - type: integer 
+	Parameter C_HAS_ARESETN bound to: 0 - type: integer 
+	Parameter C_THROTTLE_SCHEME bound to: 3 - type: integer 
+	Parameter C_HAS_A_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_A_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_B bound to: 1 - type: integer 
+	Parameter C_HAS_B_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_B_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_C bound to: 0 - type: integer 
+	Parameter C_HAS_C_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_C_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TLAST bound to: 0 - type: integer 
+	Parameter C_TLAST_RESOLUTION bound to: 0 - type: integer 
+	Parameter C_A_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_A_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_B_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_B_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_C_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_C_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_OPERATION_TDATA_WIDTH bound to: 8 - type: integer 
+	Parameter C_OPERATION_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_RESULT_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_RESULT_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_FIXED_DATA_UNSIGNED bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'floating_point_v7_1_7' declared at 'c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/c63e/hdl/floating_point_v7_1_vh_rfs.vhd:91615' bound to instance 'U0' of component 'floating_point_v7_1_7' [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/ip/HLS_accel_ap_fmul_2_max_dsp_32.vhd:203]
+INFO: [Synth 8-256] done synthesizing module 'HLS_accel_ap_fmul_2_max_dsp_32' (32#1) [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/ip/HLS_accel_ap_fmul_2_max_dsp_32.vhd:72]
+INFO: [Synth 8-6155] done synthesizing module 'HLS_accel_fmul_32cud' (33#1) [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel_fmul_32cud.v:11]
+INFO: [Synth 8-6157] synthesizing module 'HLS_accel_mac_muldEe' [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel_mac_muldEe.v:33]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 7 - type: integer 
+	Parameter din1_WIDTH bound to: 6 - type: integer 
+	Parameter din2_WIDTH bound to: 6 - type: integer 
+	Parameter dout_WIDTH bound to: 12 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'HLS_accel_mac_muldEe_DSP48_0' [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel_mac_muldEe.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'HLS_accel_mac_muldEe_DSP48_0' (34#1) [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel_mac_muldEe.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'HLS_accel_mac_muldEe' (35#1) [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel_mac_muldEe.v:33]
+INFO: [Synth 8-6157] synthesizing module 'HLS_accel_mac_muleOg' [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel_mac_muleOg.v:33]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 6 - type: integer 
+	Parameter din1_WIDTH bound to: 7 - type: integer 
+	Parameter din2_WIDTH bound to: 6 - type: integer 
+	Parameter dout_WIDTH bound to: 11 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'HLS_accel_mac_muleOg_DSP48_1' [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel_mac_muleOg.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'HLS_accel_mac_muleOg_DSP48_1' (36#1) [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel_mac_muleOg.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'HLS_accel_mac_muleOg' (37#1) [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel_mac_muleOg.v:33]
+INFO: [Synth 8-6157] synthesizing module 'HLS_accel_mac_mulfYi' [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel_mac_mulfYi.v:33]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 6 - type: integer 
+	Parameter din1_WIDTH bound to: 7 - type: integer 
+	Parameter din2_WIDTH bound to: 6 - type: integer 
+	Parameter dout_WIDTH bound to: 12 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'HLS_accel_mac_mulfYi_DSP48_2' [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel_mac_mulfYi.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'HLS_accel_mac_mulfYi_DSP48_2' (38#1) [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel_mac_mulfYi.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'HLS_accel_mac_mulfYi' (39#1) [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel_mac_mulfYi.v:33]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel.v:16255]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel.v:16257]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel.v:17021]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel.v:17033]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel.v:17035]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel.v:17037]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel.v:17065]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel.v:17101]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel.v:17103]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel.v:17123]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel.v:17125]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel.v:17127]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel.v:17151]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel.v:17177]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel.v:17183]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel.v:17193]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel.v:17197]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel.v:17203]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel.v:17205]
+WARNING: [Synth 8-6014] Unused sequential element OUTPUT_STREAM_dest_V_1_sel_rd_reg was removed.  [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel.v:7784]
+WARNING: [Synth 8-6014] Unused sequential element OUTPUT_STREAM_id_V_1_sel_rd_reg was removed.  [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel.v:7810]
+WARNING: [Synth 8-6014] Unused sequential element OUTPUT_STREAM_keep_V_1_sel_rd_reg was removed.  [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel.v:7836]
+WARNING: [Synth 8-6014] Unused sequential element OUTPUT_STREAM_strb_V_1_sel_rd_reg was removed.  [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel.v:7898]
+WARNING: [Synth 8-6014] Unused sequential element OUTPUT_STREAM_user_V_1_sel_rd_reg was removed.  [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel.v:7924]
+INFO: [Synth 8-6155] done synthesizing module 'HLS_accel' (40#1) [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'bd_0_hls_inst_0' (41#1) [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/synth/bd_0_hls_inst_0.v:58]
+WARNING: [Synth 8-3331] design flt_dec_op_lat has unconnected port DEC_OP_STATE[11]
+WARNING: [Synth 8-3331] design flt_dec_op_lat has unconnected port DEC_OP_STATE[10]
+WARNING: [Synth 8-3331] design flt_dec_op_lat has unconnected port DEC_OP_STATE[9]
+WARNING: [Synth 8-3331] design flt_dec_op_lat has unconnected port DEC_OP_STATE[8]
+WARNING: [Synth 8-3331] design flt_dec_op_lat has unconnected port DIVIDE_BY_ZERO_IN
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized29 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized29 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized29 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized29 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized29 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized72 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized72 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized72 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized72 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized72 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized70 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized70 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized70 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized70 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized70 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized13 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized13 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized13 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized13 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized13 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized3 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized3 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized3 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized3 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized3 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized11 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized11 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized11 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized11 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized11 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized7 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized7 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized7 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized7 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized7 has unconnected port SINIT
+WARNING: [Synth 8-3331] design dsp48e1_wrapper__parameterized3 has unconnected port SCLR
+WARNING: [Synth 8-3331] design flt_round_dsp_opt_full has unconnected port SIGN
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized60 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized60 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized60 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized60 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized60 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized68 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized68 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized68 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized68 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized68 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized49 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized49 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized49 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized49 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized49 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized47 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized47 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized47 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized47 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized47 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized66 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized66 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized66 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized66 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized66 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized33 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized33 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized33 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized64 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized64 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized64 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized31 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized31 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized31 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized62 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized62 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized62 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized17 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized17 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized17 has unconnected port SINIT
+WARNING: [Synth 8-3331] design compare_eq_im__parameterized1 has unconnected port CARRYS_OUT[0]
+WARNING: [Synth 8-3331] design special_detect__parameterized0 has unconnected port A[31]
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized55 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized55 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized55 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized55 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized55 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized15 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized15 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized15 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized15 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized15 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized58 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized58 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized58 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized58 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized58 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized9 has unconnected port CLK
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:25 . Memory (MB): peak = 836.363 ; gain = 462.383
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:28 . Memory (MB): peak = 836.363 ; gain = 462.383
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:28 . Memory (MB): peak = 836.363 ; gain = 462.383
+---------------------------------------------------------------------------------
+INFO: [Netlist 29-17] Analyzing 4620 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/constraints/HLS_accel_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/constraints/HLS_accel_ooc.xdc] for cell 'inst'
+Parsing XDC File [C:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.265 . Memory (MB): peak = 2029.387 ; gain = 1.348
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 126 instances were transformed.
+  FDE => FDRE: 126 instances
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.310 . Memory (MB): peak = 2090.414 ; gain = 1.211
+Constraint Validation Runtime : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 2094.969 ; gain = 65.582
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:34 ; elapsed = 00:01:54 . Memory (MB): peak = 2094.969 ; gain = 1720.988
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:34 ; elapsed = 00:01:54 . Memory (MB): peak = 2094.969 ; gain = 1720.988
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for inst. (constraint file  C:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:34 ; elapsed = 00:01:54 . Memory (MB): peak = 2094.969 ; gain = 1720.988
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'wstate_reg' in module 'HLS_accel_CONTROL_BUS_s_axi'
+INFO: [Synth 8-802] inferred FSM for state register 'rstate_reg' in module 'HLS_accel_CONTROL_BUS_s_axi'
+INFO: [Synth 8-5544] ROM "wnext" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "wnext" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exp_over_int" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ip_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exp_over_int" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ip_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "det_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exp_just_over_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exp_just_over_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "state_int_up" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-5546] ROM "exitcond_flatten8_fu_1039_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond_flatten_fu_828_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond_flatten1_fu_1283_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond_flatten2_fu_2553_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond1_i_i_fu_1301_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond2_i_fu_1057_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond_i_fu_2571_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond4_i_fu_846_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "last_assign_fu_2615_p2" won't be mapped to RAM because it is too sparse
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                             0001 |                               11
+*
+                  WRIDLE |                             0010 |                               00
+                  WRDATA |                             0100 |                               01
+                  WRRESP |                             1000 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'wstate_reg' using encoding 'one-hot' in module 'HLS_accel_CONTROL_BUS_s_axi'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                              001 |                               10
+*
+                  RDIDLE |                              010 |                               00
+                  RDDATA |                              100 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'rstate_reg' using encoding 'one-hot' in module 'HLS_accel_CONTROL_BUS_s_axi'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:46 ; elapsed = 00:02:43 . Memory (MB): peak = 2094.969 ; gain = 1720.988
+---------------------------------------------------------------------------------
+INFO: [Synth 8-223] decloning instance 'HLS_accel_fadd_32bkb:/HLS_accel_ap_fadd_3_full_dsp_32_u/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'HLS_accel_fadd_32bkb:/HLS_accel_ap_fadd_3_full_dsp_32_u/U0/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'HLS_accel_fadd_32bkb:/HLS_accel_ap_fadd_3_full_dsp_32_u/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'HLS_accel_fadd_32bkb:/HLS_accel_ap_fadd_3_full_dsp_32_u/U0/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'HLS_accel_fadd_32bkb:/HLS_accel_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/SUB_DELAY' (delay__parameterized0) to 'HLS_accel_fadd_32bkb:/HLS_accel_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/SUB_ADD_IP_DELAY'
+INFO: [Synth 8-223] decloning instance 'HLS_accel_fmul_32cud:/HLS_accel_ap_fmul_2_max_dsp_32_u/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'HLS_accel_fmul_32cud:/HLS_accel_ap_fmul_2_max_dsp_32_u/U0/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'HLS_accel_fmul_32cud:/HLS_accel_ap_fmul_2_max_dsp_32_u/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'HLS_accel_fmul_32cud:/HLS_accel_ap_fmul_2_max_dsp_32_u/U0/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+
+Report RTL Partitions: 
++------+-----------------------------+------------+----------+
+|      |RTL Partition                |Replication |Instances |
++------+-----------------------------+------------+----------+
+|1     |HLS_accel_a_ram__GB0         |           1|     28636|
+|2     |case__18_HLS_accel_a_ram__GD |           1|     22176|
+|3     |case__19_HLS_accel_a_ram__GD |           1|     32928|
+|4     |HLS_accel__GCB0              |           1|     19250|
+|5     |HLS_accel__GCB1              |           1|     19616|
+|6     |HLS_accel__GCB2              |           1|     23914|
+|7     |HLS_accel__GCB3              |           1|     19293|
+|8     |HLS_accel__GCB4              |           1|     20783|
+|9     |HLS_accel__GCB5              |           1|     26138|
+|10    |HLS_accel__GCB6              |           1|     34073|
+|11    |HLS_accel__GCB7              |           1|     31819|
+|12    |HLS_accel__GCB8              |           1|      9221|
+|13    |HLS_accel__GCB9              |           1|     24083|
+|14    |HLS_accel__GCB10             |           1|     17827|
+|15    |HLS_accel__GCB11             |           1|     13686|
++------+-----------------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5580] Multithreading enabled for synth_design using a maximum of 2 processes.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/COND_DET_A/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/COND_DET_A/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/COND_DET_B/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/COND_DET_B/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/exp_just_over_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/COND_DET_A/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/COND_DET_A/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/COND_DET_B/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/COND_DET_B/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/exp_just_over_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/COND_DET_A/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/COND_DET_A/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/COND_DET_B/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/COND_DET_B/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/exp_just_over_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/COND_DET_A/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/COND_DET_A/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/COND_DET_B/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/COND_DET_B/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/exp_just_over_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/COND_DET_A/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/COND_DET_A/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/COND_DET_B/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/COND_DET_B/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/exp_just_over_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/COND_DET_A/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/COND_DET_A/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/COND_DET_B/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/COND_DET_B/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/exp_over_int" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/ip_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-4471] merging register 'HLS_accel_fmul_32cud_U63/ce_r_reg' into 'HLS_accel_fmul_32cud_U83/ce_r_reg' [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel_fmul_32cud.v:53]
+INFO: [Synth 8-4471] merging register 'HLS_accel_fmul_32cud_U62/ce_r_reg' into 'HLS_accel_fmul_32cud_U83/ce_r_reg' [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel_fmul_32cud.v:53]
+INFO: [Synth 8-4471] merging register 'HLS_accel_fmul_32cud_U55/ce_r_reg' into 'HLS_accel_fmul_32cud_U83/ce_r_reg' [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel_fmul_32cud.v:53]
+INFO: [Synth 8-4471] merging register 'HLS_accel_fmul_32cud_U47/ce_r_reg' into 'HLS_accel_fmul_32cud_U83/ce_r_reg' [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel_fmul_32cud.v:53]
+INFO: [Synth 8-4471] merging register 'HLS_accel_fadd_32bkb_U37/ce_r_reg' into 'HLS_accel_fmul_32cud_U83/ce_r_reg' [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel_fadd_32bkb.v:53]
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/i_3_8/\HLS_accel_fmul_32cud_U83/ce_r_reg )
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_7_viv__41.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_7_viv__41.
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/442e/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/442e/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/442e/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-4471] merging register 'HLS_accel_fadd_32bkb_U29/ce_r_reg' into 'HLS_accel_fadd_32bkb_U28/ce_r_reg' [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel_fadd_32bkb.v:53]
+INFO: [Synth 8-4471] merging register 'HLS_accel_fadd_32bkb_U30/ce_r_reg' into 'HLS_accel_fadd_32bkb_U28/ce_r_reg' [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel_fadd_32bkb.v:53]
+INFO: [Synth 8-4471] merging register 'HLS_accel_fmul_32cud_U54/ce_r_reg' into 'HLS_accel_fadd_32bkb_U28/ce_r_reg' [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel_fmul_32cud.v:53]
+INFO: [Synth 8-4471] merging register 'HLS_accel_fmul_32cud_U70/ce_r_reg' into 'HLS_accel_fadd_32bkb_U28/ce_r_reg' [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel_fmul_32cud.v:53]
+INFO: [Synth 8-4471] merging register 'HLS_accel_fmul_32cud_U77/ce_r_reg' into 'HLS_accel_fadd_32bkb_U28/ce_r_reg' [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel_fmul_32cud.v:53]
+INFO: [Synth 8-4471] merging register 'HLS_accel_fmul_32cud_U78/ce_r_reg' into 'HLS_accel_fadd_32bkb_U28/ce_r_reg' [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel_fmul_32cud.v:53]
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\HLS_accel_fadd_32bkb_U28/ce_r_reg )
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_7_viv__1.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_7_viv__1.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_7_viv__2.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_7_viv__2.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_7_viv__3.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_7_viv__3.
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/442e/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/442e/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/442e/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/442e/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/442e/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-4471] merging register 'HLS_accel_fmul_32cud_U68/ce_r_reg' into 'HLS_accel_fmul_32cud_U69/ce_r_reg' [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel_fmul_32cud.v:53]
+INFO: [Synth 8-4471] merging register 'HLS_accel_fmul_32cud_U61/ce_r_reg' into 'HLS_accel_fmul_32cud_U69/ce_r_reg' [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel_fmul_32cud.v:53]
+INFO: [Synth 8-4471] merging register 'HLS_accel_fmul_32cud_U57/ce_r_reg' into 'HLS_accel_fmul_32cud_U69/ce_r_reg' [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel_fmul_32cud.v:53]
+INFO: [Synth 8-4471] merging register 'HLS_accel_fmul_32cud_U49/ce_r_reg' into 'HLS_accel_fmul_32cud_U69/ce_r_reg' [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel_fmul_32cud.v:53]
+INFO: [Synth 8-4471] merging register 'HLS_accel_fmul_32cud_U48/ce_r_reg' into 'HLS_accel_fmul_32cud_U69/ce_r_reg' [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel_fmul_32cud.v:53]
+INFO: [Synth 8-4471] merging register 'HLS_accel_fmul_32cud_U43/ce_r_reg' into 'HLS_accel_fmul_32cud_U69/ce_r_reg' [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel_fmul_32cud.v:53]
+INFO: [Synth 8-4471] merging register 'HLS_accel_fadd_32bkb_U14/ce_r_reg' into 'HLS_accel_fmul_32cud_U69/ce_r_reg' [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel_fadd_32bkb.v:53]
+INFO: [Synth 8-4471] merging register 'HLS_accel_fadd_32bkb_U13/ce_r_reg' into 'HLS_accel_fmul_32cud_U69/ce_r_reg' [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel_fadd_32bkb.v:53]
+INFO: [Synth 8-4471] merging register 'HLS_accel_fadd_32bkb_U12/ce_r_reg' into 'HLS_accel_fmul_32cud_U69/ce_r_reg' [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel_fadd_32bkb.v:53]
+INFO: [Synth 8-4471] merging register 'HLS_accel_fadd_32bkb_U11/ce_r_reg' into 'HLS_accel_fmul_32cud_U69/ce_r_reg' [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel_fadd_32bkb.v:53]
+INFO: [Synth 8-4471] merging register 'HLS_accel_fadd_32bkb_U10/ce_r_reg' into 'HLS_accel_fmul_32cud_U69/ce_r_reg' [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel_fadd_32bkb.v:53]
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\HLS_accel_fmul_32cud_U69/ce_r_reg )
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_7_viv__4.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_7_viv__4.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_7_viv__5.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_7_viv__5.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_7_viv__6.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_7_viv__6.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_7_viv__7.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_7_viv__7.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_7_viv__8.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_7_viv__8.
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/442e/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/442e/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/442e/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/442e/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-4471] merging register 'HLS_accel_fmul_32cud_U59/ce_r_reg' into 'HLS_accel_fmul_32cud_U60/ce_r_reg' [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel_fmul_32cud.v:53]
+INFO: [Synth 8-4471] merging register 'HLS_accel_fmul_32cud_U56/ce_r_reg' into 'HLS_accel_fmul_32cud_U60/ce_r_reg' [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel_fmul_32cud.v:53]
+INFO: [Synth 8-4471] merging register 'HLS_accel_fmul_32cud_U50/ce_r_reg' into 'HLS_accel_fmul_32cud_U60/ce_r_reg' [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel_fmul_32cud.v:53]
+INFO: [Synth 8-4471] merging register 'HLS_accel_fadd_32bkb_U35/ce_r_reg' into 'HLS_accel_fmul_32cud_U60/ce_r_reg' [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel_fadd_32bkb.v:53]
+INFO: [Synth 8-4471] merging register 'HLS_accel_fadd_32bkb_U34/ce_r_reg' into 'HLS_accel_fmul_32cud_U60/ce_r_reg' [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel_fadd_32bkb.v:53]
+INFO: [Synth 8-4471] merging register 'HLS_accel_fadd_32bkb_U33/ce_r_reg' into 'HLS_accel_fmul_32cud_U60/ce_r_reg' [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel_fadd_32bkb.v:53]
+INFO: [Synth 8-4471] merging register 'HLS_accel_fadd_32bkb_U15/ce_r_reg' into 'HLS_accel_fmul_32cud_U60/ce_r_reg' [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel_fadd_32bkb.v:53]
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\HLS_accel_fmul_32cud_U60/ce_r_reg )
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_7_viv__9.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_7_viv__9.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_7_viv__10.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_7_viv__10.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_7_viv__11.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_7_viv__11.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_7_viv__12.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_7_viv__12.
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/COND_DET_A/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/COND_DET_A/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/COND_DET_B/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/COND_DET_B/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/exp_just_over_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/COND_DET_A/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/COND_DET_A/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/COND_DET_B/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/COND_DET_B/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/exp_just_over_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/COND_DET_A/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/COND_DET_A/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/COND_DET_B/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/COND_DET_B/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/exp_just_over_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/COND_DET_A/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/COND_DET_A/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/COND_DET_B/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/COND_DET_B/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/exp_just_over_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/COND_DET_A/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/COND_DET_A/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/COND_DET_B/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/COND_DET_B/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/exp_just_over_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/COND_DET_A/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Common 17-14] Message 'Synth 8-5546' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Common 17-14] Message 'Synth 8-5546' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/442e/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-4471] merging register 'HLS_accel_fmul_32cud_U80/ce_r_reg' into 'HLS_accel_fmul_32cud_U81/ce_r_reg' [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel_fmul_32cud.v:53]
+INFO: [Synth 8-4471] merging register 'HLS_accel_fmul_32cud_U76/ce_r_reg' into 'HLS_accel_fmul_32cud_U81/ce_r_reg' [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel_fmul_32cud.v:53]
+INFO: [Synth 8-4471] merging register 'HLS_accel_fmul_32cud_U75/ce_r_reg' into 'HLS_accel_fmul_32cud_U81/ce_r_reg' [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel_fmul_32cud.v:53]
+INFO: [Synth 8-4471] merging register 'HLS_accel_fmul_32cud_U74/ce_r_reg' into 'HLS_accel_fmul_32cud_U81/ce_r_reg' [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel_fmul_32cud.v:53]
+INFO: [Synth 8-4471] merging register 'HLS_accel_fmul_32cud_U73/ce_r_reg' into 'HLS_accel_fmul_32cud_U81/ce_r_reg' [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel_fmul_32cud.v:53]
+INFO: [Synth 8-4471] merging register 'HLS_accel_fmul_32cud_U67/ce_r_reg' into 'HLS_accel_fmul_32cud_U81/ce_r_reg' [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel_fmul_32cud.v:53]
+INFO: [Synth 8-4471] merging register 'HLS_accel_fadd_32bkb_U36/ce_r_reg' into 'HLS_accel_fmul_32cud_U81/ce_r_reg' [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel_fadd_32bkb.v:53]
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\HLS_accel_fmul_32cud_U81/ce_r_reg )
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_7_viv__13.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_7_viv__13.
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/442e/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/442e/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/442e/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/442e/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/442e/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-4471] merging register 'HLS_accel_fadd_32bkb_U26/ce_r_reg' into 'HLS_accel_fadd_32bkb_U27/ce_r_reg' [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel_fadd_32bkb.v:53]
+INFO: [Synth 8-4471] merging register 'HLS_accel_fadd_32bkb_U25/ce_r_reg' into 'HLS_accel_fadd_32bkb_U27/ce_r_reg' [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel_fadd_32bkb.v:53]
+INFO: [Synth 8-4471] merging register 'HLS_accel_fadd_32bkb_U24/ce_r_reg' into 'HLS_accel_fadd_32bkb_U27/ce_r_reg' [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel_fadd_32bkb.v:53]
+INFO: [Synth 8-4471] merging register 'HLS_accel_fadd_32bkb_U23/ce_r_reg' into 'HLS_accel_fadd_32bkb_U27/ce_r_reg' [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel_fadd_32bkb.v:53]
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\HLS_accel_fadd_32bkb_U27/ce_r_reg )
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_7_viv__14.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_7_viv__14.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_7_viv__15.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_7_viv__15.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_7_viv__16.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_7_viv__16.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_7_viv__17.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_7_viv__17.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_7_viv__18.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_7_viv__18.
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/442e/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/442e/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/442e/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/442e/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/442e/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/442e/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-4471] merging register 'HLS_accel_fmul_32cud_U53/ce_r_reg' into 'HLS_accel_fmul_32cud_U58/ce_r_reg' [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel_fmul_32cud.v:53]
+INFO: [Synth 8-4471] merging register 'HLS_accel_fmul_32cud_U52/ce_r_reg' into 'HLS_accel_fmul_32cud_U58/ce_r_reg' [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel_fmul_32cud.v:53]
+INFO: [Synth 8-4471] merging register 'HLS_accel_fadd_32bkb_U32/ce_r_reg' into 'HLS_accel_fmul_32cud_U58/ce_r_reg' [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel_fadd_32bkb.v:53]
+INFO: [Synth 8-4471] merging register 'HLS_accel_fadd_32bkb_U31/ce_r_reg' into 'HLS_accel_fmul_32cud_U58/ce_r_reg' [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel_fadd_32bkb.v:53]
+INFO: [Synth 8-4471] merging register 'HLS_accel_fadd_32bkb_U22/ce_r_reg' into 'HLS_accel_fmul_32cud_U58/ce_r_reg' [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel_fadd_32bkb.v:53]
+INFO: [Synth 8-4471] merging register 'HLS_accel_fadd_32bkb_U21/ce_r_reg' into 'HLS_accel_fmul_32cud_U58/ce_r_reg' [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel_fadd_32bkb.v:53]
+INFO: [Synth 8-4471] merging register 'HLS_accel_fadd_32bkb_U20/ce_r_reg' into 'HLS_accel_fmul_32cud_U58/ce_r_reg' [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel_fadd_32bkb.v:53]
+INFO: [Synth 8-4471] merging register 'HLS_accel_fadd_32bkb_U19/ce_r_reg' into 'HLS_accel_fmul_32cud_U58/ce_r_reg' [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel_fadd_32bkb.v:53]
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\HLS_accel_fmul_32cud_U58/ce_r_reg )
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_7_viv__19.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_7_viv__19.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_7_viv__20.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_7_viv__20.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_7_viv__21.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_7_viv__21.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_7_viv__22.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_7_viv__22.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_7_viv__23.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_7_viv__23.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_7_viv__24.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_7_viv__24.
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/442e/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/442e/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/442e/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/442e/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/442e/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Common 17-14] Message 'Synth 8-5546' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/442e/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/442e/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/442e/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/442e/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/442e/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/442e/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/442e/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-4471] merging register 'HLS_accel_fmul_32cud_U72/ce_r_reg' into 'HLS_accel_fmul_32cud_U79/ce_r_reg' [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel_fmul_32cud.v:53]
+INFO: [Synth 8-4471] merging register 'HLS_accel_fmul_32cud_U71/ce_r_reg' into 'HLS_accel_fmul_32cud_U79/ce_r_reg' [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel_fmul_32cud.v:53]
+INFO: [Synth 8-4471] merging register 'HLS_accel_fmul_32cud_U66/ce_r_reg' into 'HLS_accel_fmul_32cud_U79/ce_r_reg' [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel_fmul_32cud.v:53]
+INFO: [Synth 8-4471] merging register 'HLS_accel_fmul_32cud_U65/ce_r_reg' into 'HLS_accel_fmul_32cud_U79/ce_r_reg' [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel_fmul_32cud.v:53]
+INFO: [Synth 8-4471] merging register 'HLS_accel_fmul_32cud_U64/ce_r_reg' into 'HLS_accel_fmul_32cud_U79/ce_r_reg' [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel_fmul_32cud.v:53]
+INFO: [Synth 8-4471] merging register 'HLS_accel_fmul_32cud_U51/ce_r_reg' into 'HLS_accel_fmul_32cud_U79/ce_r_reg' [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel_fmul_32cud.v:53]
+INFO: [Synth 8-4471] merging register 'HLS_accel_fmul_32cud_U46/ce_r_reg' into 'HLS_accel_fmul_32cud_U79/ce_r_reg' [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel_fmul_32cud.v:53]
+INFO: [Synth 8-4471] merging register 'HLS_accel_fmul_32cud_U45/ce_r_reg' into 'HLS_accel_fmul_32cud_U79/ce_r_reg' [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel_fmul_32cud.v:53]
+INFO: [Synth 8-4471] merging register 'HLS_accel_fmul_32cud_U44/ce_r_reg' into 'HLS_accel_fmul_32cud_U79/ce_r_reg' [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel_fmul_32cud.v:53]
+INFO: [Synth 8-4471] merging register 'HLS_accel_fadd_32bkb_U18/ce_r_reg' into 'HLS_accel_fmul_32cud_U79/ce_r_reg' [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel_fadd_32bkb.v:53]
+INFO: [Synth 8-4471] merging register 'HLS_accel_fadd_32bkb_U17/ce_r_reg' into 'HLS_accel_fmul_32cud_U79/ce_r_reg' [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel_fadd_32bkb.v:53]
+INFO: [Synth 8-4471] merging register 'HLS_accel_fadd_32bkb_U16/ce_r_reg' into 'HLS_accel_fmul_32cud_U79/ce_r_reg' [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel_fadd_32bkb.v:53]
+INFO: [Synth 8-4471] merging register 'HLS_accel_fadd_32bkb_U9/ce_r_reg' into 'HLS_accel_fmul_32cud_U79/ce_r_reg' [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel_fadd_32bkb.v:53]
+INFO: [Synth 8-4471] merging register 'HLS_accel_fadd_32bkb_U8/ce_r_reg' into 'HLS_accel_fmul_32cud_U79/ce_r_reg' [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel_fadd_32bkb.v:53]
+INFO: [Synth 8-4471] merging register 'HLS_accel_fadd_32bkb_U7/ce_r_reg' into 'HLS_accel_fmul_32cud_U79/ce_r_reg' [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel_fadd_32bkb.v:53]
+INFO: [Synth 8-4471] merging register 'HLS_accel_fadd_32bkb_U6/ce_r_reg' into 'HLS_accel_fmul_32cud_U79/ce_r_reg' [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel_fadd_32bkb.v:53]
+INFO: [Synth 8-4471] merging register 'HLS_accel_fadd_32bkb_U5/ce_r_reg' into 'HLS_accel_fmul_32cud_U79/ce_r_reg' [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel_fadd_32bkb.v:53]
+INFO: [Synth 8-4471] merging register 'HLS_accel_fadd_32bkb_U4/ce_r_reg' into 'HLS_accel_fmul_32cud_U79/ce_r_reg' [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel_fadd_32bkb.v:53]
+INFO: [Synth 8-4471] merging register 'HLS_accel_fadd_32bkb_U3/ce_r_reg' into 'HLS_accel_fmul_32cud_U79/ce_r_reg' [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel_fadd_32bkb.v:53]
+INFO: [Synth 8-4471] merging register 'HLS_accel_fadd_32bkb_U2/ce_r_reg' into 'HLS_accel_fmul_32cud_U79/ce_r_reg' [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel_fadd_32bkb.v:53]
+INFO: [Synth 8-4471] merging register 'HLS_accel_fadd_32bkb_U1/ce_r_reg' into 'HLS_accel_fmul_32cud_U79/ce_r_reg' [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel_fadd_32bkb.v:53]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\HLS_accel_fadd_32bkb_U1/din1_buf1_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\HLS_accel_fadd_32bkb_U1/din1_buf1_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\HLS_accel_fadd_32bkb_U1/din1_buf1_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\HLS_accel_fadd_32bkb_U1/din1_buf1_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\HLS_accel_fadd_32bkb_U1/din1_buf1_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\HLS_accel_fadd_32bkb_U1/din1_buf1_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\HLS_accel_fadd_32bkb_U1/din1_buf1_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\HLS_accel_fadd_32bkb_U1/din1_buf1_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\HLS_accel_fadd_32bkb_U1/din1_buf1_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\HLS_accel_fadd_32bkb_U1/din1_buf1_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\HLS_accel_fadd_32bkb_U1/din1_buf1_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\HLS_accel_fadd_32bkb_U1/din1_buf1_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\HLS_accel_fadd_32bkb_U1/din1_buf1_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\HLS_accel_fadd_32bkb_U1/din1_buf1_reg[13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\HLS_accel_fadd_32bkb_U1/din1_buf1_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\HLS_accel_fadd_32bkb_U1/din1_buf1_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\HLS_accel_fadd_32bkb_U1/din1_buf1_reg[16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\HLS_accel_fadd_32bkb_U1/din1_buf1_reg[17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\HLS_accel_fadd_32bkb_U1/din1_buf1_reg[18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\HLS_accel_fadd_32bkb_U1/din1_buf1_reg[19] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\HLS_accel_fadd_32bkb_U1/din1_buf1_reg[20] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\HLS_accel_fadd_32bkb_U1/din1_buf1_reg[21] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\HLS_accel_fadd_32bkb_U1/din1_buf1_reg[22] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\HLS_accel_fadd_32bkb_U1/din1_buf1_reg[28] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\HLS_accel_fadd_32bkb_U1/din1_buf1_reg[29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\HLS_accel_fadd_32bkb_U1/din1_buf1_reg[30] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\HLS_accel_fadd_32bkb_U1/din1_buf1_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\HLS_accel_fadd_32bkb_U1/din1_buf1_reg[27] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\HLS_accel_fadd_32bkb_U1/din1_buf1_reg[26] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\HLS_accel_fadd_32bkb_U1/din1_buf1_reg[25] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\HLS_accel_fadd_32bkb_U1/din1_buf1_reg[23] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\HLS_accel_fadd_32bkb_U1/din1_buf1_reg[24] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\HLS_accel_fmul_32cud_U79/ce_r_reg )
+INFO: [Synth 8-3886] merging instance 'HLS_accel_fadd_32bkb_U1/HLS_accel_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/B_SIGN_DELAY/i_pipe/opt_has_pipe.first_q_reg[0]' (FDE) to 'HLS_accel_fadd_32bkb_U1/HLS_accel_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/B_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg[7]'
+INFO: [Synth 8-3886] merging instance 'HLS_accel_fadd_32bkb_U1/HLS_accel_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/A_SIGN_DELAY/i_pipe/opt_has_pipe.first_q_reg[0]' (FDE) to 'HLS_accel_fadd_32bkb_U1/HLS_accel_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/SUB_DELAY/i_pipe/opt_has_pipe.first_q_reg[0]'
+INFO: [Synth 8-3886] merging instance 'HLS_accel_fadd_32bkb_U1/HLS_accel_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/B_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg[7]' (FDE) to 'HLS_accel_fadd_32bkb_U1/HLS_accel_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/B_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg[6]'
+INFO: [Synth 8-3886] merging instance 'HLS_accel_fadd_32bkb_U1/HLS_accel_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/B_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg[6]' (FDE) to 'HLS_accel_fadd_32bkb_U1/HLS_accel_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/B_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg[5]'
+INFO: [Synth 8-3886] merging instance 'HLS_accel_fadd_32bkb_U1/HLS_accel_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/B_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg[5]' (FDE) to 'HLS_accel_fadd_32bkb_U1/HLS_accel_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/B_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg[4]'
+INFO: [Synth 8-3886] merging instance 'HLS_accel_fadd_32bkb_U1/HLS_accel_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/B_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg[4]' (FDE) to 'HLS_accel_fadd_32bkb_U1/HLS_accel_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/B_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg[3]'
+INFO: [Synth 8-3886] merging instance 'HLS_accel_fadd_32bkb_U1/HLS_accel_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/B_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg[3]' (FDE) to 'HLS_accel_fadd_32bkb_U1/HLS_accel_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/B_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg[2]'
+INFO: [Synth 8-3886] merging instance 'HLS_accel_fadd_32bkb_U1/HLS_accel_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/B_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg[2]' (FDE) to 'HLS_accel_fadd_32bkb_U1/HLS_accel_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/B_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg[1]'
+INFO: [Synth 8-3886] merging instance 'HLS_accel_fadd_32bkb_U1/HLS_accel_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/B_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg[0]' (FDE) to 'HLS_accel_fadd_32bkb_U1/HLS_accel_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/B_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg[1]'
+INFO: [Synth 8-3886] merging instance 'HLS_accel_fadd_32bkb_U1/HLS_accel_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/B_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg[1]' (FDE) to 'HLS_accel_fadd_32bkb_U1/HLS_accel_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[22]'
+INFO: [Synth 8-3886] merging instance 'HLS_accel_fadd_32bkb_U1/HLS_accel_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[14]' (FDE) to 'HLS_accel_fadd_32bkb_U1/HLS_accel_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[22]'
+INFO: [Synth 8-3886] merging instance 'HLS_accel_fadd_32bkb_U1/HLS_accel_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[15]' (FDE) to 'HLS_accel_fadd_32bkb_U1/HLS_accel_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[22]'
+INFO: [Synth 8-3886] merging instance 'HLS_accel_fadd_32bkb_U1/HLS_accel_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[16]' (FDE) to 'HLS_accel_fadd_32bkb_U1/HLS_accel_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[22]'
+INFO: [Synth 8-3886] merging instance 'HLS_accel_fadd_32bkb_U1/HLS_accel_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[17]' (FDE) to 'HLS_accel_fadd_32bkb_U1/HLS_accel_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[22]'
+INFO: [Synth 8-3886] merging instance 'HLS_accel_fadd_32bkb_U1/HLS_accel_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[18]' (FDE) to 'HLS_accel_fadd_32bkb_U1/HLS_accel_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[22]'
+INFO: [Synth 8-3886] merging instance 'HLS_accel_fadd_32bkb_U1/HLS_accel_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[19]' (FDE) to 'HLS_accel_fadd_32bkb_U1/HLS_accel_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[22]'
+INFO: [Synth 8-3886] merging instance 'HLS_accel_fadd_32bkb_U1/HLS_accel_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[20]' (FDE) to 'HLS_accel_fadd_32bkb_U1/HLS_accel_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[22]'
+INFO: [Synth 8-3886] merging instance 'HLS_accel_fadd_32bkb_U1/HLS_accel_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[21]' (FDE) to 'HLS_accel_fadd_32bkb_U1/HLS_accel_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[22]'
+INFO: [Synth 8-3886] merging instance 'HLS_accel_fadd_32bkb_U1/HLS_accel_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[22]' (FDE) to 'HLS_accel_fadd_32bkb_U1/HLS_accel_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[13]'
+INFO: [Synth 8-3886] merging instance 'HLS_accel_fadd_32bkb_U1/HLS_accel_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[1]' (FDE) to 'HLS_accel_fadd_32bkb_U1/HLS_accel_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[13]'
+INFO: [Synth 8-3886] merging instance 'HLS_accel_fadd_32bkb_U1/HLS_accel_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[0]' (FDE) to 'HLS_accel_fadd_32bkb_U1/HLS_accel_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[13]'
+INFO: [Synth 8-3886] merging instance 'HLS_accel_fadd_32bkb_U1/HLS_accel_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[3]' (FDE) to 'HLS_accel_fadd_32bkb_U1/HLS_accel_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[13]'
+INFO: [Synth 8-3886] merging instance 'HLS_accel_fadd_32bkb_U1/HLS_accel_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[2]' (FDE) to 'HLS_accel_fadd_32bkb_U1/HLS_accel_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[13]'
+INFO: [Synth 8-3886] merging instance 'HLS_accel_fadd_32bkb_U1/HLS_accel_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[5]' (FDE) to 'HLS_accel_fadd_32bkb_U1/HLS_accel_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[13]'
+INFO: [Synth 8-3886] merging instance 'HLS_accel_fadd_32bkb_U1/HLS_accel_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[4]' (FDE) to 'HLS_accel_fadd_32bkb_U1/HLS_accel_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[13]'
+INFO: [Synth 8-3886] merging instance 'HLS_accel_fadd_32bkb_U1/HLS_accel_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[7]' (FDE) to 'HLS_accel_fadd_32bkb_U1/HLS_accel_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[13]'
+INFO: [Synth 8-3886] merging instance 'HLS_accel_fadd_32bkb_U1/HLS_accel_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[6]' (FDE) to 'HLS_accel_fadd_32bkb_U1/HLS_accel_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[13]'
+INFO: [Synth 8-3886] merging instance 'HLS_accel_fadd_32bkb_U1/HLS_accel_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[9]' (FDE) to 'HLS_accel_fadd_32bkb_U1/HLS_accel_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[13]'
+INFO: [Synth 8-3886] merging instance 'HLS_accel_fadd_32bkb_U1/HLS_accel_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[8]' (FDE) to 'HLS_accel_fadd_32bkb_U1/HLS_accel_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[13]'
+INFO: [Synth 8-3886] merging instance 'HLS_accel_fadd_32bkb_U1/HLS_accel_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[11]' (FDE) to 'HLS_accel_fadd_32bkb_U1/HLS_accel_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[13]'
+INFO: [Synth 8-3886] merging instance 'HLS_accel_fadd_32bkb_U1/HLS_accel_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[10]' (FDE) to 'HLS_accel_fadd_32bkb_U1/HLS_accel_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[13]'
+INFO: [Synth 8-3886] merging instance 'HLS_accel_fadd_32bkb_U1/HLS_accel_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[13]' (FDE) to 'HLS_accel_fadd_32bkb_U1/HLS_accel_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[12]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\HLS_accel_fadd_32bkb_U1/HLS_accel_ap_fadd_3_full_dsp_32_u/U0 /i_synth/\ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[12] )
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_7_viv__25.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_7_viv__25.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_7_viv__26.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_7_viv__26.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_7_viv__27.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_7_viv__27.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_7_viv__28.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_7_viv__28.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_7_viv__29.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_7_viv__29.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_7_viv__30.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_7_viv__30.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_7_viv__31.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_7_viv__31.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_7_viv__32.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_7_viv__32.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_7_viv__33.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_7_viv__33.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_7_viv__34.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_7_viv__34.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_7_viv__35.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_7_viv__35.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_7_viv__36.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_7_viv__36.
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/442e/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/442e/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/442e/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/442e/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-4471] merging register 'HLS_accel_fadd_32bkb_U39/ce_r_reg' into 'HLS_accel_fadd_32bkb_U38/ce_r_reg' [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel_fadd_32bkb.v:53]
+INFO: [Synth 8-4471] merging register 'HLS_accel_fadd_32bkb_U40/ce_r_reg' into 'HLS_accel_fadd_32bkb_U38/ce_r_reg' [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel_fadd_32bkb.v:53]
+INFO: [Synth 8-4471] merging register 'HLS_accel_fadd_32bkb_U41/ce_r_reg' into 'HLS_accel_fadd_32bkb_U38/ce_r_reg' [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel_fadd_32bkb.v:53]
+INFO: [Synth 8-4471] merging register 'HLS_accel_fmul_32cud_U82/ce_r_reg' into 'HLS_accel_fadd_32bkb_U38/ce_r_reg' [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel_fmul_32cud.v:53]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\HLS_accel_fadd_32bkb_U38/ce_r_reg )
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_7_viv__37.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_7_viv__37.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_7_viv__38.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_7_viv__38.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_7_viv__39.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_7_viv__39.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_7_viv__40.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_7_viv__40.
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/442e/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-4471] merging register 'HLS_accel_fadd_32bkb_U42/ce_r_reg' into 'HLS_accel_fmul_32cud_U84/ce_r_reg' [c:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/0385/hdl/verilog/HLS_accel_fadd_32bkb.v:53]
+DSP Report: Generating DSP HLS_accel_mac_muldEe_U85/HLS_accel_mac_muldEe_DSP48_0_U/p, operation Mode is: C'+(A:0x2a)*B''.
+DSP Report: register B is absorbed into DSP HLS_accel_mac_muldEe_U85/HLS_accel_mac_muldEe_DSP48_0_U/p.
+DSP Report: register B is absorbed into DSP HLS_accel_mac_muldEe_U85/HLS_accel_mac_muldEe_DSP48_0_U/p.
+DSP Report: register C is absorbed into DSP HLS_accel_mac_muldEe_U85/HLS_accel_mac_muldEe_DSP48_0_U/p.
+DSP Report: operator HLS_accel_mac_muldEe_U85/HLS_accel_mac_muldEe_DSP48_0_U/p is absorbed into DSP HLS_accel_mac_muldEe_U85/HLS_accel_mac_muldEe_DSP48_0_U/p.
+DSP Report: operator HLS_accel_mac_muldEe_U85/HLS_accel_mac_muldEe_DSP48_0_U/m is absorbed into DSP HLS_accel_mac_muldEe_U85/HLS_accel_mac_muldEe_DSP48_0_U/p.
+DSP Report: Generating DSP HLS_accel_mac_mulfYi_U87/HLS_accel_mac_mulfYi_DSP48_2_U/p, operation Mode is: C'+A2*(B:0x2a).
+DSP Report: register A is absorbed into DSP HLS_accel_mac_mulfYi_U87/HLS_accel_mac_mulfYi_DSP48_2_U/p.
+DSP Report: register C is absorbed into DSP HLS_accel_mac_mulfYi_U87/HLS_accel_mac_mulfYi_DSP48_2_U/p.
+DSP Report: operator HLS_accel_mac_mulfYi_U87/HLS_accel_mac_mulfYi_DSP48_2_U/p is absorbed into DSP HLS_accel_mac_mulfYi_U87/HLS_accel_mac_mulfYi_DSP48_2_U/p.
+DSP Report: operator HLS_accel_mac_mulfYi_U87/HLS_accel_mac_mulfYi_DSP48_2_U/m is absorbed into DSP HLS_accel_mac_mulfYi_U87/HLS_accel_mac_mulfYi_DSP48_2_U/p.
+WARNING: [Synth 8-3917] design HLS_accel__GCB11 has port s_axi_CONTROL_BUS_BRESP[1] driven by constant 0
+WARNING: [Synth 8-3917] design HLS_accel__GCB11 has port s_axi_CONTROL_BUS_BRESP[0] driven by constant 0
+WARNING: [Synth 8-3917] design HLS_accel__GCB11 has port s_axi_CONTROL_BUS_RRESP[1] driven by constant 0
+WARNING: [Synth 8-3917] design HLS_accel__GCB11 has port s_axi_CONTROL_BUS_RRESP[0] driven by constant 0
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\HLS_accel_fmul_32cud_U84/ce_r_reg )
+INFO: [Synth 8-3886] merging instance 'HLS_accel_CONTROL_BUS_s_axi_U/rdata_reg[4]' (FDE) to 'HLS_accel_CONTROL_BUS_s_axi_U/rdata_reg[5]'
+INFO: [Synth 8-3886] merging instance 'HLS_accel_CONTROL_BUS_s_axi_U/rdata_reg[5]' (FDE) to 'HLS_accel_CONTROL_BUS_s_axi_U/rdata_reg[6]'
+INFO: [Synth 8-3886] merging instance 'HLS_accel_CONTROL_BUS_s_axi_U/rdata_reg[6]' (FDE) to 'HLS_accel_CONTROL_BUS_s_axi_U/rdata_reg[8]'
+INFO: [Synth 8-3886] merging instance 'HLS_accel_CONTROL_BUS_s_axi_U/rdata_reg[8]' (FDE) to 'HLS_accel_CONTROL_BUS_s_axi_U/rdata_reg[9]'
+INFO: [Synth 8-3886] merging instance 'HLS_accel_CONTROL_BUS_s_axi_U/rdata_reg[9]' (FDE) to 'HLS_accel_CONTROL_BUS_s_axi_U/rdata_reg[10]'
+INFO: [Synth 8-3886] merging instance 'HLS_accel_CONTROL_BUS_s_axi_U/rdata_reg[10]' (FDE) to 'HLS_accel_CONTROL_BUS_s_axi_U/rdata_reg[11]'
+INFO: [Synth 8-3886] merging instance 'HLS_accel_CONTROL_BUS_s_axi_U/rdata_reg[11]' (FDE) to 'HLS_accel_CONTROL_BUS_s_axi_U/rdata_reg[12]'
+INFO: [Synth 8-3886] merging instance 'HLS_accel_CONTROL_BUS_s_axi_U/rdata_reg[12]' (FDE) to 'HLS_accel_CONTROL_BUS_s_axi_U/rdata_reg[13]'
+INFO: [Synth 8-3886] merging instance 'HLS_accel_CONTROL_BUS_s_axi_U/rdata_reg[13]' (FDE) to 'HLS_accel_CONTROL_BUS_s_axi_U/rdata_reg[14]'
+INFO: [Synth 8-3886] merging instance 'HLS_accel_CONTROL_BUS_s_axi_U/rdata_reg[14]' (FDE) to 'HLS_accel_CONTROL_BUS_s_axi_U/rdata_reg[15]'
+INFO: [Synth 8-3886] merging instance 'HLS_accel_CONTROL_BUS_s_axi_U/rdata_reg[15]' (FDE) to 'HLS_accel_CONTROL_BUS_s_axi_U/rdata_reg[16]'
+INFO: [Synth 8-3886] merging instance 'HLS_accel_CONTROL_BUS_s_axi_U/rdata_reg[16]' (FDE) to 'HLS_accel_CONTROL_BUS_s_axi_U/rdata_reg[17]'
+INFO: [Synth 8-3886] merging instance 'HLS_accel_CONTROL_BUS_s_axi_U/rdata_reg[17]' (FDE) to 'HLS_accel_CONTROL_BUS_s_axi_U/rdata_reg[18]'
+INFO: [Synth 8-3886] merging instance 'HLS_accel_CONTROL_BUS_s_axi_U/rdata_reg[18]' (FDE) to 'HLS_accel_CONTROL_BUS_s_axi_U/rdata_reg[19]'
+INFO: [Synth 8-3886] merging instance 'HLS_accel_CONTROL_BUS_s_axi_U/rdata_reg[19]' (FDE) to 'HLS_accel_CONTROL_BUS_s_axi_U/rdata_reg[20]'
+INFO: [Synth 8-3886] merging instance 'HLS_accel_CONTROL_BUS_s_axi_U/rdata_reg[20]' (FDE) to 'HLS_accel_CONTROL_BUS_s_axi_U/rdata_reg[21]'
+INFO: [Synth 8-3886] merging instance 'HLS_accel_CONTROL_BUS_s_axi_U/rdata_reg[21]' (FDE) to 'HLS_accel_CONTROL_BUS_s_axi_U/rdata_reg[22]'
+INFO: [Synth 8-3886] merging instance 'HLS_accel_CONTROL_BUS_s_axi_U/rdata_reg[22]' (FDE) to 'HLS_accel_CONTROL_BUS_s_axi_U/rdata_reg[23]'
+INFO: [Synth 8-3886] merging instance 'HLS_accel_CONTROL_BUS_s_axi_U/rdata_reg[23]' (FDE) to 'HLS_accel_CONTROL_BUS_s_axi_U/rdata_reg[24]'
+INFO: [Synth 8-3886] merging instance 'HLS_accel_CONTROL_BUS_s_axi_U/rdata_reg[24]' (FDE) to 'HLS_accel_CONTROL_BUS_s_axi_U/rdata_reg[25]'
+INFO: [Synth 8-3886] merging instance 'HLS_accel_CONTROL_BUS_s_axi_U/rdata_reg[25]' (FDE) to 'HLS_accel_CONTROL_BUS_s_axi_U/rdata_reg[26]'
+INFO: [Synth 8-3886] merging instance 'HLS_accel_CONTROL_BUS_s_axi_U/rdata_reg[26]' (FDE) to 'HLS_accel_CONTROL_BUS_s_axi_U/rdata_reg[27]'
+INFO: [Synth 8-3886] merging instance 'HLS_accel_CONTROL_BUS_s_axi_U/rdata_reg[27]' (FDE) to 'HLS_accel_CONTROL_BUS_s_axi_U/rdata_reg[28]'
+INFO: [Synth 8-3886] merging instance 'HLS_accel_CONTROL_BUS_s_axi_U/rdata_reg[28]' (FDE) to 'HLS_accel_CONTROL_BUS_s_axi_U/rdata_reg[29]'
+INFO: [Synth 8-3886] merging instance 'HLS_accel_CONTROL_BUS_s_axi_U/rdata_reg[29]' (FDE) to 'HLS_accel_CONTROL_BUS_s_axi_U/rdata_reg[30]'
+INFO: [Synth 8-3886] merging instance 'HLS_accel_CONTROL_BUS_s_axi_U/rdata_reg[30]' (FDE) to 'HLS_accel_CONTROL_BUS_s_axi_U/rdata_reg[31]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\HLS_accel_CONTROL_BUS_s_axi_U/rdata_reg[31] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\a_load_2_mid2_reg_2759_pp2_iter4_reg_reg[0] )
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_7_viv.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_7_viv.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:14 ; elapsed = 00:04:25 . Memory (MB): peak = 2094.969 ; gain = 1720.988
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6837] The timing for the instance HLS_accel_a_ram__GB0:/i_3_0/genblk1[1].ram_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance HLS_accel_a_ram__GB0:/i_3_0/genblk1[1].ram_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance HLS_accel_a_ram__GB0:/i_3_0/genblk1[1].ram_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance HLS_accel_a_ram__GB0:/i_3_0/genblk1[1].ram_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance HLS_accel_a_ram__GB0:/i_3_0/genblk1[1].ram_reg_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance HLS_accel_a_ram__GB0:/i_3_0/genblk1[1].ram_reg_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance HLS_accel_a_ram__GB0:/i_3_0/genblk1[1].ram_reg_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance HLS_accel_a_ram__GB0:/i_3_0/genblk1[1].ram_reg_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance HLS_accel_a_ram__GB0:/i_3_0/genblk1[1].ram_reg_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance HLS_accel_a_ram__GB0:/i_3_0/genblk1[1].ram_reg_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance HLS_accel_a_ram__GB0:/i_3_0/genblk1[1].ram_reg_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance HLS_accel_a_ram__GB0:/i_3_0/genblk1[1].ram_reg_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance HLS_accel_a_ram__GB0:/i_3_0/genblk1[1].ram_reg_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance HLS_accel_a_ram__GB0:/i_3_0/genblk1[1].ram_reg_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance HLS_accel_a_ram__GB0:/i_3_0/genblk1[1].ram_reg_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance HLS_accel_a_ram__GB0:/i_3_0/genblk1[1].ram_reg_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance HLS_accel_a_ram__GB0:/i_3_0/genblk1[1].ram_reg_8 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance HLS_accel_a_ram__GB0:/i_3_0/genblk1[1].ram_reg_8 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance HLS_accel_a_ram__GB0:/i_3_0/genblk1[1].ram_reg_9 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance HLS_accel_a_ram__GB0:/i_3_0/genblk1[1].ram_reg_9 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance HLS_accel_a_ram__GB0:/i_3_0/genblk1[1].ram_reg_10 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance HLS_accel_a_ram__GB0:/i_3_0/genblk1[1].ram_reg_10 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance HLS_accel_a_ram__GB0:/i_3_0/genblk1[1].ram_reg_11 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance HLS_accel_a_ram__GB0:/i_3_0/genblk1[1].ram_reg_11 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance HLS_accel_a_ram__GB0:/i_3_0/genblk1[1].ram_reg_12 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance HLS_accel_a_ram__GB0:/i_3_0/genblk1[1].ram_reg_12 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance HLS_accel_a_ram__GB0:/i_3_0/genblk1[1].ram_reg_13 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance HLS_accel_a_ram__GB0:/i_3_0/genblk1[1].ram_reg_13 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance HLS_accel_a_ram__GB0:/i_3_0/genblk1[1].ram_reg_14 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance HLS_accel_a_ram__GB0:/i_3_0/genblk1[1].ram_reg_14 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance HLS_accel_a_ram__GB0:/i_3_0/genblk1[1].ram_reg_15 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance HLS_accel_a_ram__GB0:/i_3_0/genblk1[1].ram_reg_15 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance HLS_accel_a_ram__GB0:/i_3_0/genblk1[1].ram_reg_16 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance HLS_accel_a_ram__GB0:/i_3_0/genblk1[1].ram_reg_16 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance HLS_accel_a_ram__GB0:/i_3_0/genblk1[1].ram_reg_17 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance HLS_accel_a_ram__GB0:/i_3_0/genblk1[1].ram_reg_17 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance HLS_accel_a_ram__GB0:/i_3_0/genblk1[1].ram_reg_18 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance HLS_accel_a_ram__GB0:/i_3_0/genblk1[1].ram_reg_18 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance HLS_accel_a_ram__GB0:/i_3_0/genblk1[1].ram_reg_19 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance HLS_accel_a_ram__GB0:/i_3_0/genblk1[1].ram_reg_19 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance HLS_accel_a_ram__GB0:/i_3_0/genblk1[1].ram_reg_20 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance HLS_accel_a_ram__GB0:/i_3_0/genblk1[1].ram_reg_20 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/i_3_11/i_3_3/out_U/HLS_accel_out_ram_U/ram_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/i_3_11/i_3_3/out_U/HLS_accel_out_ram_U/ram_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+
+Report RTL Partitions: 
++------+-----------------------------+------------+----------+
+|      |RTL Partition                |Replication |Instances |
++------+-----------------------------+------------+----------+
+|1     |HLS_accel_a_ram__GB0         |           2|       677|
+|2     |case__18_HLS_accel_a_ram__GD |           2|         0|
+|3     |case__19_HLS_accel_a_ram__GD |           2|       392|
+|4     |HLS_accel__GCB0              |           1|     17800|
+|5     |HLS_accel__GCB1              |           1|     17125|
+|6     |HLS_accel__GCB2              |           1|     22278|
+|7     |HLS_accel__GCB3              |           1|     17546|
+|8     |HLS_accel__GCB4              |           1|     19853|
+|9     |HLS_accel__GCB5              |           1|     24353|
+|10    |HLS_accel__GCB6              |           1|     29428|
+|11    |HLS_accel__GCB7              |           1|     30852|
+|12    |HLS_accel__GCB8              |           1|      7920|
+|13    |HLS_accel__GCB9              |           1|      4796|
+|14    |HLS_accel__GCB10             |           1|      2247|
+|15    |HLS_accel__GCB11             |           1|     12093|
++------+-----------------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:21 ; elapsed = 00:04:47 . Memory (MB): peak = 2094.969 ; gain = 1720.988
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:28 ; elapsed = 00:05:05 . Memory (MB): peak = 2094.969 ; gain = 1720.988
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+------------------------+------------+----------+
+|      |RTL Partition           |Replication |Instances |
++------+------------------------+------------+----------+
+|1     |HLS_accel_a_ram__GB0    |           1|       677|
+|2     |HLS_accel__GCB0         |           1|     17800|
+|3     |HLS_accel__GCB1         |           1|     17125|
+|4     |HLS_accel__GCB2         |           1|     22278|
+|5     |HLS_accel__GCB3         |           1|     17546|
+|6     |HLS_accel__GCB4         |           1|     19853|
+|7     |HLS_accel__GCB5         |           1|     24353|
+|8     |HLS_accel__GCB6         |           1|     29428|
+|9     |HLS_accel__GCB7         |           1|     30852|
+|10    |HLS_accel__GCB8         |           1|      7920|
+|11    |HLS_accel__GCB9         |           1|      3341|
+|12    |HLS_accel__GCB10        |           1|      1519|
+|13    |HLS_accel__GCB11        |           1|     12093|
+|14    |HLS_accel_a_ram__GB0__1 |           1|       677|
++------+------------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6837] The timing for the instance inst/i_3_12/genblk1[1].ram_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/i_3_12/genblk1[1].ram_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/i_3_12/genblk1[1].ram_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/i_3_12/genblk1[1].ram_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/i_3_12/genblk1[1].ram_reg_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/i_3_12/genblk1[1].ram_reg_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/i_3_12/genblk1[1].ram_reg_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/i_3_12/genblk1[1].ram_reg_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/i_3_12/genblk1[1].ram_reg_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/i_3_12/genblk1[1].ram_reg_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/i_3_12/genblk1[1].ram_reg_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/i_3_12/genblk1[1].ram_reg_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/i_3_12/genblk1[1].ram_reg_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/i_3_12/genblk1[1].ram_reg_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/i_3_12/genblk1[1].ram_reg_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/i_3_12/genblk1[1].ram_reg_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/i_3_12/genblk1[1].ram_reg_8 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/i_3_12/genblk1[1].ram_reg_8 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/i_3_12/genblk1[1].ram_reg_9 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/i_3_12/genblk1[1].ram_reg_9 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/i_3_12/genblk1[1].ram_reg_10 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/i_3_12/genblk1[1].ram_reg_10 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/i_3_12/genblk1[1].ram_reg_11 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/i_3_12/genblk1[1].ram_reg_11 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/i_3_12/genblk1[1].ram_reg_12 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/i_3_12/genblk1[1].ram_reg_12 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/i_3_12/genblk1[1].ram_reg_13 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/i_3_12/genblk1[1].ram_reg_13 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/i_3_12/genblk1[1].ram_reg_14 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/i_3_12/genblk1[1].ram_reg_14 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/i_3_12/genblk1[1].ram_reg_15 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/i_3_12/genblk1[1].ram_reg_15 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/i_3_12/genblk1[1].ram_reg_16 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/i_3_12/genblk1[1].ram_reg_16 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/i_3_12/genblk1[1].ram_reg_17 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/i_3_12/genblk1[1].ram_reg_17 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/i_3_12/genblk1[1].ram_reg_18 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/i_3_12/genblk1[1].ram_reg_18 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/i_3_12/genblk1[1].ram_reg_19 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/i_3_12/genblk1[1].ram_reg_19 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/i_3_12/genblk1[1].ram_reg_20 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/i_3_12/genblk1[1].ram_reg_20 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/i_3_15/genblk1[1].ram_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/i_3_15/genblk1[1].ram_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/i_3_15/genblk1[1].ram_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/i_3_15/genblk1[1].ram_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/i_3_15/genblk1[1].ram_reg_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/i_3_15/genblk1[1].ram_reg_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/i_3_15/genblk1[1].ram_reg_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/i_3_15/genblk1[1].ram_reg_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/i_3_15/genblk1[1].ram_reg_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/i_3_15/genblk1[1].ram_reg_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/i_3_15/genblk1[1].ram_reg_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/i_3_15/genblk1[1].ram_reg_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/i_3_15/genblk1[1].ram_reg_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/i_3_15/genblk1[1].ram_reg_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Common 17-14] Message 'Synth 8-6837' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:47 ; elapsed = 00:06:13 . Memory (MB): peak = 2094.969 ; gain = 1720.988
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+------------------------+------------+----------+
+|      |RTL Partition           |Replication |Instances |
++------+------------------------+------------+----------+
+|1     |HLS_accel_a_ram__GB0    |           1|       677|
+|2     |HLS_accel__GCB0         |           1|     15931|
+|3     |HLS_accel__GCB1         |           1|     13952|
+|4     |HLS_accel__GCB2         |           1|     20018|
+|5     |HLS_accel__GCB3         |           1|     15937|
+|6     |HLS_accel__GCB4         |           1|     17898|
+|7     |HLS_accel__GCB5         |           1|     21485|
+|8     |HLS_accel__GCB6         |           1|     23086|
+|9     |HLS_accel__GCB7         |           1|     29114|
+|10    |HLS_accel__GCB8         |           1|      6659|
+|11    |HLS_accel__GCB9         |           1|      2264|
+|12    |HLS_accel__GCB10        |           1|       758|
+|13    |HLS_accel__GCB11        |           1|     10849|
+|14    |HLS_accel_a_ram__GB0__1 |           1|       677|
++------+------------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:58 ; elapsed = 00:06:44 . Memory (MB): peak = 2094.969 ; gain = 1720.988
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:59 ; elapsed = 00:06:44 . Memory (MB): peak = 2094.969 ; gain = 1720.988
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:04 ; elapsed = 00:06:57 . Memory (MB): peak = 2094.969 ; gain = 1720.988
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:04 ; elapsed = 00:06:57 . Memory (MB): peak = 2094.969 ; gain = 1720.988
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:05 ; elapsed = 00:07:01 . Memory (MB): peak = 2094.969 ; gain = 1720.988
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:05 ; elapsed = 00:07:01 . Memory (MB): peak = 2094.969 ; gain = 1720.988
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----------+------+
+|      |Cell       |Count |
++------+-----------+------+
+|1     |CARRY4     |   126|
+|2     |DSP48E1    |    42|
+|3     |DSP48E1_1  |    42|
+|4     |DSP48E1_2  |    42|
+|5     |DSP48E1_3  |    42|
+|6     |DSP48E1_4  |    42|
+|7     |DSP48E1_5  |     1|
+|8     |DSP48E1_6  |     1|
+|9     |LUT1       |   226|
+|10    |LUT2       |  1627|
+|11    |LUT3       |  4094|
+|12    |LUT4       |  2883|
+|13    |LUT5       |  4384|
+|14    |LUT6       |  4813|
+|15    |MUXCY      |  3108|
+|16    |RAMB36E1_1 |     2|
+|17    |RAMB36E1_2 |    42|
+|18    |SRL16E     |   120|
+|19    |SRLC32E    |  4827|
+|20    |XORCY      |  1050|
+|21    |FDE        |   126|
+|22    |FDRE       | 16743|
+|23    |FDSE       |     1|
++------+-----------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:05 ; elapsed = 00:07:01 . Memory (MB): peak = 2094.969 ; gain = 1720.988
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 227 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:33 ; elapsed = 00:05:42 . Memory (MB): peak = 2094.969 ; gain = 462.383
+Synthesis Optimization Complete : Time (s): cpu = 00:02:05 ; elapsed = 00:07:03 . Memory (MB): peak = 2094.969 ; gain = 1720.988
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 4666 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.074 . Memory (MB): peak = 2094.969 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 966 instances were transformed.
+  (MUXCY,XORCY) => CARRY4: 840 instances
+  FDE => FDRE: 126 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+581 Infos, 129 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:02:15 ; elapsed = 00:07:28 . Memory (MB): peak = 2094.969 ; gain = 1732.469
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.055 . Memory (MB): peak = 2094.969 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1/bd_0_hls_inst_0.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:09 ; elapsed = 00:00:15 . Memory (MB): peak = 2094.969 ; gain = 0.000
+write_verilog: Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 2094.969 ; gain = 0.000
+write_vhdl: Time (s): cpu = 00:00:04 ; elapsed = 00:00:10 . Memory (MB): peak = 2094.969 ; gain = 0.000
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP bd_0_hls_inst_0, cache-ID = 390d654a6648d074
+INFO: [Coretcl 2-1174] Renamed 4246 cell refs.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.065 . Memory (MB): peak = 2094.969 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/thoms/Universite/INF3610-TPs/TP2/hls_architecture1/implementation_sol_1_2/hls_wrapped_mmult_prj/solution1_2/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1/bd_0_hls_inst_0.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:09 ; elapsed = 00:00:15 . Memory (MB): peak = 2094.969 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_utilization -file bd_0_hls_inst_0_utilization_synth.rpt -pb bd_0_hls_inst_0_utilization_synth.pb
+write_verilog: Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 2094.969 ; gain = 0.000
+write_vhdl: Time (s): cpu = 00:00:03 ; elapsed = 00:00:09 . Memory (MB): peak = 2094.969 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Wed Apr 17 16:53:10 2024...

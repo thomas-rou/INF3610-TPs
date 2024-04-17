@@ -1,0 +1,20 @@
+
+
+Implementation tool: Xilinx Vivado v.2018.3
+Project:             hls_wrapped_mmult_prj
+Solution:            solution1_2
+Device target:       xc7z020clg484-1
+Report date:         Wed Apr 17 16:59:56 -0400 2024
+
+#=== Post-Implementation Resource usage ===
+SLICE:         7113
+LUT:          20241
+FF:           16700
+DSP:            212
+BRAM:            88
+SRL:           4911
+#=== Final timing ===
+CP required:    10.000
+CP achieved post-synthesis:    8.276
+CP achieved post-implementation:    9.223
+Timing met
