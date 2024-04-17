@@ -1,0 +1,740 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Wed Apr 17 15:59:44 2024
+| Host         : Zenbook_Tomtom running 64-bit major release  (build 9200)
+| Command      : report_timing -max_paths 10 -file ./report/HLS_accel_timing_paths_routed.rpt
+| Design       : bd_0_wrapper
+| Device       : 7z020-clg484
+| Speed File   : -1  PRODUCTION 1.11 2014-09-11
+----------------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack (MET) :             0.828ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/din1_buf1_reg[17]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[7].tree.assg.ai/ad/f/YES_REG.l[29].reg.n.eOn.f/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        9.150ns  (logic 4.580ns (50.055%)  route 4.570ns (49.945%))
+  Logic Levels:           14  (CARRY4=9 LUT2=1 LUT3=2 LUT4=2)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=5933, unset)         0.973     0.973    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/ap_clk
+    SLICE_X91Y20         FDRE                                         r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/din1_buf1_reg[17]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X91Y20         FDRE (Prop_fdre_C_Q)         0.456     1.429 r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/din1_buf1_reg[17]/Q
+                         net (fo=8, routed)           1.501     2.930    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/ctl[6].nt.ct/m2/s_axis_b_tdata[0]
+    SLICE_X67Y16         LUT4 (Prop_lut4_I0_O)        0.124     3.054 r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/ctl[6].nt.ct/m2/lt4.lt/O
+                         net (fo=25, routed)          0.836     3.890    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/ppg[6].nt.ppi/cntrl[1]
+    SLICE_X67Y18         LUT4 (Prop_lut4_I3_O)        0.124     4.014 r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/ppg[6].nt.ppi/ad[1].mx/O
+                         net (fo=2, routed)           0.000     4.014    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/ppg[6].nt.ppi/sint_1
+    SLICE_X67Y18         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532     4.546 r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/ppg[6].nt.ppi/ad[1].ni.mxi.mc_CARRY4/CO[3]
+                         net (fo=1, routed)           0.000     4.546    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/ppg[6].nt.ppi/cint_5
+    SLICE_X67Y19         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     4.660 r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/ppg[6].nt.ppi/ad[5].ni.mxi.mc_CARRY4/CO[3]
+                         net (fo=1, routed)           0.000     4.660    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/ppg[6].nt.ppi/cint_9
+    SLICE_X67Y20         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.313     4.973 r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/ppg[6].nt.ppi/ad[9].ni.mxi.mc_CARRY4/O[3]
+                         net (fo=2, routed)           1.070     6.043    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/ppg[6].nt.ppi/f/ad[12].ni.nx.mxcy__0
+    SLICE_X55Y18         LUT2 (Prop_lut2_I0_O)        0.332     6.375 r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/ppg[6].nt.ppi/f/as[9].ngtb.mlut_i_1/O
+                         net (fo=1, routed)           0.642     7.017    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[4].tree.assg.ai/ad/pp3_out[9]
+    SLICE_X54Y18         LUT3 (Prop_lut3_I0_O)        0.326     7.343 r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[4].tree.assg.ai/ad/as[9].ngtb.mlut/O
+                         net (fo=1, routed)           0.000     7.343    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[4].tree.assg.ai/ad/sInt_9
+    SLICE_X54Y18         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533     7.876 r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[4].tree.assg.ai/ad/as[8].ym.mc_CARRY4/CO[3]
+                         net (fo=1, routed)           0.000     7.876    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[4].tree.assg.ai/ad/cInt_12
+    SLICE_X54Y19         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     7.993 r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[4].tree.assg.ai/ad/as[12].ym.mc_CARRY4/CO[3]
+                         net (fo=1, routed)           0.000     7.993    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[4].tree.assg.ai/ad/cInt_16
+    SLICE_X54Y20         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.323     8.316 r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[4].tree.assg.ai/ad/as[16].ym.mc_CARRY4/O[1]
+                         net (fo=1, routed)           0.521     8.837    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[7].tree.assg.ai/ad/YES_REG.l[29].reg.n.eOn.f[20]
+    SLICE_X56Y21         LUT3 (Prop_lut3_I1_O)        0.306     9.143 r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[7].tree.assg.ai/ad/as[20].ngtb.mlut/O
+                         net (fo=1, routed)           0.000     9.143    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[7].tree.assg.ai/ad/sInt_20
+    SLICE_X56Y21         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532     9.675 r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[7].tree.assg.ai/ad/as[20].ym.mc_CARRY4/CO[3]
+                         net (fo=1, routed)           0.000     9.675    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[7].tree.assg.ai/ad/cInt_24
+    SLICE_X56Y22         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     9.789 r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[7].tree.assg.ai/ad/as[24].ym.mc_CARRY4/CO[3]
+                         net (fo=1, routed)           0.000     9.789    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[7].tree.assg.ai/ad/cInt_28
+    SLICE_X56Y23         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334    10.123 r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[7].tree.assg.ai/ad/as[28].ym.mc_CARRY4/O[1]
+                         net (fo=1, routed)           0.000    10.123    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[7].tree.assg.ai/ad/f/qNoReg[29]
+    SLICE_X56Y23         FDRE                                         r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[7].tree.assg.ai/ad/f/YES_REG.l[29].reg.n.eOn.f/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=5933, unset)         0.924    10.924    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[7].tree.assg.ai/ad/f/aclk
+    SLICE_X56Y23         FDRE                                         r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[7].tree.assg.ai/ad/f/YES_REG.l[29].reg.n.eOn.f/C
+                         clock pessimism              0.000    10.924    
+                         clock uncertainty           -0.035    10.889    
+    SLICE_X56Y23         FDRE (Setup_fdre_C_D)        0.062    10.951    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[7].tree.assg.ai/ad/f/YES_REG.l[29].reg.n.eOn.f
+  -------------------------------------------------------------------
+                         required time                         10.951    
+                         arrival time                         -10.123    
+  -------------------------------------------------------------------
+                         slack                                  0.828    
+
+Slack (MET) :             0.926ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/HLS_accel_mac_muldEe_U5/HLS_accel_mac_muldEe_DSP48_0_U/p/CLK
+                            (rising edge-triggered cell DSP48E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/a_U/HLS_accel_a_ram_U/ram_reg_0/ADDRARDADDR[12]
+                            (rising edge-triggered cell RAMB36E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        8.424ns  (logic 4.381ns (52.005%)  route 4.043ns (47.995%))
+  Logic Levels:           3  (LUT6=3)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=5933, unset)         0.973     0.973    bd_0_i/hls_inst/inst/HLS_accel_mac_muldEe_U5/HLS_accel_mac_muldEe_DSP48_0_U/ap_clk
+    DSP48_X3Y2           DSP48E1                                      r  bd_0_i/hls_inst/inst/HLS_accel_mac_muldEe_U5/HLS_accel_mac_muldEe_DSP48_0_U/p/CLK
+  -------------------------------------------------------------------    -------------------
+    DSP48_X3Y2           DSP48E1 (Prop_dsp48e1_CLK_P[8])
+                                                      4.009     4.982 r  bd_0_i/hls_inst/inst/HLS_accel_mac_muldEe_U5/HLS_accel_mac_muldEe_DSP48_0_U/p/P[8]
+                         net (fo=1, routed)           1.642     6.624    bd_0_i/hls_inst/inst/HLS_accel_mac_muldEe_U5/HLS_accel_mac_muldEe_DSP48_0_U/p_n_100
+    SLICE_X74Y6          LUT6 (Prop_lut6_I5_O)        0.124     6.748 f  bd_0_i/hls_inst/inst/HLS_accel_mac_muldEe_U5/HLS_accel_mac_muldEe_DSP48_0_U/ram_reg_0_i_164/O
+                         net (fo=1, routed)           0.566     7.315    bd_0_i/hls_inst/inst/HLS_accel_mac_muldEe_U5/HLS_accel_mac_muldEe_DSP48_0_U/ram_reg_0_i_164_n_3
+    SLICE_X73Y6          LUT6 (Prop_lut6_I2_O)        0.124     7.439 f  bd_0_i/hls_inst/inst/HLS_accel_mac_muldEe_U5/HLS_accel_mac_muldEe_DSP48_0_U/ram_reg_0_i_39/O
+                         net (fo=1, routed)           0.440     7.879    bd_0_i/hls_inst/inst/HLS_accel_mac_muldEe_U5/HLS_accel_mac_muldEe_DSP48_0_U/ram_reg_0_i_39_n_3
+    SLICE_X68Y6          LUT6 (Prop_lut6_I1_O)        0.124     8.003 r  bd_0_i/hls_inst/inst/HLS_accel_mac_muldEe_U5/HLS_accel_mac_muldEe_DSP48_0_U/ram_reg_0_i_5/O
+                         net (fo=2, routed)           1.395     9.397    bd_0_i/hls_inst/inst/a_U/HLS_accel_a_ram_U/addr0[8]
+    RAMB36_X4Y2          RAMB36E1                                     r  bd_0_i/hls_inst/inst/a_U/HLS_accel_a_ram_U/ram_reg_0/ADDRARDADDR[12]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=5933, unset)         0.924    10.924    bd_0_i/hls_inst/inst/a_U/HLS_accel_a_ram_U/ap_clk
+    RAMB36_X4Y2          RAMB36E1                                     r  bd_0_i/hls_inst/inst/a_U/HLS_accel_a_ram_U/ram_reg_0/CLKARDCLK
+                         clock pessimism              0.000    10.924    
+                         clock uncertainty           -0.035    10.889    
+    RAMB36_X4Y2          RAMB36E1 (Setup_ramb36e1_CLKARDCLK_ADDRARDADDR[12])
+                                                     -0.566    10.323    bd_0_i/hls_inst/inst/a_U/HLS_accel_a_ram_U/ram_reg_0
+  -------------------------------------------------------------------
+                         required time                         10.323    
+                         arrival time                          -9.397    
+  -------------------------------------------------------------------
+                         slack                                  0.926    
+
+Slack (MET) :             0.939ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/din1_buf1_reg[17]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[7].tree.assg.ai/ad/f/YES_REG.l[28].reg.n.eOn.f/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        9.039ns  (logic 4.469ns (49.442%)  route 4.570ns (50.558%))
+  Logic Levels:           14  (CARRY4=9 LUT2=1 LUT3=2 LUT4=2)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=5933, unset)         0.973     0.973    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/ap_clk
+    SLICE_X91Y20         FDRE                                         r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/din1_buf1_reg[17]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X91Y20         FDRE (Prop_fdre_C_Q)         0.456     1.429 r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/din1_buf1_reg[17]/Q
+                         net (fo=8, routed)           1.501     2.930    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/ctl[6].nt.ct/m2/s_axis_b_tdata[0]
+    SLICE_X67Y16         LUT4 (Prop_lut4_I0_O)        0.124     3.054 r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/ctl[6].nt.ct/m2/lt4.lt/O
+                         net (fo=25, routed)          0.836     3.890    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/ppg[6].nt.ppi/cntrl[1]
+    SLICE_X67Y18         LUT4 (Prop_lut4_I3_O)        0.124     4.014 r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/ppg[6].nt.ppi/ad[1].mx/O
+                         net (fo=2, routed)           0.000     4.014    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/ppg[6].nt.ppi/sint_1
+    SLICE_X67Y18         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532     4.546 r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/ppg[6].nt.ppi/ad[1].ni.mxi.mc_CARRY4/CO[3]
+                         net (fo=1, routed)           0.000     4.546    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/ppg[6].nt.ppi/cint_5
+    SLICE_X67Y19         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     4.660 r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/ppg[6].nt.ppi/ad[5].ni.mxi.mc_CARRY4/CO[3]
+                         net (fo=1, routed)           0.000     4.660    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/ppg[6].nt.ppi/cint_9
+    SLICE_X67Y20         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.313     4.973 r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/ppg[6].nt.ppi/ad[9].ni.mxi.mc_CARRY4/O[3]
+                         net (fo=2, routed)           1.070     6.043    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/ppg[6].nt.ppi/f/ad[12].ni.nx.mxcy__0
+    SLICE_X55Y18         LUT2 (Prop_lut2_I0_O)        0.332     6.375 r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/ppg[6].nt.ppi/f/as[9].ngtb.mlut_i_1/O
+                         net (fo=1, routed)           0.642     7.017    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[4].tree.assg.ai/ad/pp3_out[9]
+    SLICE_X54Y18         LUT3 (Prop_lut3_I0_O)        0.326     7.343 r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[4].tree.assg.ai/ad/as[9].ngtb.mlut/O
+                         net (fo=1, routed)           0.000     7.343    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[4].tree.assg.ai/ad/sInt_9
+    SLICE_X54Y18         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533     7.876 r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[4].tree.assg.ai/ad/as[8].ym.mc_CARRY4/CO[3]
+                         net (fo=1, routed)           0.000     7.876    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[4].tree.assg.ai/ad/cInt_12
+    SLICE_X54Y19         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     7.993 r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[4].tree.assg.ai/ad/as[12].ym.mc_CARRY4/CO[3]
+                         net (fo=1, routed)           0.000     7.993    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[4].tree.assg.ai/ad/cInt_16
+    SLICE_X54Y20         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.323     8.316 r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[4].tree.assg.ai/ad/as[16].ym.mc_CARRY4/O[1]
+                         net (fo=1, routed)           0.521     8.837    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[7].tree.assg.ai/ad/YES_REG.l[29].reg.n.eOn.f[20]
+    SLICE_X56Y21         LUT3 (Prop_lut3_I1_O)        0.306     9.143 r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[7].tree.assg.ai/ad/as[20].ngtb.mlut/O
+                         net (fo=1, routed)           0.000     9.143    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[7].tree.assg.ai/ad/sInt_20
+    SLICE_X56Y21         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532     9.675 r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[7].tree.assg.ai/ad/as[20].ym.mc_CARRY4/CO[3]
+                         net (fo=1, routed)           0.000     9.675    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[7].tree.assg.ai/ad/cInt_24
+    SLICE_X56Y22         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     9.789 r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[7].tree.assg.ai/ad/as[24].ym.mc_CARRY4/CO[3]
+                         net (fo=1, routed)           0.000     9.789    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[7].tree.assg.ai/ad/cInt_28
+    SLICE_X56Y23         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.223    10.012 r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[7].tree.assg.ai/ad/as[28].ym.mc_CARRY4/O[0]
+                         net (fo=1, routed)           0.000    10.012    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[7].tree.assg.ai/ad/f/qNoReg[28]
+    SLICE_X56Y23         FDRE                                         r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[7].tree.assg.ai/ad/f/YES_REG.l[28].reg.n.eOn.f/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=5933, unset)         0.924    10.924    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[7].tree.assg.ai/ad/f/aclk
+    SLICE_X56Y23         FDRE                                         r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[7].tree.assg.ai/ad/f/YES_REG.l[28].reg.n.eOn.f/C
+                         clock pessimism              0.000    10.924    
+                         clock uncertainty           -0.035    10.889    
+    SLICE_X56Y23         FDRE (Setup_fdre_C_D)        0.062    10.951    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[7].tree.assg.ai/ad/f/YES_REG.l[28].reg.n.eOn.f
+  -------------------------------------------------------------------
+                         required time                         10.951    
+                         arrival time                         -10.012    
+  -------------------------------------------------------------------
+                         slack                                  0.939    
+
+Slack (MET) :             0.942ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/din1_buf1_reg[17]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[7].tree.assg.ai/ad/f/YES_REG.l[25].reg.n.eOn.f/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        9.036ns  (logic 4.466ns (49.425%)  route 4.570ns (50.575%))
+  Logic Levels:           13  (CARRY4=8 LUT2=1 LUT3=2 LUT4=2)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=5933, unset)         0.973     0.973    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/ap_clk
+    SLICE_X91Y20         FDRE                                         r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/din1_buf1_reg[17]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X91Y20         FDRE (Prop_fdre_C_Q)         0.456     1.429 r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/din1_buf1_reg[17]/Q
+                         net (fo=8, routed)           1.501     2.930    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/ctl[6].nt.ct/m2/s_axis_b_tdata[0]
+    SLICE_X67Y16         LUT4 (Prop_lut4_I0_O)        0.124     3.054 r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/ctl[6].nt.ct/m2/lt4.lt/O
+                         net (fo=25, routed)          0.836     3.890    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/ppg[6].nt.ppi/cntrl[1]
+    SLICE_X67Y18         LUT4 (Prop_lut4_I3_O)        0.124     4.014 r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/ppg[6].nt.ppi/ad[1].mx/O
+                         net (fo=2, routed)           0.000     4.014    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/ppg[6].nt.ppi/sint_1
+    SLICE_X67Y18         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532     4.546 r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/ppg[6].nt.ppi/ad[1].ni.mxi.mc_CARRY4/CO[3]
+                         net (fo=1, routed)           0.000     4.546    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/ppg[6].nt.ppi/cint_5
+    SLICE_X67Y19         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     4.660 r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/ppg[6].nt.ppi/ad[5].ni.mxi.mc_CARRY4/CO[3]
+                         net (fo=1, routed)           0.000     4.660    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/ppg[6].nt.ppi/cint_9
+    SLICE_X67Y20         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.313     4.973 r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/ppg[6].nt.ppi/ad[9].ni.mxi.mc_CARRY4/O[3]
+                         net (fo=2, routed)           1.070     6.043    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/ppg[6].nt.ppi/f/ad[12].ni.nx.mxcy__0
+    SLICE_X55Y18         LUT2 (Prop_lut2_I0_O)        0.332     6.375 r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/ppg[6].nt.ppi/f/as[9].ngtb.mlut_i_1/O
+                         net (fo=1, routed)           0.642     7.017    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[4].tree.assg.ai/ad/pp3_out[9]
+    SLICE_X54Y18         LUT3 (Prop_lut3_I0_O)        0.326     7.343 r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[4].tree.assg.ai/ad/as[9].ngtb.mlut/O
+                         net (fo=1, routed)           0.000     7.343    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[4].tree.assg.ai/ad/sInt_9
+    SLICE_X54Y18         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533     7.876 r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[4].tree.assg.ai/ad/as[8].ym.mc_CARRY4/CO[3]
+                         net (fo=1, routed)           0.000     7.876    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[4].tree.assg.ai/ad/cInt_12
+    SLICE_X54Y19         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     7.993 r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[4].tree.assg.ai/ad/as[12].ym.mc_CARRY4/CO[3]
+                         net (fo=1, routed)           0.000     7.993    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[4].tree.assg.ai/ad/cInt_16
+    SLICE_X54Y20         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.323     8.316 r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[4].tree.assg.ai/ad/as[16].ym.mc_CARRY4/O[1]
+                         net (fo=1, routed)           0.521     8.837    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[7].tree.assg.ai/ad/YES_REG.l[29].reg.n.eOn.f[20]
+    SLICE_X56Y21         LUT3 (Prop_lut3_I1_O)        0.306     9.143 r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[7].tree.assg.ai/ad/as[20].ngtb.mlut/O
+                         net (fo=1, routed)           0.000     9.143    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[7].tree.assg.ai/ad/sInt_20
+    SLICE_X56Y21         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532     9.675 r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[7].tree.assg.ai/ad/as[20].ym.mc_CARRY4/CO[3]
+                         net (fo=1, routed)           0.000     9.675    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[7].tree.assg.ai/ad/cInt_24
+    SLICE_X56Y22         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334    10.009 r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[7].tree.assg.ai/ad/as[24].ym.mc_CARRY4/O[1]
+                         net (fo=1, routed)           0.000    10.009    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[7].tree.assg.ai/ad/f/qNoReg[25]
+    SLICE_X56Y22         FDRE                                         r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[7].tree.assg.ai/ad/f/YES_REG.l[25].reg.n.eOn.f/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=5933, unset)         0.924    10.924    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[7].tree.assg.ai/ad/f/aclk
+    SLICE_X56Y22         FDRE                                         r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[7].tree.assg.ai/ad/f/YES_REG.l[25].reg.n.eOn.f/C
+                         clock pessimism              0.000    10.924    
+                         clock uncertainty           -0.035    10.889    
+    SLICE_X56Y22         FDRE (Setup_fdre_C_D)        0.062    10.951    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[7].tree.assg.ai/ad/f/YES_REG.l[25].reg.n.eOn.f
+  -------------------------------------------------------------------
+                         required time                         10.951    
+                         arrival time                         -10.009    
+  -------------------------------------------------------------------
+                         slack                                  0.942    
+
+Slack (MET) :             0.963ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/din1_buf1_reg[17]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[7].tree.assg.ai/ad/f/YES_REG.l[27].reg.n.eOn.f/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        9.015ns  (logic 4.445ns (49.307%)  route 4.570ns (50.693%))
+  Logic Levels:           13  (CARRY4=8 LUT2=1 LUT3=2 LUT4=2)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=5933, unset)         0.973     0.973    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/ap_clk
+    SLICE_X91Y20         FDRE                                         r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/din1_buf1_reg[17]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X91Y20         FDRE (Prop_fdre_C_Q)         0.456     1.429 r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/din1_buf1_reg[17]/Q
+                         net (fo=8, routed)           1.501     2.930    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/ctl[6].nt.ct/m2/s_axis_b_tdata[0]
+    SLICE_X67Y16         LUT4 (Prop_lut4_I0_O)        0.124     3.054 r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/ctl[6].nt.ct/m2/lt4.lt/O
+                         net (fo=25, routed)          0.836     3.890    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/ppg[6].nt.ppi/cntrl[1]
+    SLICE_X67Y18         LUT4 (Prop_lut4_I3_O)        0.124     4.014 r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/ppg[6].nt.ppi/ad[1].mx/O
+                         net (fo=2, routed)           0.000     4.014    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/ppg[6].nt.ppi/sint_1
+    SLICE_X67Y18         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532     4.546 r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/ppg[6].nt.ppi/ad[1].ni.mxi.mc_CARRY4/CO[3]
+                         net (fo=1, routed)           0.000     4.546    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/ppg[6].nt.ppi/cint_5
+    SLICE_X67Y19         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     4.660 r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/ppg[6].nt.ppi/ad[5].ni.mxi.mc_CARRY4/CO[3]
+                         net (fo=1, routed)           0.000     4.660    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/ppg[6].nt.ppi/cint_9
+    SLICE_X67Y20         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.313     4.973 r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/ppg[6].nt.ppi/ad[9].ni.mxi.mc_CARRY4/O[3]
+                         net (fo=2, routed)           1.070     6.043    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/ppg[6].nt.ppi/f/ad[12].ni.nx.mxcy__0
+    SLICE_X55Y18         LUT2 (Prop_lut2_I0_O)        0.332     6.375 r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/ppg[6].nt.ppi/f/as[9].ngtb.mlut_i_1/O
+                         net (fo=1, routed)           0.642     7.017    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[4].tree.assg.ai/ad/pp3_out[9]
+    SLICE_X54Y18         LUT3 (Prop_lut3_I0_O)        0.326     7.343 r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[4].tree.assg.ai/ad/as[9].ngtb.mlut/O
+                         net (fo=1, routed)           0.000     7.343    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[4].tree.assg.ai/ad/sInt_9
+    SLICE_X54Y18         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533     7.876 r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[4].tree.assg.ai/ad/as[8].ym.mc_CARRY4/CO[3]
+                         net (fo=1, routed)           0.000     7.876    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[4].tree.assg.ai/ad/cInt_12
+    SLICE_X54Y19         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     7.993 r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[4].tree.assg.ai/ad/as[12].ym.mc_CARRY4/CO[3]
+                         net (fo=1, routed)           0.000     7.993    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[4].tree.assg.ai/ad/cInt_16
+    SLICE_X54Y20         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.323     8.316 r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[4].tree.assg.ai/ad/as[16].ym.mc_CARRY4/O[1]
+                         net (fo=1, routed)           0.521     8.837    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[7].tree.assg.ai/ad/YES_REG.l[29].reg.n.eOn.f[20]
+    SLICE_X56Y21         LUT3 (Prop_lut3_I1_O)        0.306     9.143 r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[7].tree.assg.ai/ad/as[20].ngtb.mlut/O
+                         net (fo=1, routed)           0.000     9.143    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[7].tree.assg.ai/ad/sInt_20
+    SLICE_X56Y21         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532     9.675 r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[7].tree.assg.ai/ad/as[20].ym.mc_CARRY4/CO[3]
+                         net (fo=1, routed)           0.000     9.675    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[7].tree.assg.ai/ad/cInt_24
+    SLICE_X56Y22         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.313     9.988 r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[7].tree.assg.ai/ad/as[24].ym.mc_CARRY4/O[3]
+                         net (fo=1, routed)           0.000     9.988    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[7].tree.assg.ai/ad/f/qNoReg[27]
+    SLICE_X56Y22         FDRE                                         r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[7].tree.assg.ai/ad/f/YES_REG.l[27].reg.n.eOn.f/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=5933, unset)         0.924    10.924    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[7].tree.assg.ai/ad/f/aclk
+    SLICE_X56Y22         FDRE                                         r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[7].tree.assg.ai/ad/f/YES_REG.l[27].reg.n.eOn.f/C
+                         clock pessimism              0.000    10.924    
+                         clock uncertainty           -0.035    10.889    
+    SLICE_X56Y22         FDRE (Setup_fdre_C_D)        0.062    10.951    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[7].tree.assg.ai/ad/f/YES_REG.l[27].reg.n.eOn.f
+  -------------------------------------------------------------------
+                         required time                         10.951    
+                         arrival time                          -9.988    
+  -------------------------------------------------------------------
+                         slack                                  0.963    
+
+Slack (MET) :             0.989ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/HLS_accel_mac_muldEe_U5/HLS_accel_mac_muldEe_DSP48_0_U/p/CLK
+                            (rising edge-triggered cell DSP48E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/a_U/HLS_accel_a_ram_U/ram_reg_0/ADDRARDADDR[10]
+                            (rising edge-triggered cell RAMB36E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        8.361ns  (logic 4.381ns (52.395%)  route 3.980ns (47.605%))
+  Logic Levels:           3  (LUT6=3)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=5933, unset)         0.973     0.973    bd_0_i/hls_inst/inst/HLS_accel_mac_muldEe_U5/HLS_accel_mac_muldEe_DSP48_0_U/ap_clk
+    DSP48_X3Y2           DSP48E1                                      r  bd_0_i/hls_inst/inst/HLS_accel_mac_muldEe_U5/HLS_accel_mac_muldEe_DSP48_0_U/p/CLK
+  -------------------------------------------------------------------    -------------------
+    DSP48_X3Y2           DSP48E1 (Prop_dsp48e1_CLK_P[6])
+                                                      4.009     4.982 r  bd_0_i/hls_inst/inst/HLS_accel_mac_muldEe_U5/HLS_accel_mac_muldEe_DSP48_0_U/p/P[6]
+                         net (fo=1, routed)           1.645     6.627    bd_0_i/hls_inst/inst/HLS_accel_mac_muldEe_U5/HLS_accel_mac_muldEe_DSP48_0_U/p_n_102
+    SLICE_X70Y3          LUT6 (Prop_lut6_I4_O)        0.124     6.751 f  bd_0_i/hls_inst/inst/HLS_accel_mac_muldEe_U5/HLS_accel_mac_muldEe_DSP48_0_U/ram_reg_0_i_197/O
+                         net (fo=1, routed)           0.642     7.394    bd_0_i/hls_inst/inst/HLS_accel_mac_muldEe_U5/HLS_accel_mac_muldEe_DSP48_0_U/ram_reg_0_i_197_n_3
+    SLICE_X70Y3          LUT6 (Prop_lut6_I3_O)        0.124     7.518 r  bd_0_i/hls_inst/inst/HLS_accel_mac_muldEe_U5/HLS_accel_mac_muldEe_DSP48_0_U/ram_reg_0_i_52__0/O
+                         net (fo=1, routed)           0.295     7.812    bd_0_i/hls_inst/inst/HLS_accel_mac_muldEe_U5/HLS_accel_mac_muldEe_DSP48_0_U/ram_reg_0_i_52__0_n_3
+    SLICE_X71Y5          LUT6 (Prop_lut6_I3_O)        0.124     7.936 r  bd_0_i/hls_inst/inst/HLS_accel_mac_muldEe_U5/HLS_accel_mac_muldEe_DSP48_0_U/ram_reg_0_i_7/O
+                         net (fo=2, routed)           1.398     9.334    bd_0_i/hls_inst/inst/a_U/HLS_accel_a_ram_U/addr0[6]
+    RAMB36_X4Y2          RAMB36E1                                     r  bd_0_i/hls_inst/inst/a_U/HLS_accel_a_ram_U/ram_reg_0/ADDRARDADDR[10]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=5933, unset)         0.924    10.924    bd_0_i/hls_inst/inst/a_U/HLS_accel_a_ram_U/ap_clk
+    RAMB36_X4Y2          RAMB36E1                                     r  bd_0_i/hls_inst/inst/a_U/HLS_accel_a_ram_U/ram_reg_0/CLKARDCLK
+                         clock pessimism              0.000    10.924    
+                         clock uncertainty           -0.035    10.889    
+    RAMB36_X4Y2          RAMB36E1 (Setup_ramb36e1_CLKARDCLK_ADDRARDADDR[10])
+                                                     -0.566    10.323    bd_0_i/hls_inst/inst/a_U/HLS_accel_a_ram_U/ram_reg_0
+  -------------------------------------------------------------------
+                         required time                         10.323    
+                         arrival time                          -9.334    
+  -------------------------------------------------------------------
+                         slack                                  0.989    
+
+Slack (MET) :             0.992ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U4/din1_buf1_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U4/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[6].tree.assg.ai/ad/f/YES_REG.l[29].reg.n.eOn.f/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        9.033ns  (logic 4.518ns (50.017%)  route 4.515ns (49.983%))
+  Logic Levels:           15  (CARRY4=10 LUT2=1 LUT3=2 LUT4=2)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=5933, unset)         0.973     0.973    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U4/ap_clk
+    SLICE_X79Y9          FDRE                                         r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U4/din1_buf1_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X79Y9          FDRE (Prop_fdre_C_Q)         0.456     1.429 r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U4/din1_buf1_reg[2]/Q
+                         net (fo=11, routed)          1.295     2.724    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U4/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/ctl[1].nt.ct/m1/s_axis_b_tdata[0]
+    SLICE_X90Y14         LUT4 (Prop_lut4_I0_O)        0.124     2.848 r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U4/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/ctl[1].nt.ct/m1/lt4.lt/O
+                         net (fo=48, routed)          1.050     3.898    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U4/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/ppg[1].nt.ppi/cntrl[0]
+    SLICE_X86Y12         LUT4 (Prop_lut4_I0_O)        0.124     4.022 r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U4/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/ppg[1].nt.ppi/ad[2].mx/O
+                         net (fo=1, routed)           0.000     4.022    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U4/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/ppg[1].nt.ppi/sint_2
+    SLICE_X86Y12         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533     4.555 r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U4/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/ppg[1].nt.ppi/ad[1].ni.mxi.mc_CARRY4/CO[3]
+                         net (fo=1, routed)           0.000     4.555    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U4/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/ppg[1].nt.ppi/cint_5
+    SLICE_X86Y13         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     4.672 r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U4/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/ppg[1].nt.ppi/ad[5].ni.mxi.mc_CARRY4/CO[3]
+                         net (fo=1, routed)           0.000     4.672    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U4/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/ppg[1].nt.ppi/cint_9
+    SLICE_X86Y14         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     4.789 r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U4/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/ppg[1].nt.ppi/ad[9].ni.mxi.mc_CARRY4/CO[3]
+                         net (fo=1, routed)           0.000     4.789    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U4/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/ppg[1].nt.ppi/cint_13
+    SLICE_X86Y15         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     4.906 r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U4/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/ppg[1].nt.ppi/ad[13].ni.mxi.mc_CARRY4/CO[3]
+                         net (fo=1, routed)           0.000     4.906    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U4/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/ppg[1].nt.ppi/cint_17
+    SLICE_X86Y16         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     5.023 r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U4/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/ppg[1].nt.ppi/ad[17].ni.mxi.mc_CARRY4/CO[3]
+                         net (fo=1, routed)           0.000     5.023    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U4/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/ppg[1].nt.ppi/cint_21
+    SLICE_X86Y17         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.219     5.242 r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U4/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/ppg[1].nt.ppi/ad[21].ni.mxi.mc_CARRY4/O[0]
+                         net (fo=1, routed)           0.725     5.967    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U4/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/ppg[1].nt.ppi/f/ad[21].ni.nx.mxcy__0
+    SLICE_X85Y18         LUT2 (Prop_lut2_I0_O)        0.321     6.288 r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U4/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/ppg[1].nt.ppi/f/as[21].ngtb.mlut_i_2/O
+                         net (fo=1, routed)           0.795     7.083    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U4/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[1].tree.assg.ai/ad/b[21]
+    SLICE_X81Y15         LUT3 (Prop_lut3_I1_O)        0.326     7.409 r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U4/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[1].tree.assg.ai/ad/as[21].ngtb.mlut/O
+                         net (fo=1, routed)           0.000     7.409    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U4/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[1].tree.assg.ai/ad/sInt_21
+    SLICE_X81Y15         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     7.959 r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U4/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[1].tree.assg.ai/ad/as[20].ym.mc_CARRY4/CO[3]
+                         net (fo=1, routed)           0.000     7.959    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U4/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[1].tree.assg.ai/ad/cInt_24
+    SLICE_X81Y16         CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.239     8.198 r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U4/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[1].tree.assg.ai/ad/as[24].ym.mc_CARRY4/O[2]
+                         net (fo=13, routed)          0.649     8.848    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U4/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[6].tree.assg.ai/ad/YES_REG.l[23].reg.n.eOn.f[23]
+    SLICE_X82Y18         LUT3 (Prop_lut3_I0_O)        0.302     9.150 r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U4/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[6].tree.assg.ai/ad/as[25].ngtb.mlut/O
+                         net (fo=1, routed)           0.000     9.150    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U4/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[6].tree.assg.ai/ad/sInt_25
+    SLICE_X82Y18         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533     9.683 r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U4/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[6].tree.assg.ai/ad/as[24].ym.mc_CARRY4/CO[3]
+                         net (fo=1, routed)           0.000     9.683    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U4/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[6].tree.assg.ai/ad/cInt_28
+    SLICE_X82Y19         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.323    10.006 r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U4/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[6].tree.assg.ai/ad/as[28].ym.mc_CARRY4/O[1]
+                         net (fo=1, routed)           0.000    10.006    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U4/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[6].tree.assg.ai/ad/f/qNoReg[29]
+    SLICE_X82Y19         FDRE                                         r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U4/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[6].tree.assg.ai/ad/f/YES_REG.l[29].reg.n.eOn.f/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=5933, unset)         0.924    10.924    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U4/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[6].tree.assg.ai/ad/f/aclk
+    SLICE_X82Y19         FDRE                                         r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U4/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[6].tree.assg.ai/ad/f/YES_REG.l[29].reg.n.eOn.f/C
+                         clock pessimism              0.000    10.924    
+                         clock uncertainty           -0.035    10.889    
+    SLICE_X82Y19         FDRE (Setup_fdre_C_D)        0.109    10.998    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U4/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[6].tree.assg.ai/ad/f/YES_REG.l[29].reg.n.eOn.f
+  -------------------------------------------------------------------
+                         required time                         10.998    
+                         arrival time                         -10.006    
+  -------------------------------------------------------------------
+                         slack                                  0.992    
+
+Slack (MET) :             1.037ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/din1_buf1_reg[17]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[7].tree.assg.ai/ad/f/YES_REG.l[26].reg.n.eOn.f/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        8.941ns  (logic 4.371ns (48.887%)  route 4.570ns (51.113%))
+  Logic Levels:           13  (CARRY4=8 LUT2=1 LUT3=2 LUT4=2)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=5933, unset)         0.973     0.973    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/ap_clk
+    SLICE_X91Y20         FDRE                                         r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/din1_buf1_reg[17]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X91Y20         FDRE (Prop_fdre_C_Q)         0.456     1.429 r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/din1_buf1_reg[17]/Q
+                         net (fo=8, routed)           1.501     2.930    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/ctl[6].nt.ct/m2/s_axis_b_tdata[0]
+    SLICE_X67Y16         LUT4 (Prop_lut4_I0_O)        0.124     3.054 r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/ctl[6].nt.ct/m2/lt4.lt/O
+                         net (fo=25, routed)          0.836     3.890    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/ppg[6].nt.ppi/cntrl[1]
+    SLICE_X67Y18         LUT4 (Prop_lut4_I3_O)        0.124     4.014 r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/ppg[6].nt.ppi/ad[1].mx/O
+                         net (fo=2, routed)           0.000     4.014    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/ppg[6].nt.ppi/sint_1
+    SLICE_X67Y18         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532     4.546 r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/ppg[6].nt.ppi/ad[1].ni.mxi.mc_CARRY4/CO[3]
+                         net (fo=1, routed)           0.000     4.546    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/ppg[6].nt.ppi/cint_5
+    SLICE_X67Y19         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     4.660 r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/ppg[6].nt.ppi/ad[5].ni.mxi.mc_CARRY4/CO[3]
+                         net (fo=1, routed)           0.000     4.660    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/ppg[6].nt.ppi/cint_9
+    SLICE_X67Y20         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.313     4.973 r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/ppg[6].nt.ppi/ad[9].ni.mxi.mc_CARRY4/O[3]
+                         net (fo=2, routed)           1.070     6.043    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/ppg[6].nt.ppi/f/ad[12].ni.nx.mxcy__0
+    SLICE_X55Y18         LUT2 (Prop_lut2_I0_O)        0.332     6.375 r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/ppg[6].nt.ppi/f/as[9].ngtb.mlut_i_1/O
+                         net (fo=1, routed)           0.642     7.017    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[4].tree.assg.ai/ad/pp3_out[9]
+    SLICE_X54Y18         LUT3 (Prop_lut3_I0_O)        0.326     7.343 r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[4].tree.assg.ai/ad/as[9].ngtb.mlut/O
+                         net (fo=1, routed)           0.000     7.343    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[4].tree.assg.ai/ad/sInt_9
+    SLICE_X54Y18         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533     7.876 r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[4].tree.assg.ai/ad/as[8].ym.mc_CARRY4/CO[3]
+                         net (fo=1, routed)           0.000     7.876    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[4].tree.assg.ai/ad/cInt_12
+    SLICE_X54Y19         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     7.993 r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[4].tree.assg.ai/ad/as[12].ym.mc_CARRY4/CO[3]
+                         net (fo=1, routed)           0.000     7.993    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[4].tree.assg.ai/ad/cInt_16
+    SLICE_X54Y20         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.323     8.316 r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[4].tree.assg.ai/ad/as[16].ym.mc_CARRY4/O[1]
+                         net (fo=1, routed)           0.521     8.837    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[7].tree.assg.ai/ad/YES_REG.l[29].reg.n.eOn.f[20]
+    SLICE_X56Y21         LUT3 (Prop_lut3_I1_O)        0.306     9.143 r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[7].tree.assg.ai/ad/as[20].ngtb.mlut/O
+                         net (fo=1, routed)           0.000     9.143    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[7].tree.assg.ai/ad/sInt_20
+    SLICE_X56Y21         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532     9.675 r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[7].tree.assg.ai/ad/as[20].ym.mc_CARRY4/CO[3]
+                         net (fo=1, routed)           0.000     9.675    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[7].tree.assg.ai/ad/cInt_24
+    SLICE_X56Y22         CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.239     9.914 r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[7].tree.assg.ai/ad/as[24].ym.mc_CARRY4/O[2]
+                         net (fo=1, routed)           0.000     9.914    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[7].tree.assg.ai/ad/f/qNoReg[26]
+    SLICE_X56Y22         FDRE                                         r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[7].tree.assg.ai/ad/f/YES_REG.l[26].reg.n.eOn.f/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=5933, unset)         0.924    10.924    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[7].tree.assg.ai/ad/f/aclk
+    SLICE_X56Y22         FDRE                                         r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[7].tree.assg.ai/ad/f/YES_REG.l[26].reg.n.eOn.f/C
+                         clock pessimism              0.000    10.924    
+                         clock uncertainty           -0.035    10.889    
+    SLICE_X56Y22         FDRE (Setup_fdre_C_D)        0.062    10.951    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[7].tree.assg.ai/ad/f/YES_REG.l[26].reg.n.eOn.f
+  -------------------------------------------------------------------
+                         required time                         10.951    
+                         arrival time                          -9.914    
+  -------------------------------------------------------------------
+                         slack                                  1.037    
+
+Slack (MET) :             1.048ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/HLS_accel_mac_muldEe_U5/HLS_accel_mac_muldEe_DSP48_0_U/p/CLK
+                            (rising edge-triggered cell DSP48E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/a_U/HLS_accel_a_ram_U/ram_reg_1/ADDRARDADDR[12]
+                            (rising edge-triggered cell RAMB36E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        8.302ns  (logic 4.381ns (52.769%)  route 3.921ns (47.231%))
+  Logic Levels:           3  (LUT6=3)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=5933, unset)         0.973     0.973    bd_0_i/hls_inst/inst/HLS_accel_mac_muldEe_U5/HLS_accel_mac_muldEe_DSP48_0_U/ap_clk
+    DSP48_X3Y2           DSP48E1                                      r  bd_0_i/hls_inst/inst/HLS_accel_mac_muldEe_U5/HLS_accel_mac_muldEe_DSP48_0_U/p/CLK
+  -------------------------------------------------------------------    -------------------
+    DSP48_X3Y2           DSP48E1 (Prop_dsp48e1_CLK_P[8])
+                                                      4.009     4.982 r  bd_0_i/hls_inst/inst/HLS_accel_mac_muldEe_U5/HLS_accel_mac_muldEe_DSP48_0_U/p/P[8]
+                         net (fo=1, routed)           1.642     6.624    bd_0_i/hls_inst/inst/HLS_accel_mac_muldEe_U5/HLS_accel_mac_muldEe_DSP48_0_U/p_n_100
+    SLICE_X74Y6          LUT6 (Prop_lut6_I5_O)        0.124     6.748 f  bd_0_i/hls_inst/inst/HLS_accel_mac_muldEe_U5/HLS_accel_mac_muldEe_DSP48_0_U/ram_reg_0_i_164/O
+                         net (fo=1, routed)           0.566     7.315    bd_0_i/hls_inst/inst/HLS_accel_mac_muldEe_U5/HLS_accel_mac_muldEe_DSP48_0_U/ram_reg_0_i_164_n_3
+    SLICE_X73Y6          LUT6 (Prop_lut6_I2_O)        0.124     7.439 f  bd_0_i/hls_inst/inst/HLS_accel_mac_muldEe_U5/HLS_accel_mac_muldEe_DSP48_0_U/ram_reg_0_i_39/O
+                         net (fo=1, routed)           0.440     7.879    bd_0_i/hls_inst/inst/HLS_accel_mac_muldEe_U5/HLS_accel_mac_muldEe_DSP48_0_U/ram_reg_0_i_39_n_3
+    SLICE_X68Y6          LUT6 (Prop_lut6_I1_O)        0.124     8.003 r  bd_0_i/hls_inst/inst/HLS_accel_mac_muldEe_U5/HLS_accel_mac_muldEe_DSP48_0_U/ram_reg_0_i_5/O
+                         net (fo=2, routed)           1.273     9.275    bd_0_i/hls_inst/inst/a_U/HLS_accel_a_ram_U/addr0[8]
+    RAMB36_X4Y1          RAMB36E1                                     r  bd_0_i/hls_inst/inst/a_U/HLS_accel_a_ram_U/ram_reg_1/ADDRARDADDR[12]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=5933, unset)         0.924    10.924    bd_0_i/hls_inst/inst/a_U/HLS_accel_a_ram_U/ap_clk
+    RAMB36_X4Y1          RAMB36E1                                     r  bd_0_i/hls_inst/inst/a_U/HLS_accel_a_ram_U/ram_reg_1/CLKARDCLK
+                         clock pessimism              0.000    10.924    
+                         clock uncertainty           -0.035    10.889    
+    RAMB36_X4Y1          RAMB36E1 (Setup_ramb36e1_CLKARDCLK_ADDRARDADDR[12])
+                                                     -0.566    10.323    bd_0_i/hls_inst/inst/a_U/HLS_accel_a_ram_U/ram_reg_1
+  -------------------------------------------------------------------
+                         required time                         10.323    
+                         arrival time                          -9.275    
+  -------------------------------------------------------------------
+                         slack                                  1.048    
+
+Slack (MET) :             1.053ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/din1_buf1_reg[17]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[7].tree.assg.ai/ad/f/YES_REG.l[24].reg.n.eOn.f/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        8.925ns  (logic 4.355ns (48.796%)  route 4.570ns (51.204%))
+  Logic Levels:           13  (CARRY4=8 LUT2=1 LUT3=2 LUT4=2)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=5933, unset)         0.973     0.973    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/ap_clk
+    SLICE_X91Y20         FDRE                                         r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/din1_buf1_reg[17]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X91Y20         FDRE (Prop_fdre_C_Q)         0.456     1.429 r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/din1_buf1_reg[17]/Q
+                         net (fo=8, routed)           1.501     2.930    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/ctl[6].nt.ct/m2/s_axis_b_tdata[0]
+    SLICE_X67Y16         LUT4 (Prop_lut4_I0_O)        0.124     3.054 r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/ctl[6].nt.ct/m2/lt4.lt/O
+                         net (fo=25, routed)          0.836     3.890    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/ppg[6].nt.ppi/cntrl[1]
+    SLICE_X67Y18         LUT4 (Prop_lut4_I3_O)        0.124     4.014 r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/ppg[6].nt.ppi/ad[1].mx/O
+                         net (fo=2, routed)           0.000     4.014    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/ppg[6].nt.ppi/sint_1
+    SLICE_X67Y18         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532     4.546 r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/ppg[6].nt.ppi/ad[1].ni.mxi.mc_CARRY4/CO[3]
+                         net (fo=1, routed)           0.000     4.546    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/ppg[6].nt.ppi/cint_5
+    SLICE_X67Y19         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     4.660 r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/ppg[6].nt.ppi/ad[5].ni.mxi.mc_CARRY4/CO[3]
+                         net (fo=1, routed)           0.000     4.660    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/ppg[6].nt.ppi/cint_9
+    SLICE_X67Y20         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.313     4.973 r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/ppg[6].nt.ppi/ad[9].ni.mxi.mc_CARRY4/O[3]
+                         net (fo=2, routed)           1.070     6.043    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/ppg[6].nt.ppi/f/ad[12].ni.nx.mxcy__0
+    SLICE_X55Y18         LUT2 (Prop_lut2_I0_O)        0.332     6.375 r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/ppg[6].nt.ppi/f/as[9].ngtb.mlut_i_1/O
+                         net (fo=1, routed)           0.642     7.017    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[4].tree.assg.ai/ad/pp3_out[9]
+    SLICE_X54Y18         LUT3 (Prop_lut3_I0_O)        0.326     7.343 r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[4].tree.assg.ai/ad/as[9].ngtb.mlut/O
+                         net (fo=1, routed)           0.000     7.343    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[4].tree.assg.ai/ad/sInt_9
+    SLICE_X54Y18         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533     7.876 r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[4].tree.assg.ai/ad/as[8].ym.mc_CARRY4/CO[3]
+                         net (fo=1, routed)           0.000     7.876    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[4].tree.assg.ai/ad/cInt_12
+    SLICE_X54Y19         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     7.993 r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[4].tree.assg.ai/ad/as[12].ym.mc_CARRY4/CO[3]
+                         net (fo=1, routed)           0.000     7.993    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[4].tree.assg.ai/ad/cInt_16
+    SLICE_X54Y20         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.323     8.316 r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[4].tree.assg.ai/ad/as[16].ym.mc_CARRY4/O[1]
+                         net (fo=1, routed)           0.521     8.837    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[7].tree.assg.ai/ad/YES_REG.l[29].reg.n.eOn.f[20]
+    SLICE_X56Y21         LUT3 (Prop_lut3_I1_O)        0.306     9.143 r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[7].tree.assg.ai/ad/as[20].ngtb.mlut/O
+                         net (fo=1, routed)           0.000     9.143    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[7].tree.assg.ai/ad/sInt_20
+    SLICE_X56Y21         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532     9.675 r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[7].tree.assg.ai/ad/as[20].ym.mc_CARRY4/CO[3]
+                         net (fo=1, routed)           0.000     9.675    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[7].tree.assg.ai/ad/cInt_24
+    SLICE_X56Y22         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.223     9.898 r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[7].tree.assg.ai/ad/as[24].ym.mc_CARRY4/O[0]
+                         net (fo=1, routed)           0.000     9.898    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[7].tree.assg.ai/ad/f/qNoReg[24]
+    SLICE_X56Y22         FDRE                                         r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[7].tree.assg.ai/ad/f/YES_REG.l[24].reg.n.eOn.f/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=5933, unset)         0.924    10.924    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[7].tree.assg.ai/ad/f/aclk
+    SLICE_X56Y22         FDRE                                         r  bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[7].tree.assg.ai/ad/f/YES_REG.l[24].reg.n.eOn.f/C
+                         clock pessimism              0.000    10.924    
+                         clock uncertainty           -0.035    10.889    
+    SLICE_X56Y22         FDRE (Setup_fdre_C_D)        0.062    10.951    bd_0_i/hls_inst/inst/HLS_accel_fmul_32cud_U3/HLS_accel_ap_fmul_2_no_dsp_32_u/U0/i_synth/MULT.OP/MULT/QQ_VARIANT.MULT/MANT_MULT/logic_multiplier.m1/l[7].tree.assg.ai/ad/f/YES_REG.l[24].reg.n.eOn.f
+  -------------------------------------------------------------------
+                         required time                         10.951    
+                         arrival time                          -9.898    
+  -------------------------------------------------------------------
+                         slack                                  1.053    
+
+
+
+
