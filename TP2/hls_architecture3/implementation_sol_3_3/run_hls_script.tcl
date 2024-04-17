@@ -15,7 +15,11 @@ set_part {xc7z020clg484-1}
 create_clock -period 10 -name default
 # set_directive_inline "mmult_hw" 
 # Insérez ici vos directives, ces dernieres peuvent etre copiees directement de directives.tcl dans la solution retenue
-
+set_directive_array_partition -type block -factor 40 -dim 2 "mmult_hw" a
+set_directive_array_partition -type block -factor 40 -dim 1 "mmult_hw" b
+set_directive_pipeline -II 2 "mmult_hw/L2"
+set_directive_resource -core Mul_LUT "mmult_hw" temp
+set_directive_resource -core AddSubnS "mmult_hw" sum
 
 
 csim_design -clean
