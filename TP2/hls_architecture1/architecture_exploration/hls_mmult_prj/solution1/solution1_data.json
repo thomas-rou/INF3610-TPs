@@ -15,17 +15,13 @@
   "HlsSolution": {
     "DirectiveTcl": [
       "set_directive_array_reshape mmult_hw ",
-      "set_directive_pipeline mmult_hw\/L2 -II 1",
       "set_directive_array_reshape mmult_hw ",
-      "set_directive_resource mmult_hw ",
-      "set_directive_resource mmult_hw "
+      "set_directive_pipeline mmult_hw\/L2 -II 1"
     ],
     "DirectiveInfo": [
-      "array_reshape mmult_hw {{reshape positionBooleanCmd} {variable positionBooleanTextRequiredb} {complete positionBoolean0type} {dim 1}} {}",
-      "pipeline mmult_hw\/L2 {{II 1}} {}",
-      "array_reshape mmult_hw {{reshape positionBooleanCmd} {variable positionBooleanTextRequireda} {complete positionBoolean0type} {dim 2}} {}",
-      "resource mmult_hw {{variable positionBooleanTextRequiredtemp} {core FMul_nodsp}} {}",
-      "resource mmult_hw {{variable positionBooleanTextRequiredsum} {core FAddSub_nodsp}} {}"
+      "array_reshape mmult_hw {{reshape positionBooleanCmd} {variable positionBooleanTextRequireda} {block positionBoolean0type} {factor 21} {dim 2}} {}",
+      "array_reshape mmult_hw {{reshape positionBooleanCmd} {variable positionBooleanTextRequiredb} {block positionBoolean0type} {factor 21} {dim 1}} {}",
+      "pipeline mmult_hw\/L2 {{II 1}} {}"
     ]
   },
   "ClockInfo": {
@@ -89,20 +85,47 @@
     "a_address0": {
       "type": "data",
       "dir": "out",
-      "width": "6",
+      "width": "7",
       "ctype": {"DATA": {
           "Type": "null",
-          "Width": "6"
+          "Width": "7"
+        }}
+    },
+    "a_address1": {
+      "type": "data",
+      "dir": "out",
+      "width": "7",
+      "ctype": {"DATA": {
+          "Type": "null",
+          "Width": "7"
+        }}
+    },
+    "a_ce1": {
+      "type": "data",
+      "dir": "out",
+      "width": "1",
+      "ctype": {"DATA": {
+          "Type": "null",
+          "Width": "1"
         }}
     },
     "a_q0": {
       "type": "data",
       "dir": "in",
-      "width": "1344",
+      "width": "672",
       "ctype": {"DATA": {
           "Type": "real float",
           "Width": "32",
-          "Bits": "1344"
+          "Bits": "672"
+        }}
+    },
+    "a_q1": {
+      "type": "data",
+      "dir": "in",
+      "width": "672",
+      "ctype": {"DATA": {
+          "Type": "null",
+          "Width": "672"
         }}
     },
     "ap_clk": {
@@ -128,20 +151,47 @@
     "b_address0": {
       "type": "data",
       "dir": "out",
-      "width": "6",
+      "width": "7",
       "ctype": {"DATA": {
           "Type": "null",
-          "Width": "6"
+          "Width": "7"
+        }}
+    },
+    "b_address1": {
+      "type": "data",
+      "dir": "out",
+      "width": "7",
+      "ctype": {"DATA": {
+          "Type": "null",
+          "Width": "7"
+        }}
+    },
+    "b_ce1": {
+      "type": "data",
+      "dir": "out",
+      "width": "1",
+      "ctype": {"DATA": {
+          "Type": "null",
+          "Width": "1"
         }}
     },
     "b_q0": {
       "type": "data",
       "dir": "in",
-      "width": "1344",
+      "width": "672",
       "ctype": {"DATA": {
           "Type": "real float",
           "Width": "32",
-          "Bits": "1344"
+          "Bits": "672"
+        }}
+    },
+    "b_q1": {
+      "type": "data",
+      "dir": "in",
+      "width": "672",
+      "ctype": {"DATA": {
+          "Type": "null",
+          "Width": "672"
         }}
     },
     "out_r_address0": {
@@ -190,7 +240,7 @@
     },
     "a_address0": {
       "dir": "out",
-      "width": "6"
+      "width": "7"
     },
     "a_ce0": {
       "dir": "out",
@@ -198,11 +248,24 @@
     },
     "a_q0": {
       "dir": "in",
-      "width": "1344"
+      "width": "672"
+    },
+    "a_address1": {
+      "dir": "out",
+      "width": "7"
+    },
+    "a_ce1": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "a_q1": {
+      "dir": "in",
+      "width": "672"
     },
     "b_address0": {
       "dir": "out",
-      "width": "6"
+      "width": "7"
     },
     "b_ce0": {
       "dir": "out",
@@ -210,7 +273,20 @@
     },
     "b_q0": {
       "dir": "in",
-      "width": "1344"
+      "width": "672"
+    },
+    "b_address1": {
+      "dir": "out",
+      "width": "7"
+    },
+    "b_ce1": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "b_q1": {
+      "dir": "in",
+      "width": "672"
     },
     "out_r_address0": {
       "dir": "out",
@@ -237,17 +313,17 @@
     "a_q0": {
       "interfaceRef": "a_q0",
       "dir": "in",
-      "dataWidth": "1344",
+      "dataWidth": "672",
       "busTypeRef": "ap_memory",
-      "arraySize": "42",
+      "arraySize": "84",
       "handshakeRef": "ap_none"
     },
     "b_q0": {
       "interfaceRef": "b_q0",
       "dir": "in",
-      "dataWidth": "1344",
+      "dataWidth": "672",
       "busTypeRef": "ap_memory",
-      "arraySize": "42",
+      "arraySize": "84",
       "handshakeRef": "ap_none"
     },
     "out_r_d0": {
@@ -285,8 +361,8 @@
         "Area": {
           "BRAM_18K": "0",
           "DSP48E": "211",
-          "FF": "23064",
-          "LUT": "34573"
+          "FF": "23070",
+          "LUT": "34542"
         }
       }}
   },
@@ -300,7 +376,7 @@
   },
   "GenData": {
     "DataVersion": "0.1",
-    "Time": "2024-04-14 10:21:30 -0400",
+    "Time": "2024-04-17 14:18:57 -0400",
     "ToolName": "vivado_hls",
     "ToolVersion": "2018.3"
   }

@@ -10,13 +10,45 @@
             "option": [
               {
                 "name": "variable",
+                "value": "a",
+                "positionalBoolean": "4"
+              },
+              {
+                "name": "block",
+                "value": "",
+                "positionalBoolean": "type"
+              },
+              {
+                "name": "factor",
+                "value": "21"
+              },
+              {
+                "name": "dim",
+                "value": "2"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "mmult_hw",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "ARRAY_RESHAPE",
+            "option": [
+              {
+                "name": "variable",
                 "value": "b",
                 "positionalBoolean": "4"
               },
               {
-                "name": "complete",
+                "name": "block",
                 "value": "",
                 "positionalBoolean": "type"
+              },
+              {
+                "name": "factor",
+                "value": "21"
               },
               {
                 "name": "dim",
@@ -35,68 +67,6 @@
                 "name": "II",
                 "value": "1"
               }]
-          }
-        },
-        {
-          "functionName": "mmult_hw",
-          "label": "",
-          "functionLabel": "",
-          "pragma": {
-            "name": "ARRAY_RESHAPE",
-            "option": [
-              {
-                "name": "variable",
-                "value": "a",
-                "positionalBoolean": "4"
-              },
-              {
-                "name": "complete",
-                "value": "",
-                "positionalBoolean": "type"
-              },
-              {
-                "name": "dim",
-                "value": "2"
-              }
-            ]
-          }
-        },
-        {
-          "functionName": "mmult_hw",
-          "label": "",
-          "functionLabel": "",
-          "pragma": {
-            "name": "RESOURCE",
-            "option": [
-              {
-                "name": "variable",
-                "value": "temp",
-                "positionalBoolean": "4"
-              },
-              {
-                "name": "core",
-                "value": "FMul_nodsp"
-              }
-            ]
-          }
-        },
-        {
-          "functionName": "mmult_hw",
-          "label": "",
-          "functionLabel": "",
-          "pragma": {
-            "name": "RESOURCE",
-            "option": [
-              {
-                "name": "variable",
-                "value": "sum",
-                "positionalBoolean": "4"
-              },
-              {
-                "name": "core",
-                "value": "FAddSub_nodsp"
-              }
-            ]
           }
         }
       ]

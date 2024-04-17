@@ -4,7 +4,7 @@
 <CType>
 <TypeName>float</TypeName>
 <TypeWidth>32</TypeWidth>
-<PhysicalWidth>1344</PhysicalWidth>
+<PhysicalWidth>672</PhysicalWidth>
 </CType>
 <CFractionWidth>24</CFractionWidth>
 <InvalidType>0</InvalidType>
@@ -14,7 +14,7 @@
 <CType>
 <TypeName>float</TypeName>
 <TypeWidth>32</TypeWidth>
-<PhysicalWidth>1344</PhysicalWidth>
+<PhysicalWidth>672</PhysicalWidth>
 </CType>
 <CFractionWidth>24</CFractionWidth>
 <InvalidType>0</InvalidType>

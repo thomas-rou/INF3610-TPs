@@ -7569,10 +7569,10 @@ typedef float mat_type;
 
 void mmult_hw (mat_type a[DIM][DIM], mat_type b[DIM][DIM], mat_type out[DIM][DIM])
 {_ssdm_SpecArrayDimSize(a, 42);_ssdm_SpecArrayDimSize(b, 42);_ssdm_SpecArrayDimSize(out, 42);
-_ssdm_SpecArrayReshape( a, 2,  "COMPLETE",  0, "");
+_ssdm_SpecArrayReshape( a, 2,  "BLOCK",  21, "");
 # 11 "mmult_accel.cpp"
 
-_ssdm_SpecArrayReshape( b, 1,  "COMPLETE",  0, "");
+_ssdm_SpecArrayReshape( b, 1,  "BLOCK",  21, "");
 # 11 "mmult_accel.cpp"
 
 
@@ -7584,9 +7584,6 @@ _ssdm_op_SpecPipeline(1, 1, 1, 0, "");
 # 16 "mmult_accel.cpp"
 
    mat_type sum = 0;
-_ssdm_op_SpecResource(&sum, "", "FAddSub_nodsp", "", -1, "", "", "", "", "");
-# 17 "mmult_accel.cpp"
-
    L3:for (int id = 0; id < DIM; ++id)
     sum += a[ia][id] * b[id][ib];
    out[ia][ib] = sum;

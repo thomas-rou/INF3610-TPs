@@ -7569,10 +7569,10 @@ typedef float mat_type;
 
 void mmult_hw (mat_type a[DIM][DIM], mat_type b[DIM][DIM], mat_type out[DIM][DIM])
 {_ssdm_SpecArrayDimSize(a, 42);_ssdm_SpecArrayDimSize(b, 42);_ssdm_SpecArrayDimSize(out, 42);
-#pragma HLS ARRAY_RESHAPE variable=&a complete dim=2
+#pragma HLS ARRAY_RESHAPE variable=&a block factor=21 dim=2
 # 11 "mmult_accel.cpp"
 
-#pragma HLS ARRAY_RESHAPE variable=&b complete dim=1
+#pragma HLS ARRAY_RESHAPE variable=&b block factor=21 dim=1
 # 11 "mmult_accel.cpp"
 
 
@@ -7584,9 +7584,6 @@ void mmult_hw (mat_type a[DIM][DIM], mat_type b[DIM][DIM], mat_type out[DIM][DIM
 # 16 "mmult_accel.cpp"
 
    mat_type sum = 0;
-#pragma HLS RESOURCE variable=&sum core=FAddSub_nodsp
-# 17 "mmult_accel.cpp"
-
    L3:for (int id = 0; id < DIM; ++id)
     sum += a[ia][id] * b[id][ib];
    out[ia][ib] = sum;
