@@ -50,11 +50,11 @@ void mmult_hw(T a[DIM][DIM], T b[DIM][DIM], T out[DIM][DIM])
 	#pragma HLS INLINE
 
 	// matrix multiplication of a A*B matrix
-	mat_type temp;
+	float temp;
 	L1:for (int ia = 0; ia < DIM; ++ia)
 		L2:for (int ib = 0; ib < DIM; ++ib)
 			{
-				mat_type sum = 0;
+				float sum = 0;
 				L3:for (int id = 0; id < DIM; ++id){
 					temp = a[ia][id] * b[id][ib];
 					sum = sum + temp;
@@ -63,7 +63,7 @@ void mmult_hw(T a[DIM][DIM], T b[DIM][DIM], T out[DIM][DIM])
 			};
 
 			return;
-
+}
 
 
 // --------------------------------------------------------
