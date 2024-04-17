@@ -7621,10 +7621,10 @@ void mmult_hw (mat_type a[DIM][DIM], mat_type b[DIM][DIM], mat_type c[DIM][DIM])
 
 void mmult_hw (mat_type a[DIM][DIM], mat_type b[DIM][DIM], mat_type out[DIM][DIM])
 {_ssdm_SpecArrayDimSize(a, 160);_ssdm_SpecArrayDimSize(b, 160);_ssdm_SpecArrayDimSize(out, 160);
-_ssdm_SpecArrayPartition( a, 2, "BLOCK", 80, "");
+_ssdm_SpecArrayPartition( a, 2, "BLOCK", 40, "");
 # 11 "mmult_accel.cpp"
 
-_ssdm_SpecArrayPartition( b, 1, "BLOCK", 80, "");
+_ssdm_SpecArrayPartition( b, 1, "BLOCK", 40, "");
 # 11 "mmult_accel.cpp"
 
 
@@ -7632,13 +7632,33 @@ _ssdm_SpecArrayPartition( b, 1, "BLOCK", 80, "");
     L1:for (int ia = 0; ia < DIM; ++ia)
         L2:for (int ib = 0; ib < DIM; ++ib)
             {
-_ssdm_op_SpecPipeline(1, 1, 1, 0, "");
+_ssdm_op_SpecPipeline(2, 1, 1, 0, "");
 # 16 "mmult_accel.cpp"
 
                 mat_type sum = 0;
                 L3:for (int id = 0; id < DIM; ++id){
-                    temp = a[ia][id] * b[id][ib];
-                    sum = sum + temp;
+                    
+#pragma 
+# 19 "mmult_accel.cpp"
+
+{ _ssdm_RegionBegin("?Mul_LUT_temp_Region_mmult_accel.cpp:19:1");
+# 19 "mmult_accel.cpp"
+temp = a[ia][id] * b[id][ib];
+_ssdm_op_SpecResource(temp, "?Mul_LUT_temp_Region_mmult_accel.cpp:19:1", "", "Mul_LUT", "", -1, "", "", "", "", "");
+_ssdm_RegionEnd("?Mul_LUT_temp_Region_mmult_accel.cpp:19:1"); }
+# 19 "mmult_accel.cpp"
+
+                    
+#pragma 
+# 20 "mmult_accel.cpp"
+
+{ _ssdm_RegionBegin("?AddSubnS_sum_Region_mmult_accel.cpp:20:1");
+# 20 "mmult_accel.cpp"
+sum = sum + temp;
+_ssdm_op_SpecResource(sum, "?AddSubnS_sum_Region_mmult_accel.cpp:20:1", "", "AddSubnS", "", -1, "", "", "", "", "");
+_ssdm_RegionEnd("?AddSubnS_sum_Region_mmult_accel.cpp:20:1"); }
+# 20 "mmult_accel.cpp"
+
                 }
                 out[ia][ib] = sum;
             };

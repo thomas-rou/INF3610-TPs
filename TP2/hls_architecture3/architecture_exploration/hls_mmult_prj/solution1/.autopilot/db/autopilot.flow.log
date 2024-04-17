@@ -1,4 +1,4 @@
-INFO-FLOW: Workspace C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1 opened at Wed Apr 17 14:51:20 -0400 2024
+INFO-FLOW: Workspace C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1 opened at Wed Apr 17 15:00:55 -0400 2024
 Execute     config_clock -quiet -name default -period 10 -default=false 
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
 Execute     open_platform DefaultPlatform 
@@ -117,7 +117,7 @@ Execute             source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/comm
 Execute         get_default_platform 
 Execute         config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  
 Execute         config_chip_info -quiet -speed slow 
-Command       add_library done; 0.111 sec.
+Command       add_library done; 0.129 sec.
 Execute       add_library xilinx/zynq/zynq_fpv6 
 Execute         get_default_platform 
 Execute         open_platform DefaultPlatform 
@@ -136,11 +136,11 @@ Execute         source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/zynq/zyn
 Execute           source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv6.gen 
 INFO: [HLS 200-10] Setting target device to 'xc7z020clg484-1'
 Execute       get_default_platform 
-Command     set_part done; 0.148 sec.
+Command     set_part done; 0.186 sec.
 Execute     get_default_platform 
 Execute     config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  
 Execute     config_chip_info -quiet -speed slow 
-Command   open_solution done; 0.326 sec.
+Command   open_solution done; 0.362 sec.
 Execute   set_part xc7z020clg484-1 
 Execute     add_library xilinx/zynq/zynq:xc7z020:clg484:-1 
 Execute       get_default_platform 
@@ -196,6 +196,7 @@ Execute           source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/common
 Execute       get_default_platform 
 Execute       config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  
 Execute       config_chip_info -quiet -speed slow 
+Command     add_library done; 0.111 sec.
 Execute     add_library xilinx/zynq/zynq_fpv6 
 Execute       get_default_platform 
 Execute       open_platform DefaultPlatform 
@@ -213,18 +214,29 @@ Execute         source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/zynq/zyn
 Execute       source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/zynq/zynq_fpv6.gen 
 Execute         source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv6.gen 
 Execute     get_default_platform 
-Command   set_part done; 0.127 sec.
+Command   set_part done; 0.149 sec.
 Execute   create_clock -period 10 -name default 
 Execute   source ./hls_mmult_prj/solution1/directives.tcl 
-Execute     set_directive_array_partition -type block -factor 80 -dim 2 mmult_hw a 
-INFO-FLOW: Setting directive 'ARRAY_PARTITION' partition=positionBooleanCmd variable=positionBooleanTextRequireda block=positionBoolean0type factor=80 dim=2 
-Execute     set_directive_array_partition -type block -factor 80 -dim 1 mmult_hw b 
-INFO-FLOW: Setting directive 'ARRAY_PARTITION' partition=positionBooleanCmd variable=positionBooleanTextRequireda block=positionBoolean0type factor=80 dim=2 
-INFO-FLOW: Setting directive 'ARRAY_PARTITION' partition=positionBooleanCmd variable=positionBooleanTextRequiredb block=positionBoolean0type factor=80 dim=1 
-Execute     set_directive_pipeline -II 1 mmult_hw/L2 
-INFO-FLOW: Setting directive 'ARRAY_PARTITION' partition=positionBooleanCmd variable=positionBooleanTextRequireda block=positionBoolean0type factor=80 dim=2 
-INFO-FLOW: Setting directive 'ARRAY_PARTITION' partition=positionBooleanCmd variable=positionBooleanTextRequiredb block=positionBoolean0type factor=80 dim=1 
-INFO-FLOW: Setting directive 'PIPELINE' II=1 
+Execute     set_directive_array_partition -type block -factor 40 -dim 2 mmult_hw a 
+INFO-FLOW: Setting directive 'ARRAY_PARTITION' partition=positionBooleanCmd variable=positionBooleanTextRequireda block=positionBoolean0type factor=40 dim=2 
+Execute     set_directive_array_partition -type block -factor 40 -dim 1 mmult_hw b 
+INFO-FLOW: Setting directive 'ARRAY_PARTITION' partition=positionBooleanCmd variable=positionBooleanTextRequireda block=positionBoolean0type factor=40 dim=2 
+INFO-FLOW: Setting directive 'ARRAY_PARTITION' partition=positionBooleanCmd variable=positionBooleanTextRequiredb block=positionBoolean0type factor=40 dim=1 
+Execute     set_directive_pipeline -II 2 mmult_hw/L2 
+INFO-FLOW: Setting directive 'ARRAY_PARTITION' partition=positionBooleanCmd variable=positionBooleanTextRequireda block=positionBoolean0type factor=40 dim=2 
+INFO-FLOW: Setting directive 'ARRAY_PARTITION' partition=positionBooleanCmd variable=positionBooleanTextRequiredb block=positionBoolean0type factor=40 dim=1 
+INFO-FLOW: Setting directive 'PIPELINE' II=2 
+Execute     set_directive_resource -core Mul_LUT mmult_hw temp 
+INFO-FLOW: Setting directive 'ARRAY_PARTITION' partition=positionBooleanCmd variable=positionBooleanTextRequireda block=positionBoolean0type factor=40 dim=2 
+INFO-FLOW: Setting directive 'ARRAY_PARTITION' partition=positionBooleanCmd variable=positionBooleanTextRequiredb block=positionBoolean0type factor=40 dim=1 
+INFO-FLOW: Setting directive 'PIPELINE' II=2 
+INFO-FLOW: Setting directive 'RESOURCE' variable=positionBooleanTextRequiredtemp core=Mul_LUT 
+Execute     set_directive_resource -core AddSubnS mmult_hw sum 
+INFO-FLOW: Setting directive 'ARRAY_PARTITION' partition=positionBooleanCmd variable=positionBooleanTextRequireda block=positionBoolean0type factor=40 dim=2 
+INFO-FLOW: Setting directive 'ARRAY_PARTITION' partition=positionBooleanCmd variable=positionBooleanTextRequiredb block=positionBoolean0type factor=40 dim=1 
+INFO-FLOW: Setting directive 'PIPELINE' II=2 
+INFO-FLOW: Setting directive 'RESOURCE' variable=positionBooleanTextRequiredtemp core=Mul_LUT 
+INFO-FLOW: Setting directive 'RESOURCE' variable=positionBooleanTextRequiredsum core=AddSubnS 
 Execute   csynth_design 
 Execute     get_config_compile -effort 
 Execute     get_config_compile -enable_clang39 
@@ -252,91 +264,94 @@ INFO-FLOW: Running: GCC PP
 INFO-FLOW: Source preprocessing
 Execute       clang  -fno-limit-debug-info -gcc-toolchain "C:/Xilinx/Vivado/2018.3/msys" -hls  -fno-exceptions  -D__llvm__  -E "mmult_accel.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2018.3/common/technology/autopilot" -I "C:/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_accel.pp.0.cpp" 
 INFO-FLOW: exec C:/Xilinx/Vivado/2018.3/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2018.3/msys -hls -fno-exceptions -D__llvm__ -E mmult_accel.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2018.3/common/technology/autopilot -I C:/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_accel.pp.0.cpp
-Command       clang done; 0.463 sec.
+Command       clang done; 0.433 sec.
 Execute       tidy_31 xilinx-xfmat-array-geometry C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_accel.pp.0.cpp std=gnu++98 
 INFO-FLOW: exec C:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-xfmat-array-geometry -quiet -fix C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_accel.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
-Command       tidy_31 done; 0.196 sec.
+Command       tidy_31 done; 0.198 sec.
 INFO-FLOW: Syntax Checking before pre-processing...
 Execute       clang -syntaxcheck -src C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_accel.pp.0.cpp  -fno-limit-debug-info -gcc-toolchain "C:/Xilinx/Vivado/2018.3/msys" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2018.3/common/technology/autopilot" -I "C:/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  "C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_accel.pp.0.cpp"  -o "C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/useless.bc"  
 INFO-FLOW: exec C:/Xilinx/Vivado/2018.3/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2018.3/msys -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2018.3/common/technology/autopilot -I C:/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_accel.pp.0.cpp -o C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/useless.bc
-Command       clang done; 0.554 sec.
+Command       clang done; 0.54 sec.
 INFO-FLOW: Done: GCC PP time: 1.2 seconds per iteration
-INFO-FLOW: Setting directive 'ARRAY_PARTITION' partition=positionBooleanCmd variable=positionBooleanTextRequireda block=positionBoolean0type factor=80 dim=2 
-INFO-FLOW: Setting directive 'ARRAY_PARTITION' partition=positionBooleanCmd variable=positionBooleanTextRequiredb block=positionBoolean0type factor=80 dim=1 
-INFO-FLOW: Setting directive 'PIPELINE' II=1 
-INFO-FLOW: Setting directive 'ARRAY_PARTITION' partition=positionBooleanCmd variable=positionBooleanTextRequireda block=positionBoolean0type factor=80 dim=2 
-INFO-FLOW: Setting directive 'ARRAY_PARTITION' partition=positionBooleanCmd variable=positionBooleanTextRequiredb block=positionBoolean0type factor=80 dim=1 
-INFO-FLOW: Setting directive 'PIPELINE' II=1 
+INFO-FLOW: Setting directive 'ARRAY_PARTITION' partition=positionBooleanCmd variable=positionBooleanTextRequireda block=positionBoolean0type factor=40 dim=2 
+INFO-FLOW: Setting directive 'ARRAY_PARTITION' partition=positionBooleanCmd variable=positionBooleanTextRequiredb block=positionBoolean0type factor=40 dim=1 
+INFO-FLOW: Setting directive 'PIPELINE' II=2 
+INFO-FLOW: Setting directive 'RESOURCE' variable=positionBooleanTextRequiredtemp core=Mul_LUT 
+INFO-FLOW: Setting directive 'RESOURCE' variable=positionBooleanTextRequiredsum core=AddSubnS 
+INFO-FLOW: Setting directive 'ARRAY_PARTITION' partition=positionBooleanCmd variable=positionBooleanTextRequireda block=positionBoolean0type factor=40 dim=2 
+INFO-FLOW: Setting directive 'ARRAY_PARTITION' partition=positionBooleanCmd variable=positionBooleanTextRequiredb block=positionBoolean0type factor=40 dim=1 
+INFO-FLOW: Setting directive 'PIPELINE' II=2 
+INFO-FLOW: Setting directive 'RESOURCE' variable=positionBooleanTextRequiredtemp core=Mul_LUT 
+INFO-FLOW: Setting directive 'RESOURCE' variable=positionBooleanTextRequiredsum core=AddSubnS 
 Execute       list_core -type functional_unit 
 Execute       tidy_31 xilinx-systemc-detector C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_accel.pp.0.cpp std=gnu++98 -directive=C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/.systemc_flag 
 INFO-FLOW: exec C:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-systemc-detector -import-directive=C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/.systemc_flag -quiet -fix-errors C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_accel.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
-Command       tidy_31 done; 0.163 sec.
+Command       tidy_31 done; 0.167 sec.
 INFO-FLOW: Running: tidy-3.1 CDT preprocess
 Execute       tidy_31 xilinx-directive2pragma C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_accel.pp.0.cpp std=gnu++98 -directive=C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/all.directive.json 
 INFO-FLOW: exec C:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-directive2pragma -import-directive=C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/all.directive.json -quiet -fix-errors C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_accel.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
-Command       tidy_31 done; 0.726 sec.
+Command       tidy_31 done; 0.464 sec.
 Execute       get_config_dataflow -strict_mode 
 Execute       ap_eval exec -ignorestderr C:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/xilinx-dataflow-lawyer.mmult_accel.pp.0.cpp.diag.yml C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_accel.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 -fstrict-dataflow > C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/xilinx-dataflow-lawyer.mmult_accel.pp.0.cpp.out.log 2> C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/xilinx-dataflow-lawyer.mmult_accel.pp.0.cpp.err.log 
-Command       ap_eval done; 0.201 sec.
+Command       ap_eval done; 0.168 sec.
 Execute       tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_accel.pp.0.cpp std=gnu++98 
 Execute         ap_eval exec -ignorestderr C:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -export-fixes=C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/tidy-3.1.mmult_accel.pp.0.cpp.diag.yml -header-filter=.* -checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry -quiet -fix-errors C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_accel.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 > C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/tidy-3.1.mmult_accel.pp.0.cpp.out.log 2> C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/tidy-3.1.mmult_accel.pp.0.cpp.err.log 
-Command         ap_eval done; 0.735 sec.
+Command         ap_eval done; 0.526 sec.
 Execute         ap_eval exec -ignorestderr C:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_accel.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 > C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/xilinx-legacy-rewriter.mmult_accel.pp.0.cpp.out.log 2> C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/xilinx-legacy-rewriter.mmult_accel.pp.0.cpp.err.log 
-Command         ap_eval done; 0.191 sec.
-Command       tidy_31 done; 0.938 sec.
-INFO-FLOW: Done: tidy-3.1 CDT preprocess time: 1.9 seconds per iteration
+Command         ap_eval done; 0.192 sec.
+Command       tidy_31 done; 0.737 sec.
+INFO-FLOW: Done: tidy-3.1 CDT preprocess time: 1.4 seconds per iteration
 INFO-FLOW: Pragma Handling...
 Execute       tidy_31 xilinx-ssdm-intrinsics-arguments C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_accel.pragma.1.cpp std=gnu++98 
 INFO-FLOW: exec C:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_accel.pragma.1.cpp -- -std=gnu++98 -fhls -ferror-limit=0
-Command       tidy_31 done; 0.486 sec.
+Command       tidy_31 done; 0.483 sec.
 Execute       get_default_platform 
 INFO-FLOW: Processing labels
 Execute       clang -src C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_accel.pragma.2.cpp  -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2018.3/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_accel.pragma.2.cpp"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2018.3/common/technology/autopilot" -I "C:/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o "C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_accel.bc" 
 INFO-FLOW: exec C:/Xilinx/Vivado/2018.3/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2018.3/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_accel.pragma.2.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2018.3/common/technology/autopilot -I C:/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_accel.bc
-Command       clang done; 0.542 sec.
+Command       clang done; 0.569 sec.
 INFO-FLOW: Linking Debug ...
 Execute       llvm-ld C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_accel.g.bc -hls-opt -except-internalize mmult_hw -LC:/Xilinx/Vivado/2018.3/win64/lib -lhlsm -lhlsmc++ -o C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/a.g 
-Command       llvm-ld done; 0.449 sec.
-INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 105.453 ; gain = 20.742
-INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 105.453 ; gain = 20.742
+Command       llvm-ld done; 0.568 sec.
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 105.473 ; gain = 20.699
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 105.473 ; gain = 20.699
 Execute       get_config_sdx -target 
 Execute       opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
 Execute         cleanup_all_models 
 INFO: [HLS 200-10] Starting code transformations ...
 Execute         transform -promote-dbg-pointer C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/a.pp.bc -o C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/a.pp.0.bc -f 
 Execute         llvm-ld C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/a.pp.0.bc -disable-opt -LC:/Xilinx/Vivado/2018.3/win64/lib -lfloatconversion -o C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/a.g.0 
-Command         llvm-ld done; 0.204 sec.
+Command         llvm-ld done; 0.237 sec.
 INFO-FLOW: Running Standard Transforms...
 Execute         transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -mem2reg -lower-blackbox -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -prune-eh -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top mmult_hw -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -func-inst -deadargelim -auto-shift-reg-idiom -promote-dbg-pointer -norm-name C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/a.g.0.bc -o C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/a.g.1.bc -f -phase std-opt 
-INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 105.453 ; gain = 20.742
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 105.473 ; gain = 20.699
 INFO: [HLS 200-10] Checking synthesizability ...
 INFO-FLOW: Checking Synthesizability 1/2..
 Execute         transform -hls -syn-check -check-rec-only -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -pag -array-normalize -instcombine -dce -warn-fifo-pointer -array-seg-normalize -instcombine -dce -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -function-uniquify -directive-preproc -mem2reg -dse -dce -globaldce -check-dspbuiltin C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/a.g.1.bc -o C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/a.g.2.prechk.bc -f 
 INFO-FLOW: Checking Synthesizability 2/2..
 Execute         transform -syn-check C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/a.g.2.prechk.bc -o C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/a.g.2.bc -f -phase syn-check 
-INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 105.453 ; gain = 20.742
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 105.473 ; gain = 20.699
 INFO-FLOW: Compiler optimizing ...
 INFO-FLOW: Share syncheck's 1.bc for syn flow: copy C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/a.g.1.bc to C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/a.o.1.bc
 INFO-FLOW: Presyn 1...
 Execute         transform -hls -tmp C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db -interface-port-rename -type-info -function-uniquify -directive-preproc -mem2reg -dse -dce -disaggr -scalarrepl -norm-name -deadargelim -mem2reg -instcombine -dce -simplifycfg -auto-rom-infer -dce -function-uniquify -resource-proc -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -clib-intrinsic-prepare -dce -func-buffer -dce -pag -array-normalize -func-legal -instcombine -gvn -constprop -dce -ptrArgReplace -mem2reg -instcombine -dce -array-seg-normalize -deadargelim -instcombine -dce -pointer-simplify -dce -port-alignment -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -find-region -instcombine -auto-loop-pipeline -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -array-promote -constprop -instcombine -dce -ptrArgReplace -mem2reg -instcombine -simplifycfg -dce -auto-par -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -duplicate-dataflow-processes -globaldce -instcombine -array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -instcombine -dce -global-constprop -deadargelim -mem2reg -instcombine -simplifycfg -dce -merge-param -deadargelim -globalopt -constprop -dce -array-promote -constprop -instcombine -dce -ptrArgReplace -mem2reg -instcombine -simplifycfg -dce -mem-intrinsic-preproc -dce -global-internalize -global-privatize -mem2reg -globaldce -promote-global-argument -ptrArgReplace -mem2reg -instcombine -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -inst-simplify -dce -norm-name -function-inline -globaldce -func-inst -constprop -instcombine -simplifycfg -dce -func-legal -dce -loop-bound -arraycheck -bitwidthmin -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -loop-stream -instcombine -simplifycfg -dce -globaldce -duplicate-dataflow-processes -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -check-dataflow-syntax -legalize-stream-variable -legalize-global -extract-subproc -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -deadargelim -annotate-dataflow-channels -scalar-propagation -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -function-uniquify -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -norm-name C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/a.o.1.bc -o C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/a.o.1.tmp.bc -f 
 INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'L2' (mmult_accel.cpp:16) in function 'mmult_hw' for pipelining.
 INFO: [HLS 200-489] Unrolling loop 'L3' (mmult_accel.cpp:18) in function 'mmult_hw' completely with a factor of 160.
-INFO: [XFORM 203-101] Partitioning array 'a' (mmult_accel.cpp:10) in dimension 2 with a block factor 80.
-INFO: [XFORM 203-101] Partitioning array 'b' (mmult_accel.cpp:10) in dimension 1 with a block factor 80.
-Command         transform done; 0.777 sec.
+INFO: [XFORM 203-101] Partitioning array 'a' (mmult_accel.cpp:10) in dimension 2 with a block factor 40.
+INFO: [XFORM 203-101] Partitioning array 'b' (mmult_accel.cpp:10) in dimension 1 with a block factor 40.
+Command         transform done; 7.078 sec.
 INFO-FLOW: Presyn 2...
 Execute         transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -auto-burst -norm-name C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/a.o.1.tmp.bc -o C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/a.o.2.bc -f -phase presyn 
-INFO: [XFORM 203-11] Balancing expressions in function 'mmult_hw' (mmult_accel.cpp:10)...159 expression(s) balanced.
-Command         transform done; 0.222 sec.
-INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 132.879 ; gain = 48.168
+Command         transform done; 5.408 sec.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:04 ; elapsed = 00:00:18 . Memory (MB): peak = 132.066 ; gain = 47.293
 INFO-FLOW: Building ssdm...
 Execute         transform -hls -function-uniquify -auto-function-inline -globaldce -ptrArgReplace -mem2reg -instcombine -dce -reset-lda -loop-simplify -indvars -licm -loop-dep -loop-bound -licm -loop-simplify -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -axi4-lower -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -disaggr -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -bitwidthmin -deadargelim -dce -canonicalize-dataflow -dce -scalar-propagation -deadargelim -globaldce -mem2reg -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -load-elim -bitop-lower -loop-rewind -pointer-simplify -dce -cfgopt -dce -bitwidth -loop-bound -loop-dep -read-loop-dep -dce -check-stream -norm-name -legalize -validate-dataflow -inst-clarity -cdfg-build C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/a.o.2.bc -o C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
 INFO: [XFORM 203-541] Flattening a loop nest 'L1' (mmult_accel.cpp:15:9) in function 'mmult_hw'.
-Command         transform done; 0.827 sec.
-INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 132.879 ; gain = 48.168
+Command         transform done; 6.545 sec.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:06 ; elapsed = 00:00:25 . Memory (MB): peak = 136.836 ; gain = 52.062
 INFO-FLOW: Finish building internal data model.
-Command       opt_and_import_c done; 2.149 sec.
-Command     elaborate done; 6.993 sec.
+Command       opt_and_import_c done; 19.41 sec.
+Command     elaborate done; 23.887 sec.
 Execute     autosyn -from_csynth_design=1 
 INFO: [HLS 200-10] Starting hardware synthesis ...
 INFO-FLOW: Synthesizing C/C++ design ...
@@ -353,6 +368,7 @@ INFO-FLOW: Model list for preprocess: mmult_hw
 INFO-FLOW: Preprocessing Module: mmult_hw ...
 Execute       set_default_model mmult_hw 
 Execute       cdfg_preprocess -model mmult_hw 
+WARNING: [SYN 201-303] Cannot apply functional unit assignment of 'AddSubnS' (mmult_accel.cpp:19) on 'mul' operation ('temp', mmult_accel.cpp:19) due to incompatible operation sets.
 Execute       rtl_gen_preprocess mmult_hw 
 WARNING: [SYN 201-107] Renaming port name 'mmult_hw/out' to 'mmult_hw/out_r' to avoid the conflict with HDL keywords or other object names.
 INFO-FLOW: Model list for synthesis: mmult_hw
@@ -363,20 +379,14 @@ Execute       set_default_model mmult_hw
 Execute       schedule -model mmult_hw 
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'L1_L2'.
-INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 6.
-WARNING: [SCHED 204-21] Estimated clock period (11.315ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns).
-WARNING: [SCHED 204-21] The critical path in module 'mmult_hw' consists of the following:
-	'mul' operation of DSP[1192] ('temp_38', mmult_accel.cpp:19) [798]  (3.36 ns)
-	'add' operation of DSP[1192] ('tmp40', mmult_accel.cpp:20) [1192]  (3.02 ns)
-	'add' operation of DSP[1193] ('tmp39', mmult_accel.cpp:20) [1193]  (3.02 ns)
-	'add' operation ('tmp37', mmult_accel.cpp:20) [1194]  (1.92 ns)
+INFO: [SCHED 204-61] Pipelining result : Target II = 2, Final II = 2, Depth = 162.
 INFO: [SCHED 204-11] Finished scheduling.
-Command       schedule done; 0.7 sec.
-INFO: [HLS 200-111]  Elapsed time: 8.681 seconds; current allocated memory: 88.326 MB.
+Command       schedule done; 0.787 sec.
+INFO: [HLS 200-111]  Elapsed time: 25.837 seconds; current allocated memory: 96.189 MB.
 Execute       report -o C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_hw.verbose.sched.rpt -verbose -f 
-Command       report done; 0.287 sec.
+Command       report done; 0.529 sec.
 Execute       db_write -o C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_hw.sched.adb -f 
-Command       db_write done; 0.13 sec.
+Command       db_write done; 0.217 sec.
 INFO-FLOW: Finish scheduling mmult_hw.
 Execute       set_default_model mmult_hw 
 Execute       bind -model mmult_hw 
@@ -388,12 +398,12 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-Command       bind done; 0.159 sec.
-INFO: [HLS 200-111]  Elapsed time: 0.584 seconds; current allocated memory: 92.306 MB.
+Command       bind done; 0.329 sec.
+INFO: [HLS 200-111]  Elapsed time: 1.088 seconds; current allocated memory: 102.498 MB.
 Execute       report -o C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_hw.verbose.bind.rpt -verbose -f 
-Command       report done; 0.434 sec.
+Command       report done; 0.643 sec.
 Execute       db_write -o C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_hw.bind.adb -f 
-Command       db_write done; 0.162 sec.
+Command       db_write done; 0.29 sec.
 INFO-FLOW: Finish binding mmult_hw.
 Execute       get_model_list mmult_hw -filter all-wo-channel 
 INFO-FLOW: Preprocessing for RTLGen ...
@@ -445,46 +455,6 @@ INFO: [RTGEN 206-500] Setting interface mode on port 'mmult_hw/a_36' to 'ap_memo
 INFO: [RTGEN 206-500] Setting interface mode on port 'mmult_hw/a_37' to 'ap_memory'.
 INFO: [RTGEN 206-500] Setting interface mode on port 'mmult_hw/a_38' to 'ap_memory'.
 INFO: [RTGEN 206-500] Setting interface mode on port 'mmult_hw/a_39' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'mmult_hw/a_40' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'mmult_hw/a_41' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'mmult_hw/a_42' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'mmult_hw/a_43' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'mmult_hw/a_44' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'mmult_hw/a_45' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'mmult_hw/a_46' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'mmult_hw/a_47' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'mmult_hw/a_48' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'mmult_hw/a_49' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'mmult_hw/a_50' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'mmult_hw/a_51' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'mmult_hw/a_52' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'mmult_hw/a_53' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'mmult_hw/a_54' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'mmult_hw/a_55' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'mmult_hw/a_56' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'mmult_hw/a_57' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'mmult_hw/a_58' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'mmult_hw/a_59' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'mmult_hw/a_60' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'mmult_hw/a_61' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'mmult_hw/a_62' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'mmult_hw/a_63' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'mmult_hw/a_64' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'mmult_hw/a_65' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'mmult_hw/a_66' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'mmult_hw/a_67' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'mmult_hw/a_68' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'mmult_hw/a_69' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'mmult_hw/a_70' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'mmult_hw/a_71' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'mmult_hw/a_72' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'mmult_hw/a_73' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'mmult_hw/a_74' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'mmult_hw/a_75' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'mmult_hw/a_76' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'mmult_hw/a_77' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'mmult_hw/a_78' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'mmult_hw/a_79' to 'ap_memory'.
 INFO: [RTGEN 206-500] Setting interface mode on port 'mmult_hw/b_0' to 'ap_memory'.
 INFO: [RTGEN 206-500] Setting interface mode on port 'mmult_hw/b_1' to 'ap_memory'.
 INFO: [RTGEN 206-500] Setting interface mode on port 'mmult_hw/b_2' to 'ap_memory'.
@@ -525,84 +495,51 @@ INFO: [RTGEN 206-500] Setting interface mode on port 'mmult_hw/b_36' to 'ap_memo
 INFO: [RTGEN 206-500] Setting interface mode on port 'mmult_hw/b_37' to 'ap_memory'.
 INFO: [RTGEN 206-500] Setting interface mode on port 'mmult_hw/b_38' to 'ap_memory'.
 INFO: [RTGEN 206-500] Setting interface mode on port 'mmult_hw/b_39' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'mmult_hw/b_40' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'mmult_hw/b_41' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'mmult_hw/b_42' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'mmult_hw/b_43' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'mmult_hw/b_44' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'mmult_hw/b_45' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'mmult_hw/b_46' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'mmult_hw/b_47' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'mmult_hw/b_48' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'mmult_hw/b_49' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'mmult_hw/b_50' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'mmult_hw/b_51' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'mmult_hw/b_52' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'mmult_hw/b_53' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'mmult_hw/b_54' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'mmult_hw/b_55' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'mmult_hw/b_56' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'mmult_hw/b_57' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'mmult_hw/b_58' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'mmult_hw/b_59' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'mmult_hw/b_60' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'mmult_hw/b_61' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'mmult_hw/b_62' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'mmult_hw/b_63' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'mmult_hw/b_64' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'mmult_hw/b_65' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'mmult_hw/b_66' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'mmult_hw/b_67' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'mmult_hw/b_68' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'mmult_hw/b_69' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'mmult_hw/b_70' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'mmult_hw/b_71' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'mmult_hw/b_72' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'mmult_hw/b_73' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'mmult_hw/b_74' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'mmult_hw/b_75' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'mmult_hw/b_76' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'mmult_hw/b_77' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'mmult_hw/b_78' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'mmult_hw/b_79' to 'ap_memory'.
 INFO: [RTGEN 206-500] Setting interface mode on port 'mmult_hw/out_r' to 'ap_memory'.
 INFO: [RTGEN 206-500] Setting interface mode on function 'mmult_hw' to 'ap_ctrl_hs'.
-INFO: [SYN 201-210] Renamed object name 'mmult_hw_mac_muladd_8s_8s_8ns_8_1_1' to 'mmult_hw_mac_mulabkb' due to the length limit 20
-INFO: [SYN 201-210] Renamed object name 'mmult_hw_mac_muladd_8s_8s_8s_8_1_1' to 'mmult_hw_mac_mulacud' due to the length limit 20
-INFO: [RTGEN 206-100] Generating core module 'mmult_hw_mac_mulabkb': 64 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'mmult_hw_mac_mulacud': 32 instance(s).
+INFO: [SYN 201-210] Renamed object name 'mmult_hw_mul_8s_8s_8_1_1' to 'mmult_hw_mul_8s_8bkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'mmult_hw_add_8ns_8ns_8_2_1' to 'mmult_hw_add_8ns_cud' due to the length limit 20
+INFO: [RTGEN 206-104] Estimated max fanout for 'mmult_hw' is 25697 from HDL expression: ((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))
+INFO: [RTGEN 206-100] Generating core module 'mmult_hw_add_8ns_cud': 159 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mmult_hw_mul_8s_8bkb': 80 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'mmult_hw'.
-Command       create_rtl_model done; 3.519 sec.
-INFO: [HLS 200-111]  Elapsed time: 4.186 seconds; current allocated memory: 98.351 MB.
+Command       create_rtl_model done; 3.217 sec.
+INFO: [HLS 200-111]  Elapsed time: 4.201 seconds; current allocated memory: 119.162 MB.
 Execute       source C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_hw.rtl_wrap.cfg.tcl 
 Execute       gen_rtl mmult_hw -istop -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/syn/systemc/mmult_hw -synmodules mmult_hw 
 Execute       gen_rtl mmult_hw -istop -style xilinx -f -lang vhdl -o C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/syn/vhdl/mmult_hw 
+Command       gen_rtl done; 0.311 sec.
 Execute       gen_rtl mmult_hw -istop -style xilinx -f -lang vlog -o C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/syn/verilog/mmult_hw 
+Command       gen_rtl done; 0.167 sec.
 Execute       export_constraint_db -o C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_hw.constraint.tcl -f -tool general 
 Execute       report -model mmult_hw -o C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_hw.design.xml -verbose -f -dv 
+Command       report done; 0.262 sec.
 Execute       report -model mmult_hw -o C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_hw.sdaccel.xml -verbose -f -sdaccel 
+Command       report done; 0.414 sec.
 Execute       gen_tb_info mmult_hw -o C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_hw -p C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db 
 Execute       report -model mmult_hw -o C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/syn/report/mmult_hw_csynth.rpt -f 
+Command       report done; 0.153 sec.
 Execute       report -model mmult_hw -o C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/syn/report/mmult_hw_csynth.xml -f -x 
+Command       report done; 0.124 sec.
 Execute       report -model mmult_hw -o C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_hw.verbose.rpt -verbose -f 
-Command       report done; 0.498 sec.
+Command       report done; 0.735 sec.
 Execute       db_write -model mmult_hw -o C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_hw.adb -f 
-Command       db_write done; 0.259 sec.
+Command       db_write done; 0.437 sec.
 Execute       sc_get_clocks mmult_hw 
 Execute       get_config_export -vivado_clock 
 Execute       sc_get_portdomain mmult_hw 
 INFO-FLOW: Model list for RTL component generation: mmult_hw
 INFO-FLOW: Handling components in module [mmult_hw] ... 
 Execute       source C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_hw.compgen.tcl 
-INFO-FLOW: Found component mmult_hw_mac_mulabkb.
-INFO-FLOW: Append model mmult_hw_mac_mulabkb
-INFO-FLOW: Found component mmult_hw_mac_mulacud.
-INFO-FLOW: Append model mmult_hw_mac_mulacud
+INFO-FLOW: Found component mmult_hw_mul_8s_8bkb.
+INFO-FLOW: Append model mmult_hw_mul_8s_8bkb
+INFO-FLOW: Found component mmult_hw_add_8ns_cud.
+INFO-FLOW: Append model mmult_hw_add_8ns_cud
 INFO-FLOW: Append model mmult_hw
 INFO-FLOW: Generating RTL model list ...
-INFO-FLOW: All models in this session: mmult_hw_mac_mulabkb mmult_hw_mac_mulacud mmult_hw
-INFO-FLOW: To file: write model mmult_hw_mac_mulabkb
-INFO-FLOW: To file: write model mmult_hw_mac_mulacud
+INFO-FLOW: All models in this session: mmult_hw_mul_8s_8bkb mmult_hw_add_8ns_cud mmult_hw
+INFO-FLOW: To file: write model mmult_hw_mul_8s_8bkb
+INFO-FLOW: To file: write model mmult_hw_add_8ns_cud
 INFO-FLOW: To file: write model mmult_hw
 INFO-FLOW: Finished generating RTL model list.
 
@@ -644,6 +581,9 @@ Execute       source C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls
 Execute       source C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/global.setting.tcl 
 Execute       source C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/global.setting.tcl 
 Execute       source C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_hw.compgen.tcl 
+INFO: [RTMG 210-282] Generating pipelined core: 'mmult_hw_mul_8s_8bkb_Mul_LUT_0'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'mmult_hw_add_8ns_cud_AddSubnS_0'
+Command       ap_source done; 0.106 sec.
 INFO-FLOW: DBG:CMD:     auto_generate -export -impltomg_flag -rtl both -tool Vivado -pcore_version 1.00.a -phase csynth_design -d C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1
 Execute       source C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/global.setting.tcl 
 INFO-FLOW: DBG:CMD: read_platform_lib C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/global.setting.tcl
@@ -765,96 +705,16 @@ Execute         source C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/h
 Execute         source C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_hw.tbgen.tcl 
 Execute         source C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_hw.tbgen.tcl 
 Execute         source C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_hw.tbgen.tcl 
-Execute         source C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_hw.tbgen.tcl 
-Execute         source C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_hw.tbgen.tcl 
-Execute         source C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_hw.tbgen.tcl 
-Execute         source C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_hw.tbgen.tcl 
-Execute         source C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_hw.tbgen.tcl 
-Execute         source C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_hw.tbgen.tcl 
-Execute         source C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_hw.tbgen.tcl 
-Execute         source C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_hw.tbgen.tcl 
-Execute         source C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_hw.tbgen.tcl 
-Execute         source C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_hw.tbgen.tcl 
-Execute         source C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_hw.tbgen.tcl 
-Execute         source C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_hw.tbgen.tcl 
-Execute         source C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_hw.tbgen.tcl 
-Execute         source C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_hw.tbgen.tcl 
-Execute         source C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_hw.tbgen.tcl 
-Execute         source C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_hw.tbgen.tcl 
-Execute         source C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_hw.tbgen.tcl 
-Execute         source C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_hw.tbgen.tcl 
-Execute         source C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_hw.tbgen.tcl 
-Execute         source C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_hw.tbgen.tcl 
-Execute         source C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_hw.tbgen.tcl 
-Execute         source C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_hw.tbgen.tcl 
-Execute         source C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_hw.tbgen.tcl 
-Execute         source C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_hw.tbgen.tcl 
-Execute         source C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_hw.tbgen.tcl 
-Execute         source C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_hw.tbgen.tcl 
-Execute         source C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_hw.tbgen.tcl 
-Execute         source C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_hw.tbgen.tcl 
-Execute         source C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_hw.tbgen.tcl 
-Execute         source C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_hw.tbgen.tcl 
-Execute         source C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_hw.tbgen.tcl 
-Execute         source C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_hw.tbgen.tcl 
-Execute         source C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_hw.tbgen.tcl 
-Execute         source C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_hw.tbgen.tcl 
-Execute         source C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_hw.tbgen.tcl 
-Execute         source C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_hw.tbgen.tcl 
-Execute         source C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_hw.tbgen.tcl 
-Execute         source C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_hw.tbgen.tcl 
-Execute         source C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_hw.tbgen.tcl 
-Execute         source C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_hw.tbgen.tcl 
-Execute         source C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_hw.tbgen.tcl 
-Execute         source C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_hw.tbgen.tcl 
-Execute         source C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_hw.tbgen.tcl 
-Execute         source C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_hw.tbgen.tcl 
-Execute         source C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_hw.tbgen.tcl 
-Execute         source C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_hw.tbgen.tcl 
-Execute         source C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_hw.tbgen.tcl 
-Execute         source C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_hw.tbgen.tcl 
-Execute         source C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_hw.tbgen.tcl 
-Execute         source C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_hw.tbgen.tcl 
-Execute         source C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_hw.tbgen.tcl 
-Execute         source C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_hw.tbgen.tcl 
-Execute         source C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_hw.tbgen.tcl 
-Execute         source C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_hw.tbgen.tcl 
-Execute         source C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_hw.tbgen.tcl 
-Execute         source C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_hw.tbgen.tcl 
-Execute         source C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_hw.tbgen.tcl 
-Execute         source C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_hw.tbgen.tcl 
-Execute         source C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_hw.tbgen.tcl 
-Execute         source C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_hw.tbgen.tcl 
-Execute         source C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_hw.tbgen.tcl 
-Execute         source C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_hw.tbgen.tcl 
-Execute         source C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_hw.tbgen.tcl 
-Execute         source C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_hw.tbgen.tcl 
-Execute         source C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_hw.tbgen.tcl 
-Execute         source C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_hw.tbgen.tcl 
-Execute         source C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_hw.tbgen.tcl 
-Execute         source C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_hw.tbgen.tcl 
-Execute         source C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_hw.tbgen.tcl 
-Execute         source C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_hw.tbgen.tcl 
-Execute         source C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_hw.tbgen.tcl 
-Execute         source C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_hw.tbgen.tcl 
-Execute         source C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_hw.tbgen.tcl 
-Execute         source C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_hw.tbgen.tcl 
-Execute         source C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_hw.tbgen.tcl 
-Execute         source C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_hw.tbgen.tcl 
-Execute         source C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_hw.tbgen.tcl 
-Execute         source C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_hw.tbgen.tcl 
-Execute         source C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_hw.tbgen.tcl 
-Execute         source C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_hw.tbgen.tcl 
-Command       ap_source done; 3.932 sec.
+Command       ap_source done; 1.371 sec.
 INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.pcores/verilog_sim
 Execute       source C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/global.setting.tcl 
 Execute       source C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_hw.compgen.tcl 
 Execute       source C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/global.setting.tcl 
 Execute       source C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_hw.constraint.tcl 
 Execute       source C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_hw.tbgen.tcl 
-INFO-FLOW: DBG:CMD:       hasPcoreIpAdapter=false #gSsdmPorts=324
-INFO-FLOW: DBG:CMD: Skipping loadAnalyze_DB, #g_database=161
-INFO-FLOW: DBG:CMD:       generate_json is_phase_csynth=1 g_has_adaptors=false generate_bd_files=0 #modelList=3 #gSsdmPorts=324
+INFO-FLOW: DBG:CMD:       hasPcoreIpAdapter=false #gSsdmPorts=164
+INFO-FLOW: DBG:CMD: Skipping loadAnalyze_DB, #g_database=81
+INFO-FLOW: DBG:CMD:       generate_json is_phase_csynth=1 g_has_adaptors=false generate_bd_files=0 #modelList=3 #gSsdmPorts=164
 Execute       source C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/global.setting.tcl 
 Execute       source C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/global.setting.tcl 
 Execute       source C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/mmult_hw.tbgen.tcl 
@@ -871,13 +731,13 @@ Execute       get_config_sdx -profile
 Execute       ::config_rtl 
 INFO-FLOW: DBG:CMD: add_json_sdx_info kernel file does not exist: C:/Users/thoms/Universite/H2024/INF3610/INF3610-TPs/TP2/hls_architecture3/architecture_exploration/hls_mmult_prj/solution1/.autopilot/db/kernel.internal.xml
 INFO-FLOW: DBG:CMD:       delete-temp-dirs (skipped for debug)
-INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:02 ; elapsed = 00:00:34 . Memory (MB): peak = 204.301 ; gain = 119.590
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:10 ; elapsed = 00:00:42 . Memory (MB): peak = 213.688 ; gain = 128.914
 INFO: [SYSC 207-301] Generating SystemC RTL for mmult_hw.
 INFO: [VHDL 208-304] Generating VHDL RTL for mmult_hw.
 INFO: [VLOG 209-307] Generating Verilog RTL for mmult_hw.
-Command     autosyn done; 26.154 sec.
+Command     autosyn done; 17.58 sec.
 Execute     get_part 
 Execute     get_config_export -sdx_tcl 
-Command   csynth_design done; 33.158 sec.
-Command ap_source done; 33.724 sec.
+Command   csynth_design done; 41.479 sec.
+Command ap_source done; 42.196 sec.
 Execute cleanup_all 

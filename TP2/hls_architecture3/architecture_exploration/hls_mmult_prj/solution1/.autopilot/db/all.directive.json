@@ -20,7 +20,7 @@
               },
               {
                 "name": "factor",
-                "value": "80"
+                "value": "40"
               },
               {
                 "name": "dim",
@@ -48,7 +48,7 @@
               },
               {
                 "name": "factor",
-                "value": "80"
+                "value": "40"
               },
               {
                 "name": "dim",
@@ -65,8 +65,46 @@
             "name": "PIPELINE",
             "option": [{
                 "name": "II",
-                "value": "1"
+                "value": "2"
               }]
+          }
+        },
+        {
+          "functionName": "mmult_hw",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "RESOURCE",
+            "option": [
+              {
+                "name": "variable",
+                "value": "temp",
+                "positionalBoolean": "4"
+              },
+              {
+                "name": "core",
+                "value": "Mul_LUT"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "mmult_hw",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "RESOURCE",
+            "option": [
+              {
+                "name": "variable",
+                "value": "sum",
+                "positionalBoolean": "4"
+              },
+              {
+                "name": "core",
+                "value": "AddSubnS"
+              }
+            ]
           }
         }
       ]
